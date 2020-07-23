@@ -10,7 +10,9 @@
 - [TUG article](http://www.tug.org/TUGboat/tb40-1/tb124hoftich-make4ht.pdf) : Somewhat technical; it is from the TeX user group journal, after all
 - [Cheat sheet](https://www.12000.org/my_notes/faq/LATEX/htch4.htm) : Useful, if terse.
 
-This document will show my steps working towards a solution with `make4ht`.  I intend later to add a guide to a final working solution, should one arise.
+This document will show my steps working towards a solution with `make4ht`.
+
+**Current summary:** It works on trivial examples, but throwing a large (but utterly standard) bit of LaTeX at it produces some horrible HTML output.
 
 
 ## Minimal working example
@@ -41,7 +43,7 @@ Some variations:
 
       make4ht -c main.cfg main.tex
 
-  Unfortunately, when I try this I get a number of errors from `htlatex`: these do not contain sufficient information to allow me to see what is happening.  The [output](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%203/main.htm) however seems correct, though I have not checked it closely.
+  Unfortunately, when I try this I get a number of errors from `htlatex`: these do not contain sufficient information to allow me to see what is happening.  The [output](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%203/main.html) however seems correct, though I have not checked it closely.
   
   The mathematics is rendered correctly now.
 
@@ -51,3 +53,32 @@ Some variations:
 
   Here I also add some commands to try to get [utf-8](https://en.wikipedia.org/wiki/UTF-8) support.  This would be nicer for a long document.
 
+
+### Quality of the output
+
+While the output is visually pretty nice, under the hood things get pretty nasty.  I noticed this when my screen reader started saying odd thinks like "link" in the middle of a sentence.  Examining the HTML output shows why:
+
+    <span 
+    class="cmr-12">The classical Bohr Compactification of a topological (semi)group can be defined in terms of</span>
+    <span 
+    class="cmr-12">unitary representations (see the original paper of von Neumann </span><span class="cite"><span 
+    class="cmr-12">[</span><a 
+    href="#Xvn1"><span 
+    class="cmr-12">29</span></a><span 
+    class="cmr-12">]</span></span> <span 
+    class="cmr-12">or see </span><span class="cite"><span 
+    class="cmr-12">[</span><a 
+    href="#XBJM"><span 
+    class="cmr-12">2</span></a><span 
+    class="cmr-12">, ???]</span></span> <span 
+    class="cmr-12">for a modern</span>
+    <span 
+    class="cmr-12">treatment).
+
+The `class="cmr-12"` is trying to apply a CSS rule (120% size).  I would write this as:
+
+    <p>The classical Bohr Compactification of a topological (semi)group can be defined in terms of unitary representations (see the original paper of von Neumann <a href="#Xvn1">[29]</a> or see <a href="#XBJM">[2, ???]</a> for a modern treatment).
+
+There is nothing strange in the input LaTeX file to suggest why many different `spans` would be produced.
+
+This is (almost) a breaking feature as far as I am concerned.  The whole principle behind accessibility is to produce rather minimal HTML code which has clearly defined semantic meaning, and then to use CSS to provide styling.  Then automated tools (like screen-readers) have an easier time understanding the structure of the document.
