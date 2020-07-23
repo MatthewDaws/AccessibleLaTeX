@@ -16,3 +16,7 @@ This example tells TexWorks, and other aware editors, that really the file `thes
 
 TODO: How to work efficiently with very large documents: is it possible to compile only the current chapter, for example?
 
+
+### Other editors
+
+At some point, I should explore the LaTeX plugin for Visual Studio Code.
