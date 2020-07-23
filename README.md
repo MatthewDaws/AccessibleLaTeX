@@ -6,3 +6,5 @@ Some basics of how to generate [accessible]() HTML pages from LaTeX sources, wri
 
 - [Motivation](motivation.md) : Why do I care about accessible LaTeX
 
+
+The opinions here are my own, and in no way reflect opinions of my employers.  I am not a lawyer.
