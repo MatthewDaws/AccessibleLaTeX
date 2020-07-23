@@ -1,0 +1,739 @@
+\documentclass[twoside,a4paper]{article}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\topmargin}{-0.6in}
+\setlength{\textwidth}{\paperwidth}
+\addtolength{\textwidth}{-2in}
+\setlength{\textheight}{\paperheight}
+\addtolength{\textheight}{-2in}
+
+\usepackage{amsmath,amsthm,amssymb,latexsym}
+\usepackage[v2,tips]{xy}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\ap}{{\operatorname{AP}}}
+\newcommand{\AP}{{\mathbb{AP}}}
+\newcommand{\Trig}{{\operatorname{Trig}}}
+\newcommand{\ad}{{\operatorname{ad}}}
+\newcommand{\hip}[2]{(#1|#2)}
+\newcommand{\inten}{\check\otimes}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\ip}[2]{\langle{#1},{#2}\rangle}
+\newcommand{\aone}{\Box}
+\newcommand{\atwo}{\Diamond}
+\newcommand{\proten}{{\widehat{\otimes}}}
+
+\begin{document}
+
+\large
+\title{Quantum compactifications of Fourier Algebras}
+\author{Matthew Daws}
+\maketitle
+
+\begin{abstract}
+To write.
+
+2000 \emph{Mathematics Subject Classification:}
+   Primary ???;
+   Secondary ???
+
+\emph{Keywords:} ???
+\end{abstract}
+
+\section{Introduction}
+
+The classical Bohr Compactification of a topological (semi)group
+can be defined in terms of unitary representations (see the
+original paper of von Neumann \cite{vn1} or see
+\cite[???]{BJM} for a modern treatment).
+Recently, see \cite{soltan}, So{\l}tan has extended this idea to give
+a definition of a compactification of a quantum semigroup, a
+process which yields a compact quantum group, in the sense of
+Woronowicz (see \cite{woro1}).
+
+For a locally compact group $G$, we can describe the Bohr (or
+equivalently \emph{almost periodic}) compactification of $G$
+in terms of a certain function space on $G$.  Indeed, we can describe
+this function space in terms of the Banach algebra $L^1(G)$ and
+its dual $L^\infty(G)$.  We turn the dual into an $L^1(G)$-bimodule
+in the usual way, and then define $f\in L^\infty(G)$ to be
+\emph{almost periodic} if the map
+\[ R_f:L^1(G)\rightarrow L^\infty(G); \quad
+a\mapsto a\cdot f \qquad (a\in L^1(G)) \]
+is compact.  If we let $\ap(G)\subseteq L^\infty(G)$ be the collection
+of almost periodic elements, then each member of $\ap(G)$ is
+continuous; $\ap(G)$ is a unital C$^*$-subalgebra of $L^\infty(G)$;
+if the character space of $\ap(G)$ is $G^\ap$, then $G^\ap$ becomes
+a compact group containing a dense homeomorphic image of $G$.
+
+For an abelian locally compact group $G$, we have the Fourier
+transform $L^1(G)\rightarrow C_0(\hat G)$, where $\hat G$ is the
+dual group to $G$.  The image is defined as the \emph{Fourier algebra}
+of $\hat G$, see \cite[???]{Dales}.  For a non-abelian group $G$, Eymard
+defined an commutative Banach algebra of functions on $G$, written
+$A(G)$, which extends the definition of the Fourier algebra, see \cite{eymard}.
+As the definition of \emph{almost periodic} above makes sense for any
+Banach algebra, it is not surprising that the space of almost
+periodic functionals on the Fourier algebra has been studied.
+The definition appears to have been made in \cite[Section~7]{DR},
+where the authors write $\ap(\hat G)$, in analogy with the abelian case.
+Further study was undertaken in \cite{gran1} and \cite{lau}, for example.
+An excellent survey (which we use extensively below) is Chou's paper
+\cite{chou}.  See also \cite{hu} and \cite{must} for more recent work.
+
+The space $\ap(\hat G)$ is not nearly as well understood as $\ap(G)$,
+and it appears that no study has been undertaken of $\ap(\hat G)$ in
+the context of a categorical notion of ``compactification''.  The aim
+of this paper is to undertake such a study.
+
+\textbf{Stuff about approximation properties}.
+
+\textbf{AIMS:}
+\begin{itemize}
+\item Heavily using \cite{chou}, we introduce a modified definition
+of ``almost periodic'', and show the resulting space exactly
+coincides with the quantum compactification constructed by
+So{\l}tan, once appropriate identifications are made.
+\item We try to use operator-space methods.
+\item In general $\ap(\hat G)$ is not a C$^*$-algebra; this is our major
+problem with what we could call the ``classical case''.  However, does there
+perhaps exist a \emph{completely isometry} $\Delta:\ap(\hat G)\rightarrow
+\ap(\hat G)\inten\ap(\hat G)$.
+\item Proceeding with the above, can we apply some abstract procedure to
+$\ap(\hat G)$ to obtain a von Neumann algebra?  Use the Haar functional here
+(which we know does exist).
+\item What is the \emph{reduced} compact quantum group which we get from
+So{\l}tan's methods?  Can we perhaps recover this from $\ap(\hat G)$?
+\item This about the tensor product: key fact which Soltan uses to show
+that $\AP(\mathbb G)$ is an algebra.  Can we adapt to $\ap(\hat G)$ somehow?
+\item Anything else?
+\end{itemize}
+
+Notation: $\mc B(E)$.  Dual space, dual pairing.  Notation for inner products.
+
+
+
+
+
+
+\section{Compact quantum group compactifications}
+
+We shall quickly sketch So\l tan's work in \cite{soltan}.
+Following So\l tan, we shall define a \emph{compact quantum semigroup}
+to be a pair $\mathbb S=(\mc A,\Phi)$ where $\mc A$ is a unital C$^*$-algebra
+and $\Phi:\mc A\rightarrow\mc A\otimes\mc A$ is a \emph{co-associative
+product}.  Here, and henceforth, $\mc A\otimes\mc A$ is the \emph{minimal}
+or \emph{spacial} tensor product of $\mc A$ with itself.  To say that $\Phi$ is a
+co-associative product means that $\Phi$ is a unital $*$-homomorphism and
+$(\Phi\otimes\id)\Phi = (\id\otimes\Phi)\Phi$.
+
+A \emph{compact quantum group} is a compact quantum semigroup $\mathbb G=(\mc A,\Phi)$
+such that the linear span of the either of the sets
+$\{(a\otimes I)\Phi(b) : a,b\in\mc A\}$ or $\{(I\otimes a)\Phi(b) : a,b\in\mc A\}$
+is dense in $\mc A\otimes\mc A$.  These density conditions imply a large
+amount of structure: see \cite{woro1} or the survey \cite{maes} for further
+details. The density conditions can actually be weakened: see \cite{murphy}.
+
+Compact quantum groups have a very rich (co)representation theory.  For example,
+every irreducible corepresentation is finite-dimensional.  As in the classical case,
+S{\o}ltan's quantum compactification is stated in terms of finite-dimensional
+corepresentations.  We first need the notion of a \emph{quantum semigroup}.
+This is a pair $\mathbb S=(\mc A,\Phi)$ where $\mc A$ is a C$^*$-algebra (now not
+assumed unital) and $\Phi:\mc A\rightarrow M(\mc A\otimes\mc A)$ is a co-associative,
+non-degenerate $*$-homomorphism.  Here $M(\mc A\otimes\mc A)$ is the \emph{multiplier
+algebra} of $\mc A\otimes\mc A$.  See \cite{lance}, for example, for further details
+about multiplier algebras.  Recall that to say that $\Phi$ is \emph{non-degenerate} means
+that $\Phi(\mc A)(\mc A\otimes\mc A)$ is dense in $\mc A\otimes\mc A$.  As such, there
+is a unique extension of $\Phi$ to a $*$-homomorphism $M(\mc A)\rightarrow M(\mc A\otimes
+\mc A)$.  Similarly, $\Phi\otimes\id$ and $\id\otimes\Phi$ make sense as maps
+$M(\mc A\otimes\mc A)\rightarrow M(\mc A\otimes\mc A\otimes\mc A)$, and so it
+makes sense to speak of $\Phi$ as being co-associative.
+
+We now state the definitions which S{\o}ltan makes in \cite{soltan}.
+However, we shall state them in different ways which are more compatible with
+our Banach algebra approach.  Fix a quantum semigroup $\mathbb S=(\mc A,\Phi)$.
+In the usual way, we use $\Phi$ to induce an associative product on $\mc A'$,
+turning $\mc A'$ into a Banach algebra, by
+\[ \ip{\mu\lambda}{a} = \ip{\mu\otimes\lambda}{\Phi(a)}
+\qquad (a\in\mc A, \mu,\lambda\in\mc A'). \]
+
+Let $X$ be a finite-dimensional Banach space, and let $T\in\mc B(X)\otimes M(\mc A)$.
+For each $\mu\in\mc A'$, let $T_\mu\in\mc B(X)$ be the slice map,
+$T_\mu = (\id\otimes\mu)T$.  We say that $T$ is a \emph{bounded representation} if
+$T$ is invertible in the algebra $\mc B(X)\otimes M(\mc A)$, and the map
+$\mc A'\rightarrow\mc B(X), \mu\mapsto T_\mu$ is an algebra homomorphism.
+Notice that we always have the \emph{trivial representation}, $I_X\otimes I_{\mc A}$.
+It is easy to construct direct sums of bounded representations, and with a little
+more effort, tensor products, see \cite[Section~2.1]{soltan}.
+
+Let $\ad:\mc B(X)\rightarrow\mc B(X'), S\mapsto S'$ be the \emph{adjoint map}.
+For $T\in\mc B(X)\otimes M(\mc A)$, let $T^T = (\ad\otimes\id)T$ be the
+\emph{transpose} of $T$.  Then a bounded representation $T$ is \emph{admissible}
+if $T^T$ is invertible in $\mc B(X')\otimes M(\mc A)$.
+
+When $H$ is a (finite-dimensional) Hilbert space, $\mc B(H)\otimes M(\mc A)$ becomes
+a C$^*$-algebra.  When a bounded representation $T\in\mc B(H)\otimes M(\mc A)$
+is a unitary, we say that $T$ is a \emph{unitary representation}.  We say that a bounded
+representation $T\in\mc B(X)\otimes M(\mc A)$ is \emph{similar to a unitary
+representation} if $X$ admits a Hilbert space structure turning $T$ into a unitary
+representation.  Then S{\o}ltan shows that admissible representations are similar
+to unitary representations; the converse need not hold.
+
+Let $T\in\mc B(X)\otimes M(\mc A)$ be an admissible representation, and let
+$\lambda\in\mc B(X)'$.  Then $(\lambda\otimes\id)T\in M(\mc A)$ is a \emph{matrix
+element of $T$}.  S{\o}ltan shows that the linear span of matrix elements of
+all admissible representations is a unital $*$-subalgebra of $M(\mc A)$, see
+\cite[Proposition~2.12]{soltan}.  Let $\AP(\mathbb S)$ be the closure of this
+algebra, so $\AP(\mathbb S)\subseteq M(\mc A)$ is a unital C$^*$-algebra.  Let
+$\Delta_{\AP(\mathbb S)}$ be the restriction of $\Phi$ to $\AP(\mathbb S)$.
+Then $\Delta_{\AP(\mathbb S)}$ is a $*$-homomorphism from $\AP(\mathbb S)$ to
+$\AP(\mathbb S)\otimes\AP(\mathbb S)$, and the pair $\mf b\mathbb S =
+(\AP(\mathbb S),\Delta_{\AP(\mathbb S)})$ satisfies the density conditions
+to become a compact quantum group.
+
+The compact quantum group $\mf b\mathbb S$ satisfies the expected universal
+property.  Let $\chi_{\mathbb S}:\AP(\mathbb S)\rightarrow M(\mc A)$ be the
+inclusion map.  Then, if $\mathbb G=(\mc B,\Phi_\mc B)$ is a compact quantum group,
+and $\theta:\mc B\rightarrow M(\mc A)$ is a non-degenerate\footnote{As $\mc B$ is
+unital, this is equivalent to $\theta$ being a unital $*$-homomorphism} $*$-homomorphism such
+that $\Phi\circ\theta = (\theta\otimes\theta)\circ \Phi_{\mc B}$, there is a unique
+$*$-homomorphism $\mf b\theta:\mc B\rightarrow\AP(\mathbb S)$ such that
+$\chi_{\mathbb S} \circ \mf b\theta = \theta$.
+
+If $S$ is a topological semigroup, $\mc B=C_0(S)$, and $\Phi$ is the canonical
+dualisation of the product on $S$, then $\AP(\mathbb S)$ is isomorphic to
+$C(S^\ap)$, where $S^\ap$ is the classical Bohr compactification of $S$.
+
+
+\subsection{For the Fourier algebra}
+
+We now turn our attention to the Fourier algebra $A(G)$.  Let $G$ be a locally compact
+group.  Let $\lambda:G\rightarrow\mc B(L^2(G))$ be the left-regular representation
+\[ (\lambda(s)f)(t) = f(s^{-1}t) \qquad (f\in L^2(G), s,t\in G). \]
+By integrating, we get a contractive homomorphism $\lambda:L^1(G)\rightarrow\mc B(L^2(G))$.
+The norm closure of $\lambda(L^1(G))$ is $C^*_r(G)$, the \emph{reduced group C$^*$-algebra
+of $G$}.  If we take the weak-operator topology closure, then we get $VN(G)$, the
+\emph{group von Neumann algebra}.  Equivalently, $VN(G)$ is the von Neumann algebra
+generated by $\{ \lambda(s) : s\in G \}$.
+The predual of $VN(G)$ is $A(G)$, the \emph{Fourier
+algebra of $G$}.  This algebra is in standard position on $L^2(G)$, and so, for each
+$a\in A(G)$, there exists $f,g\in L^2(G)$ such that
+\[ \ip{T}{a} = \hip{Tf}{g} \qquad (T\in VN(G)). \]
+We can treat $a$ as a member of $C_0(G)$ by
+\[ a(s) = \ip{\lambda(s)}{a} = \hip{\lambda(s)f}{g}
+= \int_G f(s^{-1}t) \overline{g(t)} \ dt \qquad (s\in G). \]
+
+We identify $L^2(G)\otimes L^2(G)$ with $L^2(G\times G)$.  Define a unitary
+$W\in\mc B(L^2(G\times G)$ by
+\[ (Wf)(s,t) = f(s,st) \qquad (s,t\in G, f\in L^2(G\times G)). \]
+Then we may define a map $\Delta:VN(G)\rightarrow VN(G)\overline\otimes VN(G)
+= VN(G\times G)$ by
+\[ \Delta(T) = W^*(T\otimes I)W \qquad (T\in VN(G)). \]
+We can check that $\Delta(\lambda(s)) = \lambda(s)\otimes\lambda(s) = \lambda(s,s)$
+for $s\in G$.  Then $\Delta$ is a normal $*$-homomorphism which, in the appropriate
+sense, is co-associative.  The pre-adjoint of $\Delta$ turns $A(G)$ into a Banach
+algebra, and we can check that $A(G)$ becomes a (not closed) subalgebra of $C_0(G)$.
+
+There are lots of ways to define the \emph{multiplier} algebra of a C$^*$-algebra.
+For us, the most useful approach shall be to follow Pedersen, \cite[Section~3.12]{ped}.
+If $\mc A$ is a C$^*$-algebra inside $\mc B(H)$, and $\mc M\subseteq\mc B(H)$ is the von
+Neumann algebra generated by $\mc A$, then we can identify $M(\mc A)$ with
+\[ \{ x\in\mc M : ax,xa \in \mc A \ (a\in\mc A) \}. \]
+
+Using this, we can identify $M(C^*_r(G))$ as a $*$-subalgebra of $VN(G)$.  By the
+definition of the spacial tensor product, we identify $C^*_r(G)\otimes C^*_r(G)$ with
+a $*$-subalgebra of $VN(G)\overline\otimes VN(G) = VN(G\times G)$.  Hence,
+again, we identify $M(C^*_r(G)\otimes C^*_r(G))$ with a $*$-subalgebra of
+$VN(G\times G)$.  We can then show that $\Delta$ restricts to give a coassociative,
+non-degenerate $*$-homomorphism $C^*_r(G) \rightarrow M(C^*_r(G) \otimes C^*_r(G))$, and 
+so $\mathbb G = (C^*_r(G),\Delta)$ is a quantum semigroup (which obviously also has extra
+structure).  It is simple to see that $\lambda(s) \in M(C^*_r(G))$ for each $s\in G$.
+For further details, see \cite[Chapter~8]{lance}, although be aware that Lance looks
+at the right-regular representation.
+
+Following Chou, \cite{chou}, we define $\Trig(\hat G)$ to be the linear span of
+$\{\lambda(s):s\in G\}$ in $M(C^*_r(G))$, and let $C^*_\delta(G)$ be the closure.
+
+\begin{proposition}
+We have that $\Delta$ restricts to $C^*_\delta(G)$ to give a $*$-homomorphism
+$C^*_\delta(G) \rightarrow C^*_\delta(G)\otimes C^*_\delta(G)$, turning $C^*_\delta(G)$
+into a compact quantum group.
+\end{proposition}
+\begin{proof}
+By the definition of the spacial tensor norm, it is clear that $C^*_\delta(G)\otimes
+C^*_\delta(G)$ is the closure of $\Trig(\hat G)\otimes\Trig(\hat G)$ inside
+$VN(G)\overline\otimes VN(G) = VN(G\times G)$.  It is hence easy to see that
+$C^*_\delta(G) \otimes C^*_\delta(G)$ can be identified with $C^*_\delta(G\times G)$,
+from which it follows that $\Delta$ does map $C^*_\delta(G)$ into
+$C^*_\delta(G) \otimes C^*_\delta(G)$.
+
+Notice that
+\[ (\lambda(st^{-1})\otimes I)\Delta(\lambda(t))
+= (\lambda(st^{-1})\otimes I)(\lambda(t)\otimes\lambda(t))
+= \lambda(s)\otimes\lambda(t) \qquad (s,t\in G). \]
+It hence follows that $\{ (a\otimes I)\Delta(b) : a,b\in C^*_\delta(G) \}$ is
+linearly dense in $C^*_\delta(G) \otimes C^*_\delta(G) = C^*_\delta(G\times G)$.
+Similarly, $\{ (I\otimes a)\Delta(b) : a,b\in C^*_\delta(G) \}$ is
+linearly dense in $C^*_\delta(G) \otimes C^*_\delta(G)$, showing that $C^*_\delta(G)$
+is a compact quantum group.
+\end{proof}
+
+We remark that the Haar state $h$ on $C^*_\delta(G)$ is simply the map
+given by $h(\lambda(s)) = 1$ if $s=e_G$ the identity of $G$, and $0$ otherwise.
+Let $G_d$ be the group $G$ with the discrete topology.  If $G_d$ is amenable,
+then we know that $C^*_r(G_d) = C^*(G_d)$, and so it follows that $C^*_\delta(G)$
+is isomorphic to $C^*_r(G_d)$, and in particular, the Haar state is faithful.
+In general, it seems possible that the Haar state could fail to be faithful.
+\footnote{Can we find an example?  Do we address this later?}
+
+\begin{theorem}
+Let $\mathbb G = (C^*_r(G),\Delta)$ be as above.  Then $\mf b\mathbb G = (C^*_\delta(G),\Delta)$.
+\end{theorem}
+\begin{proof}
+By the universal property, we have that $C^*_\delta(G) \subseteq \AP(\mathbb G)$.
+We follow S{\o}ltan's construction of $\AP(\mathbb G)$; in particular, we shall show
+that if $T\in\mc B(H)\otimes M(C^*_r(G))$ is a unitary representation, then each
+matrix element of $T$ is a member of $\Trig(\hat G)$.  This shows that $\AP(\mathbb G)
+\subseteq C^*_\delta(G)$, as required.
+
+If $H$ is $n$-dimensional, then we can identify $\mc B(H)$ with $\mathbb M_n$,
+and so identify $\mc B(H)\otimes M(C^*_r(G))$ with $\mathbb M_n(M(C^*_r(G))$.
+Let $T=(T_{ij})_{1\leq i,j\leq n}$.  Then $T$ being a representation implies that
+\[ \Delta(T_{ij}) = \sum_{k=1}^n T_{ik}\otimes T_{kj} \qquad (1\leq i,j\leq n), \]
+see before Lemma~2.6 in \cite{soltan}.  Again, we identify $M(C^*_r(G))$ with a
+$*$-subalgebra of $VN(G)$.  Now, $VN(G)$ becomes an $A(G)$-module, and we have that
+\[ \ip{a\cdot T}{b} = \ip{T}{ab} = \ip{\Delta(T)}{a\otimes b} \qquad (a,b\in A(G), T\in VN(G)). \]
+Hence
+\[ a\cdot T_{ij} = \sum_{k=1}^n \ip{T_{ik}}{a} T_{kj} \qquad (1\leq i,j\leq n, a\in A(G)), \]
+showing in particular that the map $A(G)\rightarrow VN(G), a\mapsto a\cdot T_{ij}$
+is finite-rank.  By Chou's work, \cite[Proposition~2.3]{chou}, this implies that
+$T_{ij}\in\Trig(\hat G)$.  It is easy to see (compare \cite[Lemma~2.6]{soltan}) that
+the set of matrix elements of $T$ agrees with the linear span of $\{ T_{ij} : 
+1\leq i,j\leq n\}$, so we conclude that each matrix element of $T$ is a member of
+$\Trig(\hat G)$, as required.
+\end{proof}
+
+Instead of working with $C^*_r(G)$, one could start with the full C$^*$-algebra
+$C^*(G)$.  S{\o}ltan shows that $\AP(C^*(G))$ is also equal to the closure of
+the span of $\{\lambda(s) : s\in G\}$, but this time inside $M(C^*(G))$.
+
+The following tells us that, informally, there is no ``bigger'' compact quantum
+group sitting inside $VN(G)$ than $C^*_\delta(G)$.
+
+\begin{corollary}
+Let $G$ be a locally compact group, and let $\mc A \subseteq VN(G)$ be a unital
+$*$-subalgebra such that $\Delta$ restricts to give a map $\mc A \rightarrow
+\mc A \otimes \mc A$, making $(\mc A,\Delta)$ into a compact quantum group.
+Then $\mc A \subseteq C^*_\delta(G)$.
+\end{corollary}
+\begin{proof}
+Let $A$ be the subspace of $\mc A$ formed by taking the linear span of matrix
+elements of finite-dimensional, unitary representations of $\mc A$.  By
+\cite[Theorem~2.2]{woro1} we know that $A$ is a dense $*$-subalgebra of $\mc A$.
+Examining the above proof, we see immediately that $A \subseteq \Trig(\hat G)$,
+from which it follows that $\mc A \subseteq C^*_\delta(G)$.
+\end{proof}
+
+If we replaced $VN(G)$ by $M(C^*_r(G))$, then the above corollary would immediately
+follow from the definition of $\mf b C^*_r(G)$ as a universal object behaving
+as a compactification.
+
+
+
+
+
+\section{Almost periodic elements}
+
+Let $\mc A$ be a Banach algebra, and turn $\mc A'$ into an $\mc A$-bimodule in the usual way,
+\[ \ip{a\cdot\mu}{b} = \ip{\mu}{ba}, \quad
+\pi{\mu\cdot a}{b} = \ip{\mu}{ab} \qquad (a,b\in\mc A,\mu\in\mc A'). \]
+For $\mu\in\mc A'$, let $\mc R_\mu:\mc A\rightarrow\mc A'$ be the map $\mc R_\mu(a) = a\cdot\mu$.
+When $\mc R_\mu$ is a \emph{compact} operator, we say that $\mu$ is \emph{almost periodic},
+written $\mu\in\ap(\mc A)$.  We can show that $\ap(\mc A)$ is a closed $\mc A$-submodule of
+$\mc A'$.
+
+We similarly turn $\mc A''$ into an $\mc A$-bimodule.  We define an action of $\mc A''$ on
+$\mc A'$ by
+\[ \ip{\Phi\cdot\mu}{a} = \ip{\Phi}{\mu\cdot a}, \quad
+\ip{\mu\cdot\Phi}{a} = \ip{\Phi}{a\cdot\mu} \qquad (a\in\mc A, \mu\in\mc A', \Phi\in\mc A''). \]
+Then we define two bilinear maps $\aone,\atwo$ on $\mc A''$ by
+\[ \ip{\Phi\aone\Psi}{\mu} = \ip{\Phi}{\Psi\cdot\mu}, \quad
+\ip{\Phi\atwo\Psi}{\mu} = \ip{\Psi}{\mu\cdot\Phi} \qquad (\Phi,\Psi\in\mc A'', \mu\in\mc A'). \]
+Then $\aone$ and $\atwo$ are algebra products, called the \emph{Arens products}.  They
+both extend the product on $\mc A$ in the sense that, for $a\in\mc A$ and $\Phi\in\mc A''$,
+ $a\cdot\Phi = \kappa_{mc A}(a)\aone\Phi = \kappa_{\mc A}(a)\atwo\Phi$, and similarly on the
+right.  See \cite[???]{Dales} or \cite[???]{palmer1} for further details.
+
+The following result essentially appears a number of times in the literture, but for our
+purposes, is well treated by Lau in \cite[Theorem~5.8]{lau}.
+
+\begin{proposition}\label{ap_for_banalg}
+Let $\mc A$ be a Banach algebra, and let $X\subseteq\mc A'$ be a closed $\mc A$-submodule.
+Then the following are equivalent:
+\begin{enumerate}
+\item $X\subseteq\ap(\mc A)$;
+\item Treating $X'$ as a quotient of $A''$, both Arens products drop to well-defined
+algebra products on $X'$, these products agree, and the resuling product is jointly
+weak$^*$-continuous on bounded subsets.
+\end{enumerate}
+\end{proposition}
+
+Let $G$ be a locally compact group.  We say that $f\in C^b(G)$ is \emph{almost periodic}
+if the set $\{ f_s : s\in G \}$ is relatively compact in $C^b(G)$, where $f_s(t) = f(ts)$ for
+$t\in G$.  Using bounded approximate identities, it is easy (compare with \cite{ulger}) to
+show that $\ap(L^1(G)) = \ap(G)$.  We know that $\ap(G)$ is a closed $*$-subalgebra of
+$C^b(G)$, with spectrum $G^\ap$ say.  Then $G$ is dense in $G^\ap$, and extending the product
+from $G$ to $G^\ap$ turns $G^\ap$ into a compact group.  Furthermore, $G^\ap$ then agrees with
+the Bohr compactification of $G$.  See \cite{BJM} for further details.
+
+As $A(G)$ can be thought of as being the ``dual'' to $L^1(G)$ (hence extending the abelian case,
+when $A(G) = L^1(\hat G)$), it is not surprising that $\ap(A(G))$ has been studied.  It is
+customary to write $\ap(\hat G)$ for $\ap(A(G))$.  See the references \cite[Section~7]{DR},
+\cite{gran1}, \cite{lau}, \cite{hu}, \cite{must}, and especially \cite{chou} for further
+details.  It would be fair to say that, for a general locally compact group $G$, the above
+proposition is about all that is known about $\ap(\hat G)$ (though see below for our discussion
+of invariant states).
+
+When $G$ is abelian, by applying Fourier transforms, we can show that $\ap(\hat G) = C^*_\delta(G)
+= \mf b C^*_r(G)$.  Similarly, when $G$ is discrete and amenable, we have $\ap(\hat G) =
+\mf b C^*_r(G)$ (this follows from inspecting \cite[Proposition~2]{gran1}).  We do not know,
+in general, if $\ap(\hat G)$ need be a C$^*$-algebra.  Chou defines a group $G$ to have the
+\emph{dual Bohr approximation property} if $\ap(\hat G) = C^*_\delta(G) = \mf bC^*_r(G)$.
+In \cite{chou}, and in Rinder's correction \cite{rindler}, it is shown that there exist
+compact groups $G$ which fail to have the dual Bohr approximation property.  Indeed, the idea
+is as follows.  Let $E\in VN(G)$ be the rank-one operator defined by
+\[ E(f) = \Big(\int_G f \Big) 1_G \qquad (f\in L^2(G)), \]
+where $1_G$ is the constant function on $G$.  Then it is possible for both
+$\mc R_E$ to be compact, that is, $E\in\ap(\hat G)$, and for us to have that
+$E\not\in C^*_\delta(G)$.
+
+
+
+\subsection{Approximation properties}
+
+We recall the classical notion of the \emph{Banach space approximation property}
+(see, for example, \cite[Section~1.e]{lt}).  Recall that a Banach space $E$ has the
+approximation property if, for any Banach space $F$, any compact operator $T:F\rightarrow E$
+can be norm-approximated by finite-rank operators.  In general, an operator which can be
+approximated by finite-ranks is said to be \emph{approximable}.
+
+The Banach space $L^\infty(G)$ always has the approximation property, so in particular,
+asking that $\mc R_\mu$, for $\mu\in L^\infty(G)$, be compact is the same as asking if we can
+approximate $\mc R_\mu$ be finite-rank maps.  However, we know that $VN(G)$ has the approximation
+property if and only if $VN(G)$ is \emph{amenable} as a Banach algebra, which in turn is
+equivalent to $VN(G)$ being isomorphic to an algebra of the from
+\[ \bigoplus_{k=1}^n \mathbb M_{n_k} \otimes C(X_k). \]
+It follows that this is equivalent to $G$ being abelian by finite.  See \cite[Section~6.1]{runde}
+for details.  In conclusion, for general groups $G$, we have no reason to believe that
+$\mc R_\mu$ being compact is equivalent to $\mc R_\mu$ being approximable.
+
+So perhaps a better definition of $\mu$ being ``almost periodic'' would be to ask for
+$\mc R_\mu$ to be approximable.  We shall show below that if we do ask this, but in the
+category of \emph{operator spaces}, then we get $\mf b C^*_r(G)$, as we might hope.  In the 
+remainder of this section, we shall study some stronger forms of ``approximable'' and show that
+each of these gives rise to a notion of ``almost periodic'' leading back to $\mf b C^*_r(G)$,
+at least when the group $G$ is amenable.
+
+Firstly, define $\ap^{(1)}(\hat G)$ to be the collection of $T\in VN(G)$ such that $\mc R_T$ can
+be norm-approximated by maps of the form $\mc R_S$, where $S\in VN(G)$ and $\mc R_S$ is
+finite-rank.  It follows immediately from Chou's work that $\ap_1(\hat G)=\mf bC^*_r(G)$.
+Indeed, by \cite[Proposition~2.3]{chou}, we have that $\mc R_S$ is finite-rank if and only if
+$S\in\Trig(\hat G)$.  If $G$ is amenable, then $\|\mc R_S\| = \|S\|$ for all $S\in VN(G)$.
+So immediately, $\ap_1(\hat G) = \mf b C^*_r(G)$, when $G$ is amenable.
+
+Define $\ap^{(2)}(\hat G)$ to be the collection of $T\in VN(G)$ such that $\mc R_T$ can be
+norm-approximated by finite-rank $A(G)$-module maps $\theta:A(G)\rightarrow VN(G)$.
+That is, maps $\theta$ such that $\theta(ab) = a\cdot\theta(b)$ for $a,b\in A(G)$.  If $A(G)$
+has a bounded approximate identity, that is, $G$ is amenable, then a standard argument shows
+that $\theta$ is of the form $\mc R_S$ for some $S\in VN(G)$.  Infact, the following proposition
+shows that this is true in general, and so $\ap_2(\hat G) = \ap_1(\hat G)$.
+
+\begin{proposition}
+A finite-rank map $\theta:A(G)\rightarrow VN(G)$ is a module map if and only if
+$\theta=\mc R_S$ for some $S\in\Trig(\hat G)$.
+\end{proposition}
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
+\section{Operator-space structures}
+
+There is now ample evidence that when considering the Fourier algebra $A(G)$, if we view
+$A(G)$ as a \emph{completely-contractive Banach algebra} with its canonical operator-space
+structure, then $A(G)$ behaves much more closely to being the ``dual'' of $L^1(G)$, as compared
+to viewing $A(G)$ as simply a Banach algebra.  See, for example, Ruan's original paper
+\cite{ruan} or Runde's survey article \cite{runde1}.
+
+We shall assume standard results about operator spaces, as found in \cite{ER} or \cite{pisier}.
+The important fact for us is that $A(G) \proten A(G) = A(G\times G)$, where $\proten$ denotes
+the \emph{operator space projective tensor product}.  Let $T\in VN(G)$, and consider the
+map $\mc R_T$, now treated as a completely bounded map $A(G)\rightarrow VN(G)$.  Now,
+$\mc{CB}(A(G),VN(G)) = (A(G)\proten A(G))'$, and we see that
+\[ \ip{\mc R_T(a)}{b} = \ip{T}{ab} = \ip{\Delta(T)}{a\otimes b} \qquad(a,b\in A(G), \]
+so $R_T(a) = (a\otimes\id)\Delta(T)$.  As $A(G)\proten A(G) = A(G\times G)$, we have
+\[ \|\mc R_T\|_{cb} = \sup\{ |\ip{\Delta(T)}{a}| : a\in A(G\times G), \|a\|\leq 1 \}
+= \|\Delta(T)\| = \|T\|. \]
+
+We start by showing that operator space versions of $\ap^{(1)}$ and $\ap^{(2)}$ allow us to
+remove the condition that $G$ be amenable.
+
+Let $\ap^{(1)}_{cb}(\hat G)$ be the collection of $T\in VN(G)$ such that $\mc R_T$ can be
+approximated, in the completely bounded norm, by maps of the form $\mc R_S$ such that
+$\mc R_S$ is finite rank.  Again, this means that $S\in\Trig(\hat G)$.  However, we now have
+that $\|\mc R_T-\mc R_S\|_{cb} = \|T-S\|$, so we immediately conclude that $T\in C^*_\delta(G)$.
+Hence $\ap^{(1)}_{cb}(\hat G) = \mf bC^*_r(G)$.
+
+Similarly, if we define $\ap^{(2)}_{cb}(\hat G)$ to be the collection of $T\in VN(G)$ such
+that $\mc R_T$ can be approximated, in the completely bounded norm, but finite-rank module
+maps, then as above, $\ap^{(2)}_{cb}(\hat G) = \ap^{(1)}_{cb}(\hat G) = \mf bC^*_r(G)$.
+
+These are very strong approximation properties.  A much weaker notion is the following.
+Define $\ap_{cb}(\hat G)$ be the the collection of $R\in VN(G)$ such that $\mc R_T$ can
+be approximated, in the completely bounded norm, by arbitrary finite-rank maps from $A(G)$ to
+$VN(G)$.  From \cite[Proposition~8.1.2]{ER}, it follows that $T\in\ap_{cb}(\hat G)$ if and
+only if $\Delta(T) \in VN(G) \inten VN(G)$, where here $\inten$ denotes the operator space
+\emph{injective tensor product}.  This agrees with the minimal (or spacial) C$^*$-tensor
+product (see \cite[Proposition~8.1.6]{ER}).
+
+\begin{theorem}
+Let $G$ be a discrete group.  Then $\ap_{cb}(\hat G) = \mf b C^*_r(G) = C^*_r(G)$.
+\end{theorem}
+\begin{proof}
+Let $(e_s)_{s\in G}$ be the standard orthonormal basis of $\ell^2(G)$.  Each $T\in VN(G)$
+is uniquely determined by the vector $\tau = T(e_{e_G})\in\ell^2(G)$, as $T(x) = \tau * x$
+for $x\in\ell^2(G)$, namely the convolution of $\tau$ with $x$.  Under this, we identify
+$VN(G)$ with the collection of vectors $\tau\in\ell^2(G)$ such that convolution by $\tau$ on
+the left gives a bounded operators on $\ell^2(G)$.  Under this identification, $\Trig(G)$
+is simply the linear span of $(e_s)$ in $\ell^2(G)$.
+
+Similarly, we identify $VN(G\times G)$ with a subspace of $\ell^2(G\times G) = \ell^2(G)
+\otimes \ell^2(G)$.  We can check that if $T\in VN(G)$ and $\tau = T(e_{e_G})$, then
+\[ \Delta(T)(e_{(e_G,e_G)}) = ( \tau_s \delta_{s,t} )_{(s,t)\in G\times G}, \]
+where $\delta_{s,t}$ is the Kronecker delta.
+
+Define $U:\ell^2(G)\rightarrow\ell^2(G\times G)$ and
+$V:\ell^2(G\times G)\rightarrow\ell^2(G)$ by $U(e_s) = e_{(s,s)}$ and $V(e_{(s,t)})
+= \delta_{s,t} e_s$ for $s,t\in G$.
+Define a map $\theta:VN(G\times G) \rightarrow \ell^2(G)$ as follows.  For $R\in VN(G\times G)$,
+let $\rho = R(e_{(e_G,e_G)}) \in \ell^2(G\times G)$.  Then define
+\[ \theta(R) = \big( \rho_{s,s} \big)_{s\in G} \in \ell^2(G). \]
+Notice that
+\[ VRU(e_s) = VR(e_{(s,s)}) = \sum_{t,r\in G} \rho_{(t,r)} V(e_{(ts,rs)})
+= \sum_{t,r\in G} \rho_{(t,r)} \delta_{t,r} e_{ts}
+= \sum_{t\in G} \rho_{(t,t)} e_{ts} = \theta(R) * e_s. \]
+Consequently, convolution on the left by $\theta(R)$ is a bounded operator, namely
+$VRU$, and so $\theta(R)$ induces a member of $VN(G)$.
+Notice that
+\[ V\Delta(T)U = T \qquad (T\in VN(G)). \]
+
+If $T,S\in VN(G)$, say $\tau = T(e_{e_G})$ and $\sigma = S(e_{e_G})$, then
+\[ \theta(T\otimes S) = \big( \tau_s \sigma_s \big)_{s\in G}. \]
+The Cauchy-Schwarz inequality shows that $\theta(T\otimes S)\in\ell^1(G)\subseteq\ell^2(G)$,
+and so $V(T\otimes S)U$ is in the closure of $\Trig(\hat G)$, that is, in $C^*_r(G)$.
+By continuity, we conclude that $V R U \in C^*_r(G)$ for any $R\in VN(G) \inten VN(G)$.
+Hence, if $T\in VN(G)$ is such that $\Delta(T)\in VN(G)\inten VN(G)$, then
+$T = V\Delta(T)U \in C^*_r(G)$, as required.
+\end{proof}
+
+We shall have to work harder to prove this result for arbitrary locally compact groups $G$.
+
+One approach would be the following.  Let $\Lambda$ be the collection on compact,
+symmetric neighbourhoods of $e_G$.  For $T\in VN(G)$, let
+\[ x_K = T(\chi_K) |K|^{-1} \qquad (K\in\Lambda). \]
+Then $(x_K)$ is a (in general unbounded) net in $L^2(G)$.  However, the net
+$(\chi_K |K|^{-1})_{K\in\Lambda}$ is a bounded net in $L^1(G)$ which is an approximate
+identity.  In particular, for $f\in L^2(G)$, we have that $f = \lim_K |K|^{-1}
+\chi_K * f$.  As $VN(G)$ commutes with convolution on the right, we have that
+\[ T(f) = \lim_K T(\chi_K*f) |K|^{-1} = \lim_K T(\chi_K)*f |K|^{-1}
+= \lim_K x_K * f \qquad (f\in L^2(G)), \]
+where the limit is in norm.
+
+Thus $(x_K)$ determines $T$; in fact, if $\psi$ is the left Plancherel weight, then
+$\psi(T^*T) = \limsup_K \|x_K\|_2^2$.  For $T\in VN(G)$ and $f,g\in L^2(G)$, we have
+\[ (T^*(f)|g) = (f|T(g)) = \lim_K (f|x_K*g) = \lim_K (x_K^* * f|g). \]
+Hence $|K|^{-1} T^*(\chi_K)$ might not be $x_K^*$, but the net $(x_K^*)_{K\in\Lambda}$
+does induce the operator $T^*$.  Here the involution is that on $L^1(G)$,
+\[ x_K^*(s) = \Delta(s^{-1}) \overline{ x_K(s) } \qquad (s\in G). \]
+As this is only defined upon $L^2(G) \cap L^1(G)$, we technically have to perturb
+each $x_K$ so that it is integrable.
+
+The problem is then to reconstruct $(x_K)$ from $\Delta(T)$ in some way.  For example,
+\[ x_K\otimes f = |K|^{-1} T(\chi_K)\otimes f = |K|^{-1} W\Delta(T)W^*(\chi_K\otimes f)
+\qquad (f\in L^2(G)). \]
+Hence, for $f\in L^2(G)$, we have that
+\begin{align*} (x_K|f) &= \lim_L |L|^{-1} (x_K\otimes\chi_L | f\otimes \chi_L) \\
+&= \lim_L |L|^{-1} |K|^{-1} \big( \Delta(T)W^*(\chi_K\otimes \chi_L) |
+   W^*(f\otimes\chi_L) \big).
+\end{align*}
+For each $L\in\Lambda$, let $e_L = \chi_L |L|^{-1/2}$, so that $\|e_L\|_2=1$.  Then,
+for any $R\in\mc B(L^2(G\times G))$, the following limit exists
+\[ \phi_{K,f}(R) = \lim_{L\in\Lambda} |K|^{-1} \big( RW^*(\chi_K\otimes e_L) |
+W^*(f\otimes e_L) \big), \]
+so that $\phi_{K,f}\in\mc B(L^2(G\times G))'$ with $\|\phi_{K,f}\|\leq |K|^{-1/2}
+\|f\|_2$.  We then have that
+\[ (x_K|f) = \ip{\phi_{K,f}}{\Delta(T)} \qquad (f\in L^2(G)). \]
+
+\textbf{How are we going to do this?}
+
+\noindent\textbf{Idea:}
+We can do the above for $VN(G\times G)$ as well, of course.  The idea, copying what we
+did in the discrete case, would be to find some \emph{bounded} operation which takes
+a ``convolution family'' given by $VN(G\times G)$ and gives back a ``convolution
+family'' inducing a member of $VN(G)$.  We want this to be an inverse to $\Delta$, and
+which hopefully does interesting things to $VN(G) \otimes VN(G)$.
+
+
+
+
+\begin{thebibliography}{99}
+\normalsize
+\newcommand{\bibbook}[3]{\textsc{#1}, \emph{#2}, (#3).}
+\newcommand{\bibpaper}[6]{\textsc{#1}, `#2', \emph{#3} #4 (#5) #6.}
+\newcommand{\bibpreprint}[2]{\textsc{#1}, `#2', preprint.}
+
+\bibitem{BMT} \bibpaper{E. B\'edos, G.\,J. Murphy, L. Tuset}
+   {Co-amenability of compact quantum groups}
+   {J. Geom. Phys.}{40}{2001}{130--153}
+
+\bibitem{BJM} \bibbook{J.\,F. Berglund, H.\,D. Junghenn, P. Milnes}
+   {Analysis on semigroups.  Function spaces, compactifications, representations}
+   {John Wiley \& Sons, Inc., New York, 1989}
+
+\bibitem{chou} \bibpaper{C. Chou}
+   {Almost periodic operators in ${\rm VN}(G)$}
+   {Trans. Amer. Math. Soc.}{317}{1990}{229--253}
+
+\bibitem{Dales} \bibbook{H.\,G. Dales}
+   {Banach algebras and automatic continuity}
+   {Clarendon Press, Oxford, 2000}
+
+\bibitem{DR} \bibpaper{C.\,F. Dunkl, D.\,E. Ramirez}
+   {Weakly almost periodic functionals on the Fourier algebra}
+   {Trans. Amer. Math. Soc.}{185}{1973}{501--514}
+
+\bibitem{DR2} \bibpaper{C.\,F. Dunkl, D.\,E. Ramirez}
+   {Existence and nonuniqueness of invariant means on {${\mc L}\sp{\infty }(\hat G)$}}
+   {Proc. Amer. Math. Soc.}{32}{1972}{525--530}
+
+\bibitem{ER} \bibbook{E.\,G. Effros, Z.-J. Ruan}
+   {Operator spaces}
+   {Oxford University Press, New York, 2000}
+
+\bibitem{eymard} \bibpaper{P. Eymard}
+   {L'alg\`ebre de Fourier d'un groupe localement compact}
+   {Bull. Soc. Math. France}{92}{1964}{181--236}
+
+\bibitem{gran1} \bibpaper{E.\,E. Granirer}
+   {Weakly almost periodic and uniformly continuous functionals
+   on the Fourier algebra of any locally compact group}
+   {Trans. Amer. Math. Soc.}{189}{1974}{371--382}
+
+\bibitem{hu} \bibpaper{Z. Hu}
+   {Open subgroups of $G$ and almost periodic functionals on $A(G)$}
+   {Proc. Amer. Math. Soc.}{128}{2000}{2473--2478}
+
+\bibitem{kus} \bibpaper{J. Kustermans}
+   {Locally compact quantum groups in the universal setting.}
+   {Internat. J. Math.}{12}{2001}{289--338}
+
+\bibitem{kv} \bibpaper{J. Kustermans, S. Vaes}
+   {Locally compact quantum groups}
+   {Ann. Sci. \'Ecole Norm. Sup. (4)}{33}{2000}{837--934}
+
+\bibitem{lance} \bibbook{E.\,C. Lance}
+   {Hilbert $C\sp *$-modules. A toolkit for operator algebraists}
+   {London Mathematical Society Lecture Note Series, 210.
+   Cambridge University Press, Cambridge, 1995.}
+
+\bibitem{lau} \bibpaper{A.\,T.-M. Lau}
+   {Uniformly continuous functionals on the Fourier algebra of any locally compact group}
+   {Trans. Amer. Math. Soc.}{251}{1979}{39--59}
+
+\bibitem{lt} \bibbook{J. Lindenstrauss, L. Tzafriri}
+   {Classical Banach spaces. I.}
+   {Springer-Verlag, Berlin-New York, 1977}
+
+\bibitem{maes} \bibpaper{A. Maes, A. Van Daele}
+   {Notes on compact quantum groups}
+   {Nieuw Arch. Wisk. (4)}{16}{1998}{73--112}
+
+\bibitem{murphy} \bibpaper{G.\,J. Murphy, L. Tuset}
+   {Aspects of compact quantum group theory}
+   {Proc. Amer. Math. Soc.}{132}{2004}{3055--3067}
+
+\bibitem{must} \bibpaper{H.\,S. Mustafayev}
+   {Almost periodic functionals on some class of Banach algebras}
+   {Rocky Mountain J. Math.}{36}{2006}{1977--1997}
+
+\bibitem{ped} \bibbook{G.\,K. Pedersen}
+   {$C\sp{*} $-algebras and their automorphism groups}
+   {Academic Press, Inc., London-New York, 1979}
+
+\bibitem{pisier} \bibbook{G. Pisier}
+   {Introduction to operator space theory}
+   {Cambridge University Press, Cambridge, 2003}
+
+\bibitem{renaud} \bibpaper{P.\,F. Renaud}
+   {Invariant means on a class of von {N}eumann algebras}
+   {Trans. Amer. Math. Soc.}{170}{1972}{285--291}
+
+\bibitem{rindler} \bibpaper{H. Rindler}
+   {On weak containment properties}
+   {Proc. Amer. Math. Soc.}{114}{1992}{561--563}
+
+\bibitem{ruan} \bibpaper{Z.-J. Ruan}
+   {The operator amenability of $A(G)$}
+   {Amer. J. Math.}{117}{1995}{1449--1474}
+
+\bibitem{runde} \bibbook{V. Runde}
+   {Lectures on amenability}
+   {Lecture Notes in Mathematics, 1774. Springer-Verlag, Berlin, 2002}
+
+\bibitem{runde1} \bibpaper{V. Runde}
+   {Applications of operator spaces to abstract harmonic analysis}
+   {Expo. Math.}{22}{2004}{317--363}
+
+\bibitem{soltan} \bibpaper{P.\,M. So\l tan}
+   {Quantum Bohr compactification}
+   {Illinois J. Math.}{49}{2005}{1245--1270}
+
+\bibitem{tak1} \bibbook{M. Takesaki}
+   {Theory of operator algebras. I.}
+   {Springer-Verlag, New York-Heidelberg, 1979}
+
+\bibitem{ulger} \bibpaper{A. \"Ulger}
+   {Continuity of weakly almost periodic functionals on $L\sp 1(G)$}
+   {Quart. J. Math. Oxford Ser. (2)}{37}{1986}{495--497}
+
+\bibitem{vn1} \bibpaper{J. v.\,Neumann}
+   {Almost periodic functions in a group. I.}
+   {Trans. Amer. Math. Soc.}{36}{1934}{445--492}
+
+\bibitem{woro1} \textsc{S.\,L. Woronowicz},
+   `Compact quantum groups', in \emph{Symetries quantiques} (Les Houches, 1995),
+   845--884, North-Holland, Amsterdam, 1998. 
+
+\end{thebibliography}
+
+\bigskip\noindent\emph{Email:} \texttt{matt.daws@cantab.net}
+
+\end{document}
+

@@ -21,11 +21,16 @@ A very simple example, to check things work.  The [LaTeX file](sources/make4ht%2
 
 (On Windows, using MikTeX, I had to install some additional packages, which happens automatically, if slowly.)  We should find `main.htm`.  Open this is a web browser, and you should see the expected output.  Right click on the displayed formula to see the MathJax context menu.
 
-- You can see the [HTML output here](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main.hhm).
+- You can see the [HTML output here](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main.htm).
 - The _bad news_: On testing with ChromeVox, the mathematics is not really read at all.  More on this later.
 
 
 ## More complicated example
 
-Here we use a (very old, stalled, partly complete) research paper of mine as an example.  The LaTeX is standard, but complicated.  There are theorem environments, custom commands etc.
+Here we use a (very old, stalled, partly complete) research paper of mine as an example.  The LaTeX is standard, but complicated.  There are theorem environments, custom commands etc.  We run the same command to `make4ht`.  [View the HTML output here](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%202/main.htm).
+
+- It works!
+- The output is a single file.  It is immediately clear that my custom macros are not being picked up by MathJax.
+- The footnotes are bizarrely placed as entirely separate HTML files
+- Theorems are so forth look correct.
 

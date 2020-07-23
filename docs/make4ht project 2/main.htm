@@ -1,0 +1,2015 @@
+<!DOCTYPE html> 
+<html lang="en-US" xml:lang="en-US" > 
+<head><title>Quantum compactifications of Fourier Algebras</title> 
+<meta  charset="utf-8" /> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)" /> 
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" type="text/css" href="main.css" /> 
+<meta name="src" content="main.tex" /> 
+ <script type="text/x-mathjax-config"> MathJax.Hub.Config({ 'fast-preview': {disabled: true}, TeX: { extensions: ["color.js","AMSmath.js"], equationNumbers: { autoNumber: "AMS" } }, extensions: ["tex2jax.js"], tex2jax: {  inlineMath: [ ["\\\(","\\\)"] ], displayMath: [ ['$$','$$'], ["\\[","\\]"] ], processEscapes: true, processEnvironments: true } }); </script> 
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>  
+</head><body 
+>
+   <div class="maketitle">
+
+
+
+<h2 class="titleHead">Quantum compactifications of Fourier Algebras</h2>
+<div class="author" ><span 
+class="cmr-12">Matthew Daws</span></div><br />
+<div class="date" ><span 
+class="cmr-12">July 23, 2020</span></div>
+   </div>
+   <div 
+class="abstract" 
+>
+<div class="center" 
+>
+<!--l. 47--><p class="noindent" >
+</p><!--l. 47--><p class="noindent" ><span 
+class="cmbx-9">Abstract</span></p></div>
+     <!--l. 48--><p class="indent" >    <span 
+class="cmr-9">To write.</span>
+     </p><!--l. 50--><p class="indent" >   <span 
+class="cmr-9">2000 </span><span 
+class="cmti-9">Mathematics Subject Classification: </span><span 
+class="cmr-9">Primary ???; Secondary ???</span>
+     </p><!--l. 54--><p class="indent" >   <span 
+class="cmti-9">Keywords: </span><span 
+class="cmr-9">???</span>
+</p>
+</div>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-12">1   </span></span> <a 
+ id="x1-10001"></a><span 
+class="cmr-12">Introduction</span></h3>
+<!--l. 59--><p class="noindent" ><span 
+class="cmr-12">The classical Bohr Compactification of a topological (semi)group can be defined in terms of</span>
+<span 
+class="cmr-12">unitary representations (see the original paper of von Neumann </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xvn1"><span 
+class="cmr-12">29</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">or see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XBJM"><span 
+class="cmr-12">2</span></a><span 
+class="cmr-12">, ???]</span></span> <span 
+class="cmr-12">for a modern</span>
+<span 
+class="cmr-12">treatment). Recently, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, So</span><span 
+class="cmr-12">łtan has extended this idea to give a definition of a</span>
+<span 
+class="cmr-12">compactification of a quantum semigroup, a process which yields a compact quantum group, in</span>
+<span 
+class="cmr-12">the sense of Woronowicz (see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xworo1"><span 
+class="cmr-12">30</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">).</span>
+</p><!--l. 68--><p class="indent" >   <span 
+class="cmr-12">For a locally compact group</span> \(G\)<span 
+class="cmr-12">, we can describe the Bohr (or equivalently </span><span 
+class="cmti-12">almost periodic</span><span 
+class="cmr-12">)</span>
+<span 
+class="cmr-12">compactification of</span> \(G\) <span 
+class="cmr-12">in terms of a certain function space on</span> \(G\)<span 
+class="cmr-12">. Indeed, we can describe</span>
+<span 
+class="cmr-12">this function space in terms of the Banach algebra</span> \(L^1(G)\) <span 
+class="cmr-12">and its dual</span> \(L^\infty (G)\)<span 
+class="cmr-12">. We turn the dual</span>
+<span 
+class="cmr-12">into an</span> \(L^1(G)\)<span 
+class="cmr-12">-bimodule in the usual way, and then define</span> \(f\in L^\infty (G)\) <span 
+class="cmr-12">to be </span><span 
+class="cmti-12">almost periodic </span><span 
+class="cmr-12">if the</span>
+<span 
+class="cmr-12">map </span>\[ R_f:L^1(G)\rightarrow L^\infty (G); \quad a\mapsto a\cdot f \qquad (a\in L^1(G)) \] <span 
+class="cmr-12">is compact. If we let</span> \(\ap (G)\subseteq L^\infty (G)\) <span 
+class="cmr-12">be the collection of almost periodic elements, then each</span>
+<span 
+class="cmr-12">member of</span> \(\ap (G)\) <span 
+class="cmr-12">is continuous;</span> \(\ap (G)\) <span 
+class="cmr-12">is a unital C</span>\(^*\)<span 
+class="cmr-12">-subalgebra of</span> \(L^\infty (G)\)<span 
+class="cmr-12">; if the character space of</span>
+\(\ap (G)\) <span 
+class="cmr-12">is</span> \(G^\ap \)<span 
+class="cmr-12">, then</span> \(G^\ap \) <span 
+class="cmr-12">becomes a compact group containing a dense homeomorphic image of</span>
+\(G\)<span 
+class="cmr-12">.</span>
+</p><!--l. 83--><p class="indent" >   <span 
+class="cmr-12">For an abelian locally compact group</span> \(G\)<span 
+class="cmr-12">, we have the Fourier transform</span> \(L^1(G)\rightarrow C_0(\hat G)\)<span 
+class="cmr-12">, where</span> \(\hat G\) <span 
+class="cmr-12">is the dual</span>
+<span 
+class="cmr-12">group to</span> \(G\)<span 
+class="cmr-12">. The image is defined as the </span><span 
+class="cmti-12">Fourier algebra </span><span 
+class="cmr-12">of</span> \(\hat G\)<span 
+class="cmr-12">, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XDales"><span 
+class="cmr-12">4</span></a><span 
+class="cmr-12">, ???]</span></span><span 
+class="cmr-12">. For a non-abelian group</span>
+\(G\)<span 
+class="cmr-12">, Eymard defined an commutative Banach algebra of functions on</span> \(G\)<span 
+class="cmr-12">, written</span> \(A(G)\)<span 
+class="cmr-12">, which extends the</span>
+<span 
+class="cmr-12">definition of the Fourier algebra, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xeymard"><span 
+class="cmr-12">8</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. As the definition of </span><span 
+class="cmti-12">almost periodic </span><span 
+class="cmr-12">above makes sense</span>
+<span 
+class="cmr-12">for any Banach algebra, it is not surprising that the space of almost periodic functionals on</span>
+<span 
+class="cmr-12">the Fourier algebra has been studied. The definition appears to have been made in</span>
+<span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XDR"><span 
+class="cmr-12">5</span></a><span 
+class="cmr-12">, Section</span><span 
+class="cmr-12"> 7]</span></span><span 
+class="cmr-12">, where the authors write</span> \(\ap (\hat G)\)<span 
+class="cmr-12">, in analogy with the abelian case. Further</span>
+
+<span 
+class="cmr-12">study was undertaken in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xgran1"><span 
+class="cmr-12">9</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">and </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlau"><span 
+class="cmr-12">14</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, for example. An excellent survey (which we</span>
+<span 
+class="cmr-12">use extensively below) is Chou’s paper </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. See also </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xhu"><span 
+class="cmr-12">10</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">and </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xmust"><span 
+class="cmr-12">18</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">for more recent</span>
+<span 
+class="cmr-12">work.</span>
+</p><!--l. 98--><p class="indent" >   <span 
+class="cmr-12">The space</span> \(\ap (\hat G)\) <span 
+class="cmr-12">is not nearly as well understood as</span> \(\ap (G)\)<span 
+class="cmr-12">, and it appears that no study has been</span>
+<span 
+class="cmr-12">undertaken of</span> \(\ap (\hat G)\) <span 
+class="cmr-12">in the context of a categorical notion of “compactification”. The aim of this</span>
+<span 
+class="cmr-12">paper is to undertake such a study.</span>
+</p><!--l. 103--><p class="indent" >   <span 
+class="cmbx-12">Stuff about approximation properties</span><span 
+class="cmr-12">.</span>
+</p><!--l. 105--><p class="indent" >   <span 
+class="cmbx-12">AIMS:</span> </p>
+     <ul class="itemize1">
+     <li class="itemize"><span 
+class="cmr-12">Heavily using </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, we introduce a modified definition of “almost periodic”, and show</span>
+     <span 
+class="cmr-12">the resulting space exactly coincides with the quantum compactification constructed</span>
+     <span 
+class="cmr-12">by So</span><span 
+class="cmr-12">łtan, once appropriate identifications are made.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">We try to use operator-space methods.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">In general</span> \(\ap (\hat G)\) <span 
+class="cmr-12">is not a C</span>\(^*\)<span 
+class="cmr-12">-algebra; this is our major problem with what we could call</span>
+     <span 
+class="cmr-12">the “classical case”. However, does there perhaps exist a </span><span 
+class="cmti-12">completely isometry</span> \(\Delta :\ap (\hat G)\rightarrow \ap (\hat G)\inten \ap (\hat G)\)<span 
+class="cmr-12">.</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">Proceeding with the above, can we apply some abstract procedure to</span> \(\ap (\hat G)\) <span 
+class="cmr-12">to obtain a</span>
+     <span 
+class="cmr-12">von Neumann algebra? Use the Haar functional here (which we know does exist).</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">What is the </span><span 
+class="cmti-12">reduced </span><span 
+class="cmr-12">compact quantum group which we get from So</span><span 
+class="cmr-12">łtan’s methods?</span>
+     <span 
+class="cmr-12">Can we perhaps recover this from</span> \(\ap (\hat G)\)<span 
+class="cmr-12">?</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">This about the tensor product: key fact which Soltan uses to show that</span> \(\AP (\mathbb G)\) <span 
+class="cmr-12">is an algebra.</span>
+     <span 
+class="cmr-12">Can we adapt to</span> \(\ap (\hat G)\) <span 
+class="cmr-12">somehow?</span>
+     </li>
+     <li class="itemize"><span 
+class="cmr-12">Anything else?</span></li></ul>
+<!--l. 126--><p class="indent" >   <span 
+class="cmr-12">Notation:</span> \(\mc B(E)\)<span 
+class="cmr-12">. Dual space, dual pairing. Notation for inner products.</span>
+</p><!--l. 133--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-12">2   </span></span> <a 
+ id="x1-20002"></a><span 
+class="cmr-12">Compact quantum group compactifications</span></h3>
+<!--l. 135--><p class="noindent" ><span 
+class="cmr-12">We shall quickly sketch So</span><span 
+class="cmr-12">łtan’s work in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. Following So</span><span 
+class="cmr-12">łtan, we shall define a </span><span 
+class="cmti-12">compact</span>
+<span 
+class="cmti-12">quantum semigroup </span><span 
+class="cmr-12">to be a pair</span> \(\mathbb S=(\mc A,\Phi )\) <span 
+class="cmr-12">where</span> \(\mc A\) <span 
+class="cmr-12">is a unital C</span>\(^*\)<span 
+class="cmr-12">-algebra and</span> \(\Phi :\mc A\rightarrow \mc A\otimes \mc A\) <span 
+class="cmr-12">is a </span><span 
+class="cmti-12">co-associative product</span><span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">Here, and henceforth,</span> \(\mc A\otimes \mc A\) <span 
+class="cmr-12">is the </span><span 
+class="cmti-12">minimal </span><span 
+class="cmr-12">or </span><span 
+class="cmti-12">spacial </span><span 
+class="cmr-12">tensor product of</span> \(\mc A\) <span 
+class="cmr-12">with itself. To</span>
+<span 
+class="cmr-12">say that</span> \(\Phi \) <span 
+class="cmr-12">is a co-associative product means that</span> \(\Phi \) <span 
+class="cmr-12">is a unital</span> \(*\)<span 
+class="cmr-12">-homomorphism and</span>
+\((\Phi \otimes \id )\Phi = (\id \otimes \Phi )\Phi \)<span 
+class="cmr-12">.</span>
+</p><!--l. 144--><p class="indent" >   <span 
+class="cmr-12">A </span><span 
+class="cmti-12">compact quantum group </span><span 
+class="cmr-12">is a compact quantum semigroup</span> \(\mathbb G=(\mc A,\Phi )\) <span 
+class="cmr-12">such that the linear span of the</span>
+<span 
+class="cmr-12">either of the sets</span> \(\{(a\otimes I)\Phi (b) : a,b\in \mc A\}\) <span 
+class="cmr-12">or</span> \(\{(I\otimes a)\Phi (b) : a,b\in \mc A\}\) <span 
+class="cmr-12">is dense in</span> \(\mc A\otimes \mc A\)<span 
+class="cmr-12">. These density conditions imply a large amount of structure:</span>
+<span 
+class="cmr-12">see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xworo1"><span 
+class="cmr-12">30</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">or the survey </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xmaes"><span 
+class="cmr-12">16</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">for further details. The density conditions can actually be weakened:</span>
+<span 
+class="cmr-12">see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xmurphy"><span 
+class="cmr-12">17</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">.</span>
+
+</p><!--l. 151--><p class="indent" >   <span 
+class="cmr-12">Compact quantum groups have a very rich (co)representation theory. For example, every</span>
+<span 
+class="cmr-12">irreducible corepresentation is finite-dimensional. As in the classical case, Søltan’s quantum</span>
+<span 
+class="cmr-12">compactification is stated in terms of finite-dimensional corepresentations. We first need the</span>
+<span 
+class="cmr-12">notion of a </span><span 
+class="cmti-12">quantum semigroup</span><span 
+class="cmr-12">. This is a pair</span> \(\mathbb S=(\mc A,\Phi )\) <span 
+class="cmr-12">where</span> \(\mc A\) <span 
+class="cmr-12">is a C</span>\(^*\)<span 
+class="cmr-12">-algebra (now not assumed unital)</span>
+<span 
+class="cmr-12">and</span> \(\Phi :\mc A\rightarrow M(\mc A\otimes \mc A)\) <span 
+class="cmr-12">is a co-associative, non-degenerate</span> \(*\)<span 
+class="cmr-12">-homomorphism. Here</span> \(M(\mc A\otimes \mc A)\) <span 
+class="cmr-12">is the </span><span 
+class="cmti-12">multiplier algebra </span><span 
+class="cmr-12">of</span> \(\mc A\otimes \mc A\)<span 
+class="cmr-12">. See</span>
+<span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlance"><span 
+class="cmr-12">13</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, for example, for further details about multiplier algebras. Recall that to say that</span> \(\Phi \) <span 
+class="cmr-12">is</span>
+<span 
+class="cmti-12">non-degenerate </span><span 
+class="cmr-12">means that</span> \(\Phi (\mc A)(\mc A\otimes \mc A)\) <span 
+class="cmr-12">is dense in</span> \(\mc A\otimes \mc A\)<span 
+class="cmr-12">. As such, there is a unique extension of</span> \(\Phi \) <span 
+class="cmr-12">to a</span>
+\(*\)<span 
+class="cmr-12">-homomorphism</span> \(M(\mc A)\rightarrow M(\mc A\otimes \mc A)\)<span 
+class="cmr-12">. Similarly,</span> \(\Phi \otimes \id \) <span 
+class="cmr-12">and</span> \(\id \otimes \Phi \) <span 
+class="cmr-12">make sense as maps</span> \(M(\mc A\otimes \mc A)\rightarrow M(\mc A\otimes \mc A\otimes \mc A)\)<span 
+class="cmr-12">, and so it makes sense to speak of</span> \(\Phi \) <span 
+class="cmr-12">as</span>
+<span 
+class="cmr-12">being co-associative.</span>
+</p><!--l. 166--><p class="indent" >   <span 
+class="cmr-12">We now state the definitions which Søltan makes in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. However, we shall state them in</span>
+<span 
+class="cmr-12">different ways which are more compatible with our Banach algebra approach. Fix a quantum</span>
+<span 
+class="cmr-12">semigroup</span> \(\mathbb S=(\mc A,\Phi )\)<span 
+class="cmr-12">. In the usual way, we use</span> \(\Phi \) <span 
+class="cmr-12">to induce an associative product on</span> \(\mc A'\)<span 
+class="cmr-12">, turning</span> \(\mc A'\) <span 
+class="cmr-12">into a</span>
+<span 
+class="cmr-12">Banach algebra, by </span>\[ \ip{\mu \lambda }{a} = \ip{\mu \otimes \lambda }{\Phi (a)} \qquad (a\in \mc A, \mu ,\lambda \in \mc A'). \]
+</p><!--l. 174--><p class="indent" >   <span 
+class="cmr-12">Let</span> \(X\) <span 
+class="cmr-12">be a finite-dimensional Banach space, and let</span> \(T\in \mc B(X)\otimes M(\mc A)\)<span 
+class="cmr-12">. For each</span> \(\mu \in \mc A'\)<span 
+class="cmr-12">, let</span> \(T_\mu \in \mc B(X)\) <span 
+class="cmr-12">be the slice map,</span> \(T_\mu = (\id \otimes \mu )T\)<span 
+class="cmr-12">. We say</span>
+<span 
+class="cmr-12">that</span> \(T\) <span 
+class="cmr-12">is a </span><span 
+class="cmti-12">bounded representation </span><span 
+class="cmr-12">if</span> \(T\) <span 
+class="cmr-12">is invertible in the algebra</span> \(\mc B(X)\otimes M(\mc A)\)<span 
+class="cmr-12">, and the map</span> \(\mc A'\rightarrow \mc B(X), \mu \mapsto T_\mu \) <span 
+class="cmr-12">is an algebra</span>
+<span 
+class="cmr-12">homomorphism. Notice that we always have the </span><span 
+class="cmti-12">trivial representation</span><span 
+class="cmr-12">,</span> \(I_X\otimes I_{\mc A}\)<span 
+class="cmr-12">. It is easy to construct</span>
+<span 
+class="cmr-12">direct sums of bounded representations, and with a little more effort, tensor products, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">,</span>
+<span 
+class="cmr-12">Section</span><span 
+class="cmr-12"> 2.1]</span></span><span 
+class="cmr-12">.</span>
+</p><!--l. 183--><p class="indent" >   <span 
+class="cmr-12">Let</span> \(\ad :\mc B(X)\rightarrow \mc B(X'), S\mapsto S'\) <span 
+class="cmr-12">be the </span><span 
+class="cmti-12">adjoint map</span><span 
+class="cmr-12">. For</span> \(T\in \mc B(X)\otimes M(\mc A)\)<span 
+class="cmr-12">, let</span> \(T^T = (\ad \otimes \id )T\) <span 
+class="cmr-12">be the </span><span 
+class="cmti-12">transpose </span><span 
+class="cmr-12">of</span> \(T\)<span 
+class="cmr-12">. Then a bounded representation</span> \(T\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmti-12">admissible </span><span 
+class="cmr-12">if</span> \(T^T\) <span 
+class="cmr-12">is invertible in</span> \(\mc B(X')\otimes M(\mc A)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 188--><p class="indent" >   <span 
+class="cmr-12">When</span> \(H\) <span 
+class="cmr-12">is a (finite-dimensional) Hilbert space,</span> \(\mc B(H)\otimes M(\mc A)\) <span 
+class="cmr-12">becomes a C</span>\(^*\)<span 
+class="cmr-12">-algebra. When a</span>
+<span 
+class="cmr-12">bounded representation</span> \(T\in \mc B(H)\otimes M(\mc A)\) <span 
+class="cmr-12">is a unitary, we say that</span> \(T\) <span 
+class="cmr-12">is a </span><span 
+class="cmti-12">unitary representation</span><span 
+class="cmr-12">. We say</span>
+<span 
+class="cmr-12">that a bounded representation</span> \(T\in \mc B(X)\otimes M(\mc A)\) <span 
+class="cmr-12">is </span><span 
+class="cmti-12">similar to a unitary representation </span><span 
+class="cmr-12">if</span> \(X\) <span 
+class="cmr-12">admits a</span>
+<span 
+class="cmr-12">Hilbert space structure turning</span> \(T\) <span 
+class="cmr-12">into a unitary representation. Then Søltan shows that</span>
+<span 
+class="cmr-12">admissible representations are similar to unitary representations; the converse need not</span>
+<span 
+class="cmr-12">hold.</span>
+</p><!--l. 196--><p class="indent" >   <span 
+class="cmr-12">Let</span> \(T\in \mc B(X)\otimes M(\mc A)\) <span 
+class="cmr-12">be an admissible representation, and let</span> \(\lambda \in \mc B(X)'\)<span 
+class="cmr-12">. Then</span> \((\lambda \otimes \id )T\in M(\mc A)\) <span 
+class="cmr-12">is a </span><span 
+class="cmti-12">matrix element of</span> \(T\)<span 
+class="cmr-12">. Søltan shows</span>
+<span 
+class="cmr-12">that the linear span of matrix elements of all admissible representations is a unital</span>
+\(*\)<span 
+class="cmr-12">-subalgebra of</span> \(M(\mc A)\)<span 
+class="cmr-12">, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">, Proposition</span><span 
+class="cmr-12"> 2.12]</span></span><span 
+class="cmr-12">. Let</span> \(\AP (\mathbb S)\) <span 
+class="cmr-12">be the closure of this algebra, so</span> \(\AP (\mathbb S)\subseteq M(\mc A)\) <span 
+class="cmr-12">is a</span>
+<span 
+class="cmr-12">unital C</span>\(^*\)<span 
+class="cmr-12">-algebra. Let</span> \(\Delta _{\AP (\mathbb S)}\) <span 
+class="cmr-12">be the restriction of</span> \(\Phi \) <span 
+class="cmr-12">to</span> \(\AP (\mathbb S)\)<span 
+class="cmr-12">. Then</span> \(\Delta _{\AP (\mathbb S)}\) <span 
+class="cmr-12">is a</span> \(*\)<span 
+class="cmr-12">-homomorphism from</span> \(\AP (\mathbb S)\)
+<span 
+class="cmr-12">to</span> \(\AP (\mathbb S)\otimes \AP (\mathbb S)\)<span 
+class="cmr-12">, and the pair</span> \(\mf b\mathbb S = (\AP (\mathbb S),\Delta _{\AP (\mathbb S)})\) <span 
+class="cmr-12">satisfies the density conditions to become a compact quantum</span>
+<span 
+class="cmr-12">group.</span>
+</p><!--l. 208--><p class="indent" >   <span 
+class="cmr-12">The compact quantum group</span> \(\mf b\mathbb S\) <span 
+class="cmr-12">satisfies the expected universal property.</span>
+<span 
+class="cmr-12">Let</span> \(\chi _{\mathbb S}:\AP (\mathbb S)\rightarrow M(\mc A)\) <span 
+class="cmr-12">be the inclusion map. Then, if</span> \(\mathbb G=(\mc B,\Phi _\mc B)\) <span 
+class="cmr-12">is a compact quantum group, and</span> \(\theta :\mc B\rightarrow M(\mc A)\) <span 
+class="cmr-12">is a</span>
+<span 
+class="cmr-12">non-degenerate</span><span class="footnote-mark"><a 
+href="ma2.htm#fn1x0"><sup class="textsuperscript">1</sup></a></span><a 
+ id="x1-2001f1"></a>
+\(*\)<span 
+class="cmr-12">-homomorphism such that</span> \(\Phi \circ \theta = (\theta \otimes \theta )\circ \Phi _{\mc B}\)<span 
+class="cmr-12">, there is a unique</span> \(*\)<span 
+class="cmr-12">-homomorphism</span> \(\mf b\theta :\mc B\rightarrow \AP (\mathbb S)\) <span 
+class="cmr-12">such that</span> \(\chi _{\mathbb S} \circ \mf b\theta = \theta \)<span 
+class="cmr-12">.</span>
+</p><!--l. 217--><p class="indent" >   <span 
+class="cmr-12">If</span> \(S\) <span 
+class="cmr-12">is a topological semigroup,</span> \(\mc B=C_0(S)\)<span 
+class="cmr-12">, and</span> \(\Phi \) <span 
+class="cmr-12">is the canonical dualisation of the product on</span> \(S\)<span 
+class="cmr-12">, then</span> \(\AP (\mathbb S)\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmr-12">isomorphic to</span> \(C(S^\ap )\)<span 
+class="cmr-12">, where</span> \(S^\ap \) <span 
+class="cmr-12">is the classical Bohr compactification of</span> \(S\)<span 
+class="cmr-12">.</span>
+</p>
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-12">2.1   </span></span> <a 
+ id="x1-30002.1"></a><span 
+class="cmr-12">For the Fourier algebra</span></h4>
+<!--l. 224--><p class="noindent" ><span 
+class="cmr-12">We now turn our attention to the Fourier algebra</span> \(A(G)\)<span 
+class="cmr-12">. Let</span> \(G\) <span 
+class="cmr-12">be a locally compact group. Let</span> \(\lambda :G\rightarrow \mc B(L^2(G))\) <span 
+class="cmr-12">be the</span>
+<span 
+class="cmr-12">left-regular representation </span>\[ (\lambda (s)f)(t) = f(s^{-1}t) \qquad (f\in L^2(G), s,t\in G). \] <span 
+class="cmr-12">By integrating, we get a contractive homomorphism</span> \(\lambda :L^1(G)\rightarrow \mc B(L^2(G))\)<span 
+class="cmr-12">. The norm</span>
+<span 
+class="cmr-12">closure of</span> \(\lambda (L^1(G))\) <span 
+class="cmr-12">is</span> \(C^*_r(G)\)<span 
+class="cmr-12">, the </span><span 
+class="cmti-12">reduced group C</span>\(^*\)<span 
+class="cmti-12">-algebra of</span> \(G\)<span 
+class="cmr-12">. If we take the weak-operator topology closure,</span>
+<span 
+class="cmr-12">then we get</span> \(VN(G)\)<span 
+class="cmr-12">, the </span><span 
+class="cmti-12">group von Neumann algebra</span><span 
+class="cmr-12">. Equivalently,</span> \(VN(G)\) <span 
+class="cmr-12">is the von Neumann algebra</span>
+<span 
+class="cmr-12">generated by</span> \(\{ \lambda (s) : s\in G \}\)<span 
+class="cmr-12">. The predual of</span> \(VN(G)\) <span 
+class="cmr-12">is</span> \(A(G)\)<span 
+class="cmr-12">, the </span><span 
+class="cmti-12">Fourier algebra of</span> \(G\)<span 
+class="cmr-12">. This algebra is in standard position</span>
+<span 
+class="cmr-12">on</span> \(L^2(G)\)<span 
+class="cmr-12">, and so, for each</span> \(a\in A(G)\)<span 
+class="cmr-12">, there exists</span> \(f,g\in L^2(G)\) <span 
+class="cmr-12">such that </span>\[ \ip{T}{a} = \hip{Tf}{g} \qquad (T\in VN(G)). \] <span 
+class="cmr-12">We can treat</span> \(a\) <span 
+class="cmr-12">as a member of</span> \(C_0(G)\) <span 
+class="cmr-12">by</span>
+
+\[ a(s) = \ip{\lambda (s)}{a} = \hip{\lambda (s)f}{g} = \int _G f(s^{-1}t) \overline{g(t)} \ dt \qquad (s\in G). \]
+</p><!--l. 240--><p class="indent" >   <span 
+class="cmr-12">We identify</span> \(L^2(G)\otimes L^2(G)\) <span 
+class="cmr-12">with</span> \(L^2(G\times G)\)<span 
+class="cmr-12">. Define a unitary</span> \(W\in \mc B(L^2(G\times G)\) <span 
+class="cmr-12">by </span>\[ (Wf)(s,t) = f(s,st) \qquad (s,t\in G, f\in L^2(G\times G)). \] <span 
+class="cmr-12">Then we may define a map</span> \(\Delta :VN(G)\rightarrow VN(G)\overline \otimes VN(G) = VN(G\times G)\) <span 
+class="cmr-12">by </span>\[ \Delta (T) = W^*(T\otimes I)W \qquad (T\in VN(G)). \] <span 
+class="cmr-12">We can check that</span> \(\Delta (\lambda (s)) = \lambda (s)\otimes \lambda (s) = \lambda (s,s)\)
+<span 
+class="cmr-12">for</span> \(s\in G\)<span 
+class="cmr-12">. Then</span> \(\Delta \) <span 
+class="cmr-12">is a normal</span> \(*\)<span 
+class="cmr-12">-homomorphism which, in the appropriate sense, is co-associative. The</span>
+<span 
+class="cmr-12">pre-adjoint of</span> \(\Delta \) <span 
+class="cmr-12">turns</span> \(A(G)\) <span 
+class="cmr-12">into a Banach algebra, and we can check that</span> \(A(G)\) <span 
+class="cmr-12">becomes a (not closed)</span>
+<span 
+class="cmr-12">subalgebra of</span> \(C_0(G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 251--><p class="indent" >   <span 
+class="cmr-12">There are lots of ways to define the </span><span 
+class="cmti-12">multiplier </span><span 
+class="cmr-12">algebra of a C</span>\(^*\)<span 
+class="cmr-12">-algebra. For us, the most</span>
+<span 
+class="cmr-12">useful approach shall be to follow Pedersen, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xped"><span 
+class="cmr-12">19</span></a><span 
+class="cmr-12">, Section</span><span 
+class="cmr-12"> 3.12]</span></span><span 
+class="cmr-12">. If</span> \(\mc A\) <span 
+class="cmr-12">is a C</span>\(^*\)<span 
+class="cmr-12">-algebra</span>
+<span 
+class="cmr-12">inside</span> \(\mc B(H)\)<span 
+class="cmr-12">, and</span> \(\mc M\subseteq \mc B(H)\) <span 
+class="cmr-12">is the von Neumann algebra generated by</span> \(\mc A\)<span 
+class="cmr-12">, then we can identify</span> \(M(\mc A)\) <span 
+class="cmr-12">with</span>
+\[ \{ x\in \mc M : ax,xa \in \mc A \ (a\in \mc A) \}. \]
+</p><!--l. 257--><p class="indent" >   <span 
+class="cmr-12">Using this, we can identify</span> \(M(C^*_r(G))\) <span 
+class="cmr-12">as a</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(VN(G)\)<span 
+class="cmr-12">. By the definition of the spacial tensor</span>
+<span 
+class="cmr-12">product, we identify</span> \(C^*_r(G)\otimes C^*_r(G)\) <span 
+class="cmr-12">with a</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(VN(G)\overline \otimes VN(G) = VN(G\times G)\)<span 
+class="cmr-12">. Hence, again, we identify</span> \(M(C^*_r(G)\otimes C^*_r(G))\) <span 
+class="cmr-12">with a</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(VN(G\times G)\)<span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">We can then show that</span> \(\Delta \) <span 
+class="cmr-12">restricts to give a coassociative, non-degenerate</span> \(*\)<span 
+class="cmr-12">-homomorphism</span> \(C^*_r(G) \rightarrow M(C^*_r(G) \otimes C^*_r(G))\)<span 
+class="cmr-12">, and</span>
+<span 
+class="cmr-12">so</span> \(\mathbb G = (C^*_r(G),\Delta )\) <span 
+class="cmr-12">is a quantum semigroup (which obviously also has extra structure). It is simple to see that</span> \(\lambda (s) \in M(C^*_r(G))\)
+<span 
+class="cmr-12">for each</span> \(s\in G\)<span 
+class="cmr-12">. For further details, see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlance"><span 
+class="cmr-12">13</span></a><span 
+class="cmr-12">, Chapter</span><span 
+class="cmr-12"> 8]</span></span><span 
+class="cmr-12">, although be aware that Lance looks at the</span>
+<span 
+class="cmr-12">right-regular representation.</span>
+</p><!--l. 268--><p class="indent" >   <span 
+class="cmr-12">Following Chou, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, we define</span> \(\Trig (\hat G)\) <span 
+class="cmr-12">to be the linear span of</span> \(\{\lambda (s):s\in G\}\) <span 
+class="cmr-12">in</span> \(M(C^*_r(G))\)<span 
+class="cmr-12">, and let</span> \(C^*_\delta (G)\) <span 
+class="cmr-12">be the closure.</span>
+</p>
+   <div class="newtheorem">
+<!--l. 271--><p class="noindent" ><span class="head">
+<a 
+ id="x1-3001r1"></a>
+<span 
+class="cmbx-12">Proposition 2.1.</span>  </span><span 
+class="cmti-12">We have that</span> \(\Delta \) <span 
+class="cmti-12">restricts to</span> \(C^*_\delta (G)\) <span 
+class="cmti-12">to give a</span> \(*\)<span 
+class="cmti-12">-homomorphism</span> \(C^*_\delta (G) \rightarrow C^*_\delta (G)\otimes C^*_\delta (G)\)<span 
+class="cmti-12">, turning</span> \(C^*_\delta (G)\) <span 
+class="cmti-12">into</span>
+<span 
+class="cmti-12">a compact quantum group.</span>
+</p>
+   </div>
+<!--l. 276--><p class="indent" >
+</p>
+   <div class="proof">
+<!--l. 277--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span><span 
+class="cmr-12">By the definition of the spacial tensor norm, it is clear that</span> \(C^*_\delta (G)\otimes C^*_\delta (G)\) <span 
+class="cmr-12">is the closure of</span> \(\Trig (\hat G)\otimes \Trig (\hat G)\)
+<span 
+class="cmr-12">inside</span> \(VN(G)\overline \otimes VN(G) = VN(G\times G)\)<span 
+class="cmr-12">. It is hence easy to see that</span> \(C^*_\delta (G) \otimes C^*_\delta (G)\) <span 
+class="cmr-12">can be identified with</span> \(C^*_\delta (G\times G)\)<span 
+class="cmr-12">, from which it follows that</span> \(\Delta \)
+<span 
+class="cmr-12">does map</span> \(C^*_\delta (G)\) <span 
+class="cmr-12">into</span> \(C^*_\delta (G) \otimes C^*_\delta (G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 284--><p class="indent" >   <span 
+class="cmr-12">Notice that </span>\[ (\lambda (st^{-1})\otimes I)\Delta (\lambda (t)) = (\lambda (st^{-1})\otimes I)(\lambda (t)\otimes \lambda (t)) = \lambda (s)\otimes \lambda (t) \qquad (s,t\in G). \] <span 
+class="cmr-12">It hence follows that</span> \(\{ (a\otimes I)\Delta (b) : a,b\in C^*_\delta (G) \}\) <span 
+class="cmr-12">is linearly dense in</span> \(C^*_\delta (G) \otimes C^*_\delta (G) = C^*_\delta (G\times G)\)<span 
+class="cmr-12">. Similarly,</span> \(\{ (I\otimes a)\Delta (b) : a,b\in C^*_\delta (G) \}\) <span 
+class="cmr-12">is linearly dense in</span>
+\(C^*_\delta (G) \otimes C^*_\delta (G)\)<span 
+class="cmr-12">, showing that</span> \(C^*_\delta (G)\) <span 
+class="cmr-12">is a compact quantum group.</span>                                                       <span 
+class="cmr-12">□</span>
+</p>
+   </div>
+<!--l. 295--><p class="indent" >   <span 
+class="cmr-12">We remark that the Haar state</span> \(h\) <span 
+class="cmr-12">on</span> \(C^*_\delta (G)\) <span 
+class="cmr-12">is simply the map given by</span> \(h(\lambda (s)) = 1\) <span 
+class="cmr-12">if</span> \(s=e_G\) <span 
+class="cmr-12">the identity of</span> \(G\)<span 
+class="cmr-12">, and</span> \(0\)
+<span 
+class="cmr-12">otherwise. Let</span> \(G_d\) <span 
+class="cmr-12">be the group</span> \(G\) <span 
+class="cmr-12">with the discrete topology. If</span> \(G_d\) <span 
+class="cmr-12">is amenable, then we know</span>
+<span 
+class="cmr-12">that</span> \(C^*_r(G_d) = C^*(G_d)\)<span 
+class="cmr-12">, and so it follows that</span> \(C^*_\delta (G)\) <span 
+class="cmr-12">is isomorphic to</span> \(C^*_r(G_d)\)<span 
+class="cmr-12">, and in particular, the Haar state is</span>
+<span 
+class="cmr-12">faithful. In general, it seems possible that the Haar state could fail to be faithful.</span>
+<span class="footnote-mark"><a 
+href="ma3.htm#fn2x0"><sup class="textsuperscript">2</sup></a></span><a 
+ id="x1-3002f2"></a>
+</p>
+   <div class="newtheorem">
+<!--l. 303--><p class="noindent" ><span class="head">
+
+<a 
+ id="x1-3003r2"></a>
+<span 
+class="cmbx-12">Theorem 2.2.</span>  </span><span 
+class="cmti-12">Let</span> \(\mathbb G = (C^*_r(G),\Delta )\) <span 
+class="cmti-12">be as above. Then</span> \(\mf b\mathbb G = (C^*_\delta (G),\Delta )\)<span 
+class="cmti-12">.</span>
+</p>
+   </div>
+<!--l. 306--><p class="indent" >
+</p>
+   <div class="proof">
+<!--l. 307--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span><span 
+class="cmr-12">By the universal property, we have that</span> \(C^*_\delta (G) \subseteq \AP (\mathbb G)\)<span 
+class="cmr-12">. We follow Søltan’s construction of</span> \(\AP (\mathbb G)\)<span 
+class="cmr-12">; in</span>
+<span 
+class="cmr-12">particular, we shall show that if</span> \(T\in \mc B(H)\otimes M(C^*_r(G))\) <span 
+class="cmr-12">is a unitary representation, then each matrix element</span>
+<span 
+class="cmr-12">of</span> \(T\) <span 
+class="cmr-12">is a member of</span> \(\Trig (\hat G)\)<span 
+class="cmr-12">. This shows that</span> \(\AP (\mathbb G) \subseteq C^*_\delta (G)\)<span 
+class="cmr-12">, as required.</span>
+</p><!--l. 313--><p class="indent" >   <span 
+class="cmr-12">If</span> \(H\) <span 
+class="cmr-12">is</span> \(n\)<span 
+class="cmr-12">-dimensional, then we can identify</span> \(\mc B(H)\) <span 
+class="cmr-12">with</span> \(\mathbb M_n\)<span 
+class="cmr-12">, and so identify</span> \(\mc B(H)\otimes M(C^*_r(G))\) <span 
+class="cmr-12">with</span> \(\mathbb M_n(M(C^*_r(G))\)<span 
+class="cmr-12">. Let</span> \(T=(T_{ij})_{1\leq i,j\leq n}\)<span 
+class="cmr-12">. Then</span> \(T\)
+<span 
+class="cmr-12">being a representation implies that </span>\[ \Delta (T_{ij}) = \sum _{k=1}^n T_{ik}\otimes T_{kj} \qquad (1\leq i,j\leq n), \] <span 
+class="cmr-12">see before Lemma</span><span 
+class="cmr-12"> 2.6 in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. Again, we identify</span> \(M(C^*_r(G))\)
+<span 
+class="cmr-12">with a</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(VN(G)\)<span 
+class="cmr-12">. Now,</span> \(VN(G)\) <span 
+class="cmr-12">becomes an</span> \(A(G)\)<span 
+class="cmr-12">-module, and we have that </span>\[ \ip{a\cdot T}{b} = \ip{T}{ab} = \ip{\Delta (T)}{a\otimes b} \qquad (a,b\in A(G), T\in VN(G)). \] <span 
+class="cmr-12">Hence </span>\[ a\cdot T_{ij} = \sum _{k=1}^n \ip{T_{ik}}{a} T_{kj} \qquad (1\leq i,j\leq n, a\in A(G)), \] <span 
+class="cmr-12">showing in</span>
+<span 
+class="cmr-12">particular that the map</span> \(A(G)\rightarrow VN(G), a\mapsto a\cdot T_{ij}\) <span 
+class="cmr-12">is finite-rank. By Chou’s work, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">, Proposition</span><span 
+class="cmr-12"> 2.3]</span></span><span 
+class="cmr-12">, this implies</span>
+<span 
+class="cmr-12">that</span> \(T_{ij}\in \Trig (\hat G)\)<span 
+class="cmr-12">. It is easy to see (compare </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xsoltan"><span 
+class="cmr-12">26</span></a><span 
+class="cmr-12">, Lemma</span><span 
+class="cmr-12"> 2.6]</span></span><span 
+class="cmr-12">) that the set of matrix elements of</span> \(T\)
+<span 
+class="cmr-12">agrees with the linear span of</span> \(\{ T_{ij} : 1\leq i,j\leq n\}\)<span 
+class="cmr-12">, so we conclude that each matrix element of</span> \(T\) <span 
+class="cmr-12">is a member</span>
+<span 
+class="cmr-12">of</span> \(\Trig (\hat G)\)<span 
+class="cmr-12">, as required.</span>                                                                                              <span 
+class="cmr-12">□</span>
+</p>
+   </div>
+<!--l. 330--><p class="indent" >   <span 
+class="cmr-12">Instead of working with</span> \(C^*_r(G)\)<span 
+class="cmr-12">, one could start with the full C</span>\(^*\)<span 
+class="cmr-12">-algebra</span> \(C^*(G)\)<span 
+class="cmr-12">. Søltan shows that</span> \(\AP (C^*(G))\) <span 
+class="cmr-12">is also</span>
+<span 
+class="cmr-12">equal to the closure of the span of</span> \(\{\lambda (s) : s\in G\}\)<span 
+class="cmr-12">, but this time inside</span> \(M(C^*(G))\)<span 
+class="cmr-12">.</span>
+</p><!--l. 334--><p class="indent" >   <span 
+class="cmr-12">The following tells us that, informally, there is no “bigger” compact quantum group sitting</span>
+<span 
+class="cmr-12">inside</span> \(VN(G)\) <span 
+class="cmr-12">than</span> \(C^*_\delta (G)\)<span 
+class="cmr-12">.</span>
+</p>
+   <div class="newtheorem">
+<!--l. 337--><p class="noindent" ><span class="head">
+<a 
+ id="x1-3004r3"></a>
+<span 
+class="cmbx-12">Corollary 2.3.</span>  </span><span 
+class="cmti-12">Let</span> \(G\) <span 
+class="cmti-12">be a locally compact group, and let</span> \(\mc A \subseteq VN(G)\) <span 
+class="cmti-12">be a unital</span> \(*\)<span 
+class="cmti-12">-subalgebra such that</span>
+\(\Delta \) <span 
+class="cmti-12">restricts to give a map</span> \(\mc A \rightarrow \mc A \otimes \mc A\)<span 
+class="cmti-12">, making</span> \((\mc A,\Delta )\) <span 
+class="cmti-12">into a compact quantum group. Then</span> \(\mc A \subseteq C^*_\delta (G)\)<span 
+class="cmti-12">.</span>
+</p>
+   </div>
+<!--l. 343--><p class="indent" >
+</p>
+   <div class="proof">
+<!--l. 344--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span><span 
+class="cmr-12">Let</span> \(A\) <span 
+class="cmr-12">be the subspace of</span> \(\mc A\) <span 
+class="cmr-12">formed by taking the linear span of matrix elements of</span>
+<span 
+class="cmr-12">finite-dimensional, unitary representations of</span> \(\mc A\)<span 
+class="cmr-12">. By </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xworo1"><span 
+class="cmr-12">30</span></a><span 
+class="cmr-12">, Theorem</span><span 
+class="cmr-12"> 2.2]</span></span> <span 
+class="cmr-12">we know that</span> \(A\) <span 
+class="cmr-12">is a</span>
+<span 
+class="cmr-12">dense</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(\mc A\)<span 
+class="cmr-12">. Examining the above proof, we see immediately that</span> \(A \subseteq \Trig (\hat G)\)<span 
+class="cmr-12">, from which</span>
+<span 
+class="cmr-12">it follows that</span> \(\mc A \subseteq C^*_\delta (G)\)<span 
+class="cmr-12">.</span>                                                                                              <span 
+class="cmr-12">□</span>
+
+</p>
+   </div>
+<!--l. 351--><p class="indent" >   <span 
+class="cmr-12">If we replaced</span> \(VN(G)\) <span 
+class="cmr-12">by</span> \(M(C^*_r(G))\)<span 
+class="cmr-12">, then the above corollary would immediately follow from the definition of</span> \(\mf b C^*_r(G)\)
+<span 
+class="cmr-12">as a universal object behaving as a compactification.</span>
+</p>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-12">3   </span></span> <a 
+ id="x1-40003"></a><span 
+class="cmr-12">Almost periodic elements</span></h3>
+<!--l. 361--><p class="noindent" ><span 
+class="cmr-12">Let</span> \(\mc A\) <span 
+class="cmr-12">be a Banach algebra, and turn</span> \(\mc A'\) <span 
+class="cmr-12">into an</span> \(\mc A\)<span 
+class="cmr-12">-bimodule in the usual way, </span>\[ \ip{a\cdot \mu }{b} = \ip{\mu }{ba}, \quad \pi{\mu \cdot a}{b} = \ip{\mu }{ab} \qquad (a,b\in \mc A,\mu \in \mc A'). \] <span 
+class="cmr-12">For</span> \(\mu \in \mc A'\)<span 
+class="cmr-12">, let</span> \(\mc R_\mu :\mc A\rightarrow \mc A'\) <span 
+class="cmr-12">be the map</span> \(\mc R_\mu (a) = a\cdot \mu \)<span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">When</span> \(\mc R_\mu \) <span 
+class="cmr-12">is a </span><span 
+class="cmti-12">compact </span><span 
+class="cmr-12">operator, we say that</span> \(\mu \) <span 
+class="cmr-12">is </span><span 
+class="cmti-12">almost periodic</span><span 
+class="cmr-12">, written</span> \(\mu \in \ap (\mc A)\)<span 
+class="cmr-12">. We can show that</span> \(\ap (\mc A)\) <span 
+class="cmr-12">is a</span>
+<span 
+class="cmr-12">closed</span> \(\mc A\)<span 
+class="cmr-12">-submodule of</span> \(\mc A'\)<span 
+class="cmr-12">.</span>
+</p><!--l. 369--><p class="indent" >   <span 
+class="cmr-12">We similarly turn</span> \(\mc A''\) <span 
+class="cmr-12">into an</span> \(\mc A\)<span 
+class="cmr-12">-bimodule. We define an action of</span> \(\mc A''\) <span 
+class="cmr-12">on</span> \(\mc A'\) <span 
+class="cmr-12">by </span>\[ \ip{\Phi \cdot \mu }{a} = \ip{\Phi }{\mu \cdot a}, \quad \ip{\mu \cdot \Phi }{a} = \ip{\Phi }{a\cdot \mu } \qquad (a\in \mc A, \mu \in \mc A', \Phi \in \mc A''). \] <span 
+class="cmr-12">Then we define two</span>
+<span 
+class="cmr-12">bilinear maps</span> \(\aone ,\atwo \) <span 
+class="cmr-12">on</span> \(\mc A''\) <span 
+class="cmr-12">by </span>\[ \ip{\Phi \aone \Psi }{\mu } = \ip{\Phi }{\Psi \cdot \mu }, \quad \ip{\Phi \atwo \Psi }{\mu } = \ip{\Psi }{\mu \cdot \Phi } \qquad (\Phi ,\Psi \in \mc A'', \mu \in \mc A'). \] <span 
+class="cmr-12">Then</span> \(\aone \) <span 
+class="cmr-12">and</span> \(\atwo \) <span 
+class="cmr-12">are algebra products, called the </span><span 
+class="cmti-12">Arens products</span><span 
+class="cmr-12">. They both</span>
+<span 
+class="cmr-12">extend the product on</span> \(\mc A\) <span 
+class="cmr-12">in the sense that, for</span> \(a\in \mc A\) <span 
+class="cmr-12">and</span> \(\Phi \in \mc A''\)<span 
+class="cmr-12">,</span> \(a\cdot \Phi = \kappa _{mc A}(a)\aone \Phi = \kappa _{\mc A}(a)\atwo \Phi \)<span 
+class="cmr-12">, and similarly on the right. See </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XDales"><span 
+class="cmr-12">4</span></a><span 
+class="cmr-12">, ???]</span></span> <span 
+class="cmr-12">or</span>
+<span class="cite"><span 
+class="cmr-12">[</span><span 
+class="cmbx-12">?</span><span 
+class="cmr-12">, ???]</span></span> <span 
+class="cmr-12">for further details.</span>
+</p><!--l. 381--><p class="indent" >   <span 
+class="cmr-12">The following result essentially appears a number of times in the literture, but for our</span>
+<span 
+class="cmr-12">purposes, is well treated by Lau in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlau"><span 
+class="cmr-12">14</span></a><span 
+class="cmr-12">, Theorem</span><span 
+class="cmr-12"> 5.8]</span></span><span 
+class="cmr-12">.</span>
+</p>
+   <div class="newtheorem">
+<!--l. 384--><p class="noindent" ><span class="head">
+<a 
+ id="x1-4001r1"></a>
+<span 
+class="cmbx-12">Proposition 3.1.</span>  </span> <span 
+class="cmti-12">Let</span> \(\mc A\) <span 
+class="cmti-12">be a Banach algebra, and let</span> \(X\subseteq \mc A'\) <span 
+class="cmti-12">be a closed</span> \(\mc A\)<span 
+class="cmti-12">-submodule. Then the</span>
+<span 
+class="cmti-12">following are equivalent:</span>
+     </p><ol  class="enumerate1" >
+     <li 
+  class="enumerate" id="x1-4003x1">\(X\subseteq \ap (\mc A)\)<span 
+class="cmti-12">;</span>
+     </li>
+     <li 
+  class="enumerate" id="x1-4005x2"><span 
+class="cmti-12">Treating</span> \(X'\) <span 
+class="cmti-12">as a quotient of</span> \(A''\)<span 
+class="cmti-12">, both Arens products drop to well-defined algebra products</span>
+     <span 
+class="cmti-12">on</span> \(X'\)<span 
+class="cmti-12">, these products agree, and the resuling product is jointly weak</span>\(^*\)<span 
+class="cmti-12">-continuous on</span>
+     <span 
+class="cmti-12">bounded subsets.</span></li></ol>
+   </div>
+<!--l. 395--><p class="indent" >   <span 
+class="cmr-12">Let</span> \(G\) <span 
+class="cmr-12">be a locally compact group. We say that</span> \(f\in C^b(G)\) <span 
+class="cmr-12">is </span><span 
+class="cmti-12">almost periodic </span><span 
+class="cmr-12">if the set</span> \(\{ f_s : s\in G \}\) <span 
+class="cmr-12">is relatively</span>
+<span 
+class="cmr-12">compact in</span> \(C^b(G)\)<span 
+class="cmr-12">, where</span> \(f_s(t) = f(ts)\) <span 
+class="cmr-12">for</span> \(t\in G\)<span 
+class="cmr-12">. Using bounded approximate identities, it is easy (compare with</span>
+<span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xulger"><span 
+class="cmr-12">28</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">) to show that</span> \(\ap (L^1(G)) = \ap (G)\)<span 
+class="cmr-12">. We know that</span> \(\ap (G)\) <span 
+class="cmr-12">is a closed</span> \(*\)<span 
+class="cmr-12">-subalgebra of</span> \(C^b(G)\)<span 
+class="cmr-12">, with spectrum</span> \(G^\ap \) <span 
+class="cmr-12">say.</span>
+<span 
+class="cmr-12">Then</span> \(G\) <span 
+class="cmr-12">is dense in</span> \(G^\ap \)<span 
+class="cmr-12">, and extending the product from</span> \(G\) <span 
+class="cmr-12">to</span> \(G^\ap \) <span 
+class="cmr-12">turns</span> \(G^\ap \) <span 
+class="cmr-12">into a compact group.</span>
+<span 
+class="cmr-12">Furthermore,</span> \(G^\ap \) <span 
+class="cmr-12">then agrees with the Bohr compactification of</span> \(G\)<span 
+class="cmr-12">. See </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XBJM"><span 
+class="cmr-12">2</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">for further</span>
+<span 
+class="cmr-12">details.</span>
+</p><!--l. 403--><p class="indent" >   <span 
+class="cmr-12">As</span> \(A(G)\) <span 
+class="cmr-12">can be thought of as being the “dual” to</span> \(L^1(G)\) <span 
+class="cmr-12">(hence extending the abelian case, when</span> \(A(G) = L^1(\hat G)\)<span 
+class="cmr-12">),</span>
+<span 
+class="cmr-12">it is not surprising that</span> \(\ap (A(G))\) <span 
+class="cmr-12">has been studied. It is customary to write</span> \(\ap (\hat G)\) <span 
+class="cmr-12">for</span> \(\ap (A(G))\)<span 
+class="cmr-12">. See the</span>
+<span 
+class="cmr-12">references </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XDR"><span 
+class="cmr-12">5</span></a><span 
+class="cmr-12">, Section</span><span 
+class="cmr-12"> 7]</span></span><span 
+class="cmr-12">, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xgran1"><span 
+class="cmr-12">9</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlau"><span 
+class="cmr-12">14</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xhu"><span 
+class="cmr-12">10</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xmust"><span 
+class="cmr-12">18</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, and especially </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">for further details. It would</span>
+<span 
+class="cmr-12">be fair to say that, for a general locally compact group</span> \(G\)<span 
+class="cmr-12">, the above proposition is</span>
+<span 
+class="cmr-12">about all that is known about</span> \(\ap (\hat G)\) <span 
+class="cmr-12">(though see below for our discussion of invariant</span>
+<span 
+class="cmr-12">states).</span>
+</p><!--l. 411--><p class="indent" >   <span 
+class="cmr-12">When</span> \(G\) <span 
+class="cmr-12">is abelian, by applying Fourier transforms, we can show that</span> \(\ap (\hat G) = C^*_\delta (G) = \mf b C^*_r(G)\)<span 
+class="cmr-12">. Similarly, when</span> \(G\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmr-12">discrete and amenable, we have</span> \(\ap (\hat G) = \mf b C^*_r(G)\) <span 
+class="cmr-12">(this follows from inspecting </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xgran1"><span 
+class="cmr-12">9</span></a><span 
+class="cmr-12">, Proposition</span><span 
+class="cmr-12"> 2]</span></span><span 
+class="cmr-12">). We do not</span>
+<span 
+class="cmr-12">know, in general, if</span> \(\ap (\hat G)\) <span 
+class="cmr-12">need be a C</span>\(^*\)<span 
+class="cmr-12">-algebra. Chou defines a group</span> \(G\) <span 
+class="cmr-12">to have the </span><span 
+class="cmti-12">dual Bohr</span>
+
+<span 
+class="cmti-12">approximation property </span><span 
+class="cmr-12">if</span> \(\ap (\hat G) = C^*_\delta (G) = \mf bC^*_r(G)\)<span 
+class="cmr-12">. In </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, and in Rinder’s correction </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xrindler"><span 
+class="cmr-12">22</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">, it is shown that there exist</span>
+<span 
+class="cmr-12">compact groups</span> \(G\) <span 
+class="cmr-12">which fail to have the dual Bohr approximation property. Indeed, the idea is</span>
+<span 
+class="cmr-12">as follows. Let</span> \(E\in VN(G)\) <span 
+class="cmr-12">be the rank-one operator defined by </span>\[ E(f) = \Big (\int _G f \Big ) 1_G \qquad (f\in L^2(G)), \] <span 
+class="cmr-12">where</span> \(1_G\) <span 
+class="cmr-12">is the constant function</span>
+<span 
+class="cmr-12">on</span> \(G\)<span 
+class="cmr-12">. Then it is possible for both</span> \(\mc R_E\) <span 
+class="cmr-12">to be compact, that is,</span> \(E\in \ap (\hat G)\)<span 
+class="cmr-12">, and for us to have that</span>
+\(E\not \in C^*_\delta (G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 426--><p class="noindent" >
+</p>
+   <h4 class="subsectionHead"><span class="titlemark"><span 
+class="cmr-12">3.1   </span></span> <a 
+ id="x1-50003.1"></a><span 
+class="cmr-12">Approximation properties</span></h4>
+<!--l. 428--><p class="noindent" ><span 
+class="cmr-12">We recall the classical notion of the </span><span 
+class="cmti-12">Banach space approximation property </span><span 
+class="cmr-12">(see, for example,</span>
+<span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xlt"><span 
+class="cmr-12">15</span></a><span 
+class="cmr-12">, Section</span><span 
+class="cmr-12"> 1.e]</span></span><span 
+class="cmr-12">). Recall that a Banach space</span> \(E\) <span 
+class="cmr-12">has the approximation property if, for any</span>
+<span 
+class="cmr-12">Banach space</span> \(F\)<span 
+class="cmr-12">, any compact operator</span> \(T:F\rightarrow E\) <span 
+class="cmr-12">can be norm-approximated by finite-rank</span>
+<span 
+class="cmr-12">operators. In general, an operator which can be approximated by finite-ranks is said to be</span>
+<span 
+class="cmti-12">approximable</span><span 
+class="cmr-12">.</span>
+</p><!--l. 434--><p class="indent" >   <span 
+class="cmr-12">The Banach space</span> \(L^\infty (G)\) <span 
+class="cmr-12">always has the approximation property, so in particular, asking that</span> \(\mc R_\mu \)<span 
+class="cmr-12">, for</span>
+\(\mu \in L^\infty (G)\)<span 
+class="cmr-12">, be compact is the same as asking if we can approximate</span> \(\mc R_\mu \) <span 
+class="cmr-12">be finite-rank maps. However, we</span>
+<span 
+class="cmr-12">know that</span> \(VN(G)\) <span 
+class="cmr-12">has the approximation property if and only if</span> \(VN(G)\) <span 
+class="cmr-12">is </span><span 
+class="cmti-12">amenable </span><span 
+class="cmr-12">as a Banach algebra,</span>
+<span 
+class="cmr-12">which in turn is equivalent to</span> \(VN(G)\) <span 
+class="cmr-12">being isomorphic to an algebra of the from </span>\[ \bigoplus _{k=1}^n \mathbb M_{n_k} \otimes C(X_k). \] <span 
+class="cmr-12">It follows that this is</span>
+<span 
+class="cmr-12">equivalent to</span> \(G\) <span 
+class="cmr-12">being abelian by finite. See </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xrunde"><span 
+class="cmr-12">24</span></a><span 
+class="cmr-12">, Section</span><span 
+class="cmr-12"> 6.1]</span></span> <span 
+class="cmr-12">for details. In conclusion, for general</span>
+<span 
+class="cmr-12">groups</span> \(G\)<span 
+class="cmr-12">, we have no reason to believe that</span> \(\mc R_\mu \) <span 
+class="cmr-12">being compact is equivalent to</span> \(\mc R_\mu \) <span 
+class="cmr-12">being</span>
+<span 
+class="cmr-12">approximable.</span>
+</p><!--l. 444--><p class="indent" >   <span 
+class="cmr-12">So perhaps a better definition of</span> \(\mu \) <span 
+class="cmr-12">being “almost periodic” would be to ask for</span> \(\mc R_\mu \) <span 
+class="cmr-12">to be</span>
+<span 
+class="cmr-12">approximable. We shall show below that if we do ask this, but in the category of </span><span 
+class="cmti-12">operator</span>
+<span 
+class="cmti-12">spaces</span><span 
+class="cmr-12">, then we get</span> \(\mf b C^*_r(G)\)<span 
+class="cmr-12">, as we might hope. In the remainder of this section, we shall</span>
+<span 
+class="cmr-12">study some stronger forms of “approximable” and show that each of these gives</span>
+<span 
+class="cmr-12">rise to a notion of “almost periodic” leading back to</span> \(\mf b C^*_r(G)\)<span 
+class="cmr-12">, at least when the group</span> \(G\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmr-12">amenable.</span>
+</p><!--l. 451--><p class="indent" >   <span 
+class="cmr-12">Firstly, define</span> \(\ap ^{(1)}(\hat G)\) <span 
+class="cmr-12">to be the collection of</span> \(T\in VN(G)\) <span 
+class="cmr-12">such that</span> \(\mc R_T\) <span 
+class="cmr-12">can be norm-approximated by maps of the</span>
+<span 
+class="cmr-12">form</span> \(\mc R_S\)<span 
+class="cmr-12">, where</span> \(S\in VN(G)\) <span 
+class="cmr-12">and</span> \(\mc R_S\) <span 
+class="cmr-12">is finite-rank. It follows immediately from Chou’s work that</span> \(\ap _1(\hat G)=\mf bC^*_r(G)\)<span 
+class="cmr-12">. Indeed, by </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xchou"><span 
+class="cmr-12">3</span></a><span 
+class="cmr-12">,</span>
+<span 
+class="cmr-12">Proposition</span><span 
+class="cmr-12"> 2.3]</span></span><span 
+class="cmr-12">, we have that</span> \(\mc R_S\) <span 
+class="cmr-12">is finite-rank if and only if</span> \(S\in \Trig (\hat G)\)<span 
+class="cmr-12">. If</span> \(G\) <span 
+class="cmr-12">is amenable, then</span> \(\|\mc R_S\| = \|S\|\) <span 
+class="cmr-12">for all</span> \(S\in VN(G)\)<span 
+class="cmr-12">. So</span>
+<span 
+class="cmr-12">immediately,</span> \(\ap _1(\hat G) = \mf b C^*_r(G)\)<span 
+class="cmr-12">, when</span> \(G\) <span 
+class="cmr-12">is amenable.</span>
+</p><!--l. 458--><p class="indent" >   <span 
+class="cmr-12">Define</span> \(\ap ^{(2)}(\hat G)\) <span 
+class="cmr-12">to be the collection of</span> \(T\in VN(G)\) <span 
+class="cmr-12">such that</span> \(\mc R_T\) <span 
+class="cmr-12">can be norm-approximated by finite-rank</span> \(A(G)\)<span 
+class="cmr-12">-module</span>
+<span 
+class="cmr-12">maps</span> \(\theta :A(G)\rightarrow VN(G)\)<span 
+class="cmr-12">. That is, maps</span> \(\theta \) <span 
+class="cmr-12">such that</span> \(\theta (ab) = a\cdot \theta (b)\) <span 
+class="cmr-12">for</span> \(a,b\in A(G)\)<span 
+class="cmr-12">. If</span> \(A(G)\) <span 
+class="cmr-12">has a bounded approximate identity, that is,</span> \(G\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmr-12">amenable, then a standard argument shows that</span> \(\theta \) <span 
+class="cmr-12">is of the form</span> \(\mc R_S\) <span 
+class="cmr-12">for some</span> \(S\in VN(G)\)<span 
+class="cmr-12">. Infact, the following</span>
+<span 
+class="cmr-12">proposition shows that this is true in general, and so</span> \(\ap _2(\hat G) = \ap _1(\hat G)\)<span 
+class="cmr-12">.</span>
+</p>
+   <div class="newtheorem">
+<!--l. 465--><p class="noindent" ><span class="head">
+<a 
+ id="x1-5001r2"></a>
+<span 
+class="cmbx-12">Proposition 3.2.</span>  </span><span 
+class="cmti-12">A finite-rank map</span> \(\theta :A(G)\rightarrow VN(G)\) <span 
+class="cmti-12">is a module map if and only if</span> \(\theta =\mc R_S\) <span 
+class="cmti-12">for some</span> \(S\in \Trig (\hat G)\)<span 
+class="cmti-12">.</span>
+</p>
+   </div>
+<!--l. 469--><p class="indent" >
+</p>
+   <div class="proof">
+<!--l. 470--><p class="indent" >   <span class="head">
+
+<span 
+class="cmti-12">Proof.</span> </span>
+                                                                                     <span 
+class="cmr-12">□</span>
+</p>
+   </div>
+<!--l. 477--><p class="noindent" >
+</p>
+   <h3 class="sectionHead"><span class="titlemark"><span 
+class="cmr-12">4   </span></span> <a 
+ id="x1-60004"></a><span 
+class="cmr-12">Operator-space structures</span></h3>
+<!--l. 479--><p class="noindent" ><span 
+class="cmr-12">There is now ample evidence that when considering the Fourier algebra</span> \(A(G)\)<span 
+class="cmr-12">, if we view</span> \(A(G)\) <span 
+class="cmr-12">as a</span>
+<span 
+class="cmti-12">completely-contractive Banach algebra </span><span 
+class="cmr-12">with its canonical operator-space structure, then</span> \(A(G)\)
+<span 
+class="cmr-12">behaves much more closely to being the “dual” of</span> \(L^1(G)\)<span 
+class="cmr-12">, as compared to viewing</span> \(A(G)\) <span 
+class="cmr-12">as simply a</span>
+<span 
+class="cmr-12">Banach algebra. See, for example, Ruan’s original paper </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xruan"><span 
+class="cmr-12">23</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">or Runde’s survey article</span>
+<span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xrunde1"><span 
+class="cmr-12">25</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">.</span>
+</p><!--l. 485--><p class="indent" >   <span 
+class="cmr-12">We shall assume standard results about operator spaces, as found in </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XER"><span 
+class="cmr-12">7</span></a><span 
+class="cmr-12">]</span></span> <span 
+class="cmr-12">or </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#Xpisier"><span 
+class="cmr-12">20</span></a><span 
+class="cmr-12">]</span></span><span 
+class="cmr-12">. The</span>
+<span 
+class="cmr-12">important fact for us is that</span> \(A(G) \proten A(G) = A(G\times G)\)<span 
+class="cmr-12">, where</span> \(\proten \) <span 
+class="cmr-12">denotes the </span><span 
+class="cmti-12">operator space projective tensor product</span><span 
+class="cmr-12">. Let</span> \(T\in VN(G)\)<span 
+class="cmr-12">,</span>
+<span 
+class="cmr-12">and consider the map</span> \(\mc R_T\)<span 
+class="cmr-12">, now treated as a completely bounded map</span> \(A(G)\rightarrow VN(G)\)<span 
+class="cmr-12">. Now,</span> \(\mc{CB}(A(G),VN(G)) = (A(G)\proten A(G))'\)<span 
+class="cmr-12">, and we see that </span>\[ \ip{\mc R_T(a)}{b} = \ip{T}{ab} = \ip{\Delta (T)}{a\otimes b} \qquad (a,b\in A(G), \] <span 
+class="cmr-12">so</span> \(R_T(a) = (a\otimes \id )\Delta (T)\)<span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">As</span> \(A(G)\proten A(G) = A(G\times G)\)<span 
+class="cmr-12">, we have </span>\[ \|\mc R_T\|_{cb} = \sup \{ |\ip{\Delta (T)}{a}| : a\in A(G\times G), \|a\|\leq 1 \} = \|\Delta (T)\| = \|T\|. \]
+</p><!--l. 495--><p class="indent" >   <span 
+class="cmr-12">We start by showing that operator space versions of</span> \(\ap ^{(1)}\) <span 
+class="cmr-12">and</span> \(\ap ^{(2)}\) <span 
+class="cmr-12">allow us to remove the condition</span>
+<span 
+class="cmr-12">that</span> \(G\) <span 
+class="cmr-12">be amenable.</span>
+</p><!--l. 498--><p class="indent" >   <span 
+class="cmr-12">Let</span> \(\ap ^{(1)}_{cb}(\hat G)\) <span 
+class="cmr-12">be the collection of</span> \(T\in VN(G)\) <span 
+class="cmr-12">such that</span> \(\mc R_T\) <span 
+class="cmr-12">can be approximated, in the completely bounded norm,</span>
+<span 
+class="cmr-12">by maps of the form</span> \(\mc R_S\) <span 
+class="cmr-12">such that</span> \(\mc R_S\) <span 
+class="cmr-12">is finite rank. Again, this means that</span> \(S\in \Trig (\hat G)\)<span 
+class="cmr-12">. However, we now have</span>
+<span 
+class="cmr-12">that</span> \(\|\mc R_T-\mc R_S\|_{cb} = \|T-S\|\)<span 
+class="cmr-12">, so we immediately conclude that</span> \(T\in C^*_\delta (G)\)<span 
+class="cmr-12">. Hence</span> \(\ap ^{(1)}_{cb}(\hat G) = \mf bC^*_r(G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 504--><p class="indent" >   <span 
+class="cmr-12">Similarly, if we define</span> \(\ap ^{(2)}_{cb}(\hat G)\) <span 
+class="cmr-12">to be the collection of</span> \(T\in VN(G)\) <span 
+class="cmr-12">such that</span> \(\mc R_T\) <span 
+class="cmr-12">can be approximated, in the</span>
+<span 
+class="cmr-12">completely bounded norm, but finite-rank module maps, then as above,</span> \(\ap ^{(2)}_{cb}(\hat G) = \ap ^{(1)}_{cb}(\hat G) = \mf bC^*_r(G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 508--><p class="indent" >   <span 
+class="cmr-12">These are very strong approximation properties. A much weaker notion is the following.</span>
+<span 
+class="cmr-12">Define</span> \(\ap _{cb}(\hat G)\) <span 
+class="cmr-12">be the the collection of</span> \(R\in VN(G)\) <span 
+class="cmr-12">such that</span> \(\mc R_T\) <span 
+class="cmr-12">can be approximated, in the completely bounded</span>
+<span 
+class="cmr-12">norm, by arbitrary finite-rank maps from</span> \(A(G)\) <span 
+class="cmr-12">to</span> \(VN(G)\)<span 
+class="cmr-12">. From </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XER"><span 
+class="cmr-12">7</span></a><span 
+class="cmr-12">, Proposition</span><span 
+class="cmr-12"> 8.1.2]</span></span><span 
+class="cmr-12">, it follows that</span> \(T\in \ap _{cb}(\hat G)\) <span 
+class="cmr-12">if</span>
+<span 
+class="cmr-12">and only if</span> \(\Delta (T) \in VN(G) \inten VN(G)\)<span 
+class="cmr-12">, where here</span> \(\inten \) <span 
+class="cmr-12">denotes the operator space </span><span 
+class="cmti-12">injective tensor product</span><span 
+class="cmr-12">. This agrees with</span>
+<span 
+class="cmr-12">the minimal (or spacial) C</span>\(^*\)<span 
+class="cmr-12">-tensor product (see </span><span class="cite"><span 
+class="cmr-12">[</span><a 
+href="#XER"><span 
+class="cmr-12">7</span></a><span 
+class="cmr-12">, Proposition</span><span 
+class="cmr-12"> 8.1.6]</span></span><span 
+class="cmr-12">).</span>
+</p>
+   <div class="newtheorem">
+<!--l. 516--><p class="noindent" ><span class="head">
+<a 
+ id="x1-6001r1"></a>
+<span 
+class="cmbx-12">Theorem 4.1.</span>  </span><span 
+class="cmti-12">Let</span> \(G\) <span 
+class="cmti-12">be a discrete group. Then</span> \(\ap _{cb}(\hat G) = \mf b C^*_r(G) = C^*_r(G)\)<span 
+class="cmti-12">.</span>
+</p>
+   </div>
+<!--l. 519--><p class="indent" >
+</p>
+   <div class="proof">
+<!--l. 520--><p class="indent" >   <span class="head">
+<span 
+class="cmti-12">Proof.</span> </span><span 
+class="cmr-12">Let</span> \((e_s)_{s\in G}\) <span 
+class="cmr-12">be the standard orthonormal basis of</span> \(\ell ^2(G)\)<span 
+class="cmr-12">. Each</span> \(T\in VN(G)\) <span 
+class="cmr-12">is uniquely determined by the</span>
+<span 
+class="cmr-12">vector</span> \(\tau = T(e_{e_G})\in \ell ^2(G)\)<span 
+class="cmr-12">, as</span> \(T(x) = \tau * x\) <span 
+class="cmr-12">for</span> \(x\in \ell ^2(G)\)<span 
+class="cmr-12">, namely the convolution of</span> \(\tau \) <span 
+class="cmr-12">with</span> \(x\)<span 
+class="cmr-12">. Under this, we identify</span> \(VN(G)\) <span 
+class="cmr-12">with the</span>
+
+<span 
+class="cmr-12">collection of vectors</span> \(\tau \in \ell ^2(G)\) <span 
+class="cmr-12">such that convolution by</span> \(\tau \) <span 
+class="cmr-12">on the left gives a bounded operators on</span>
+\(\ell ^2(G)\)<span 
+class="cmr-12">. Under this identification,</span> \(\Trig (G)\) <span 
+class="cmr-12">is simply the linear span of</span> \((e_s)\) <span 
+class="cmr-12">in</span> \(\ell ^2(G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 527--><p class="indent" >   <span 
+class="cmr-12">Similarly, we identify</span> \(VN(G\times G)\) <span 
+class="cmr-12">with a subspace of</span> \(\ell ^2(G\times G) = \ell ^2(G) \otimes \ell ^2(G)\)<span 
+class="cmr-12">. We can check that if</span> \(T\in VN(G)\) <span 
+class="cmr-12">and</span> \(\tau = T(e_{e_G})\)<span 
+class="cmr-12">, then </span>\[ \Delta (T)(e_{(e_G,e_G)}) = ( \tau _s \delta _{s,t} )_{(s,t)\in G\times G}, \] <span 
+class="cmr-12">where</span> \(\delta _{s,t}\) <span 
+class="cmr-12">is</span>
+<span 
+class="cmr-12">the Kronecker delta.</span>
+</p><!--l. 532--><p class="indent" >   <span 
+class="cmr-12">Define</span> \(U:\ell ^2(G)\rightarrow \ell ^2(G\times G)\) <span 
+class="cmr-12">and</span> \(V:\ell ^2(G\times G)\rightarrow \ell ^2(G)\) <span 
+class="cmr-12">by</span> \(U(e_s) = e_{(s,s)}\) <span 
+class="cmr-12">and</span> \(V(e_{(s,t)}) = \delta _{s,t} e_s\) <span 
+class="cmr-12">for</span> \(s,t\in G\)<span 
+class="cmr-12">. Define a map</span> \(\theta :VN(G\times G) \rightarrow \ell ^2(G)\) <span 
+class="cmr-12">as follows. For</span> \(R\in VN(G\times G)\)<span 
+class="cmr-12">, let</span> \(\rho = R(e_{(e_G,e_G)}) \in \ell ^2(G\times G)\)<span 
+class="cmr-12">. Then define </span>\[ \theta (R) = \big ( \rho _{s,s} \big )_{s\in G} \in \ell ^2(G). \] <span 
+class="cmr-12">Notice</span>
+<span 
+class="cmr-12">that </span>\[ VRU(e_s) = VR(e_{(s,s)}) = \sum _{t,r\in G} \rho _{(t,r)} V(e_{(ts,rs)}) = \sum _{t,r\in G} \rho _{(t,r)} \delta _{t,r} e_{ts} = \sum _{t\in G} \rho _{(t,t)} e_{ts} = \theta (R) * e_s. \] <span 
+class="cmr-12">Consequently, convolution on the left by</span> \(\theta (R)\) <span 
+class="cmr-12">is a bounded operator, namely</span> \(VRU\)<span 
+class="cmr-12">, and so</span> \(\theta (R)\)
+<span 
+class="cmr-12">induces a member of</span> \(VN(G)\)<span 
+class="cmr-12">. Notice that </span>\[ V\Delta (T)U = T \qquad (T\in VN(G)). \]
+</p><!--l. 547--><p class="indent" >   <span 
+class="cmr-12">If</span> \(T,S\in VN(G)\)<span 
+class="cmr-12">, say</span> \(\tau = T(e_{e_G})\) <span 
+class="cmr-12">and</span> \(\sigma = S(e_{e_G})\)<span 
+class="cmr-12">, then </span>\[ \theta (T\otimes S) = \big ( \tau _s \sigma _s \big )_{s\in G}. \] <span 
+class="cmr-12">The Cauchy-Schwarz inequality shows that</span> \(\theta (T\otimes S)\in \ell ^1(G)\subseteq \ell ^2(G)\)<span 
+class="cmr-12">, and so</span> \(V(T\otimes S)U\) <span 
+class="cmr-12">is in the</span>
+<span 
+class="cmr-12">closure of</span> \(\Trig (\hat G)\)<span 
+class="cmr-12">, that is, in</span> \(C^*_r(G)\)<span 
+class="cmr-12">. By continuity, we conclude that</span> \(V R U \in C^*_r(G)\) <span 
+class="cmr-12">for any</span> \(R\in VN(G) \inten VN(G)\)<span 
+class="cmr-12">. Hence, if</span> \(T\in VN(G)\) <span 
+class="cmr-12">is such that</span>
+\(\Delta (T)\in VN(G)\inten VN(G)\)<span 
+class="cmr-12">, then</span> \(T = V\Delta (T)U \in C^*_r(G)\)<span 
+class="cmr-12">, as required.</span>                                                                                        <span 
+class="cmr-12">□</span>
+</p>
+   </div>
+<!--l. 556--><p class="indent" >   <span 
+class="cmr-12">We shall have to work harder to prove this result for arbitrary locally compact groups</span>
+\(G\)<span 
+class="cmr-12">.</span>
+</p><!--l. 558--><p class="indent" >   <span 
+class="cmr-12">One approach would be the following. Let</span> \(\Lambda \) <span 
+class="cmr-12">be the collection on compact, symmetric</span>
+<span 
+class="cmr-12">neighbourhoods of</span> \(e_G\)<span 
+class="cmr-12">. For</span> \(T\in VN(G)\)<span 
+class="cmr-12">, let </span>\[ x_K = T(\chi _K) |K|^{-1} \qquad (K\in \Lambda ). \] <span 
+class="cmr-12">Then</span> \((x_K)\) <span 
+class="cmr-12">is a (in general unbounded) net in</span> \(L^2(G)\)<span 
+class="cmr-12">. However, the net</span> \((\chi _K |K|^{-1})_{K\in \Lambda }\) <span 
+class="cmr-12">is a</span>
+<span 
+class="cmr-12">bounded net in</span> \(L^1(G)\) <span 
+class="cmr-12">which is an approximate identity. In particular, for</span> \(f\in L^2(G)\)<span 
+class="cmr-12">, we have that</span> \(f = \lim _K |K|^{-1} \chi _K * f\)<span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">As</span> \(VN(G)\) <span 
+class="cmr-12">commutes with convolution on the right, we have that </span>\[ T(f) = \lim _K T(\chi _K*f) |K|^{-1} = \lim _K T(\chi _K)*f |K|^{-1} = \lim _K x_K * f \qquad (f\in L^2(G)), \] <span 
+class="cmr-12">where the limit is in</span>
+<span 
+class="cmr-12">norm.</span>
+</p><!--l. 569--><p class="indent" >   <span 
+class="cmr-12">Thus</span> \((x_K)\) <span 
+class="cmr-12">determines</span> \(T\)<span 
+class="cmr-12">; in fact, if</span> \(\psi \) <span 
+class="cmr-12">is the left Plancherel weight, then</span> \(\psi (T^*T) = \limsup _K \|x_K\|_2^2\)<span 
+class="cmr-12">. For</span> \(T\in VN(G)\) <span 
+class="cmr-12">and</span> \(f,g\in L^2(G)\)<span 
+class="cmr-12">, we have </span>\[ (T^*(f)|g) = (f|T(g)) = \lim _K (f|x_K*g) = \lim _K (x_K^* * f|g). \] <span 
+class="cmr-12">Hence</span> \(|K|^{-1} T^*(\chi _K)\)
+<span 
+class="cmr-12">might not be</span> \(x_K^*\)<span 
+class="cmr-12">, but the net</span> \((x_K^*)_{K\in \Lambda }\) <span 
+class="cmr-12">does induce the operator</span> \(T^*\)<span 
+class="cmr-12">. Here the involution is that on</span> \(L^1(G)\)<span 
+class="cmr-12">,</span>
+\[ x_K^*(s) = \Delta (s^{-1}) \overline{ x_K(s) } \qquad (s\in G). \] <span 
+class="cmr-12">As this is only defined upon</span> \(L^2(G) \cap L^1(G)\)<span 
+class="cmr-12">, we technically have to perturb each</span> \(x_K\) <span 
+class="cmr-12">so that it is</span>
+<span 
+class="cmr-12">integrable.</span>
+</p><!--l. 578--><p class="indent" >   <span 
+class="cmr-12">The problem is then to reconstruct</span> \((x_K)\) <span 
+class="cmr-12">from</span> \(\Delta (T)\) <span 
+class="cmr-12">in some way. For example, </span>\[ x_K\otimes f = |K|^{-1} T(\chi _K)\otimes f = |K|^{-1} W\Delta (T)W^*(\chi _K\otimes f) \qquad (f\in L^2(G)). \] <span 
+class="cmr-12">Hence, for</span> \(f\in L^2(G)\)<span 
+class="cmr-12">, we have</span>
+<span 
+class="cmr-12">that </span>\begin{align*} (x_K|f) &amp;= \lim _L |L|^{-1} (x_K\otimes \chi _L | f\otimes \chi _L) \\ &amp;= \lim _L |L|^{-1} |K|^{-1} \big ( \Delta (T)W^*(\chi _K\otimes \chi _L) | W^*(f\otimes \chi _L) \big ). \end{align*}
+</p><!--l. 586--><p class="indent" >   <span 
+class="cmr-12">For each</span> \(L\in \Lambda \)<span 
+class="cmr-12">, let</span> \(e_L = \chi _L |L|^{-1/2}\)<span 
+class="cmr-12">, so that</span> \(\|e_L\|_2=1\)<span 
+class="cmr-12">. Then, for any</span> \(R\in \mc B(L^2(G\times G))\)<span 
+class="cmr-12">, the following limit exists </span>\[ \phi _{K,f}(R) = \lim _{L\in \Lambda } |K|^{-1} \big ( RW^*(\chi _K\otimes e_L) | W^*(f\otimes e_L) \big ), \] <span 
+class="cmr-12">so that</span> \(\phi _{K,f}\in \mc B(L^2(G\times G))'\) <span 
+class="cmr-12">with</span> \(\|\phi _{K,f}\|\leq |K|^{-1/2} \|f\|_2\)<span 
+class="cmr-12">. We then</span>
+<span 
+class="cmr-12">have that </span>\[ (x_K|f) = \ip{\phi _{K,f}}{\Delta (T)} \qquad (f\in L^2(G)). \]
+</p><!--l. 594--><p class="indent" >   <span 
+class="cmbx-12">How are we going to do this?</span>
+</p><!--l. 596--><p class="noindent" ><span 
+class="cmbx-12">Idea: </span><span 
+class="cmr-12">We can do the above for</span> \(VN(G\times G)\) <span 
+class="cmr-12">as well, of course. The idea, copying what we did in the</span>
+<span 
+class="cmr-12">discrete case, would be to find some </span><span 
+class="cmti-12">bounded </span><span 
+class="cmr-12">operation which takes a “convolution</span>
+<span 
+class="cmr-12">family” given by</span> \(VN(G\times G)\) <span 
+class="cmr-12">and gives back a “convolution family” inducing a member of</span> \(VN(G)\)<span 
+class="cmr-12">.</span>
+<span 
+class="cmr-12">We want this to be an inverse to</span> \(\Delta \)<span 
+class="cmr-12">, and which hopefully does interesting things to</span>
+\(VN(G) \otimes VN(G)\)<span 
+class="cmr-12">.</span>
+</p><!--l. 606--><p class="noindent" >
+</p>
+   <h3 class="likesectionHead"><a 
+ id="x1-70004"></a><span 
+class="cmr-12">References</span></h3>
+<!--l. 606--><p class="noindent" >
+    </p><div class="thebibliography">
+    <p class="bibitem" ><span class="biblabel">
+  [1]<span class="bibsp">   </span></span><a 
+ id="XBMT"></a><span 
+class="cmcsc-10">E. B</span><span 
+class="cmcsc-10">é</span><span 
+class="cmcsc-10"><span 
+class="small-caps">d</span><span 
+class="small-caps">o</span><span 
+class="small-caps">s</span>, G.J. M<span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">p</span><span 
+class="small-caps">h</span><span 
+class="small-caps">y</span>, L. T<span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">e</span><span 
+class="small-caps">t</span></span>, ‘Co-amenability of compact quantum groups’, <span 
+class="cmti-10">J. Geom.</span>
+    <span 
+class="cmti-10">Phys. </span>40 (2001) 130–153.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [2]<span class="bibsp">   </span></span><a 
+ id="XBJM"></a><span 
+class="cmcsc-10">J.F. B<span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">g</span><span 
+class="small-caps">l</span><span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span>, H.D. J<span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">g</span><span 
+class="small-caps">h</span><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">n</span>, P. M<span 
+class="small-caps">i</span><span 
+class="small-caps">l</span><span 
+class="small-caps">n</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span></span>, <span 
+class="cmti-10">Analysis on semigroups. Function spaces,</span>
+    <span 
+class="cmti-10">compactifications, representations</span>, (John Wiley &#x0026; Sons, Inc., New York, 1989).
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [3]<span class="bibsp">   </span></span><a 
+ id="Xchou"></a><span 
+class="cmcsc-10">C. C<span 
+class="small-caps">h</span><span 
+class="small-caps">o</span><span 
+class="small-caps">u</span></span>, ‘Almost periodic operators in \({\rm VN}(G)\)’, <span 
+class="cmti-10">Trans. Amer. Math. Soc. </span>317 (1990) 229–253.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [4]<span class="bibsp">   </span></span><a 
+ id="XDales"></a><span 
+class="cmcsc-10">H.G. D<span 
+class="small-caps">a</span><span 
+class="small-caps">l</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span></span>, <span 
+class="cmti-10">Banach algebras and automatic continuity</span>, (Clarendon Press, Oxford, 2000).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [5]<span class="bibsp">   </span></span><a 
+ id="XDR"></a><span 
+class="cmcsc-10">C.F. D<span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">k</span><span 
+class="small-caps">l</span>, D.E. R<span 
+class="small-caps">a</span><span 
+class="small-caps">m</span><span 
+class="small-caps">i</span><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">z</span></span>, ‘Weakly almost periodic functionals on the Fourier algebra’,
+    <span 
+class="cmti-10">Trans. Amer. Math. Soc. </span>185 (1973) 501–514.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [6]<span class="bibsp">   </span></span><a 
+ id="XDR2"></a><span 
+class="cmcsc-10">C.F. D<span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">k</span><span 
+class="small-caps">l</span>, D.E. R<span 
+class="small-caps">a</span><span 
+class="small-caps">m</span><span 
+class="small-caps">i</span><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">z</span></span>, ‘Existence and nonuniqueness of invariant means on \({\mc L}\sp{\infty }(\hat G)\)’, <span 
+class="cmti-10">Proc.</span>
+    <span 
+class="cmti-10">Amer. Math. Soc. </span>32 (1972) 525–530.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [7]<span class="bibsp">   </span></span><a 
+ id="XER"></a><span 
+class="cmcsc-10">E.G. E<span 
+class="small-caps">f</span><span 
+class="small-caps">f</span><span 
+class="small-caps">r</span><span 
+class="small-caps">o</span><span 
+class="small-caps">s</span>, Z.-J. R<span 
+class="small-caps">u</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span></span>, <span 
+class="cmti-10">Operator spaces</span>, (Oxford University Press, New York, 2000).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [8]<span class="bibsp">   </span></span><a 
+ id="Xeymard"></a><span 
+class="cmcsc-10">P. E<span 
+class="small-caps">y</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">r</span><span 
+class="small-caps">d</span></span>, ‘L’algèbre de Fourier d’un groupe localement compact’, <span 
+class="cmti-10">Bull. Soc. Math. France</span>
+    92 (1964) 181–236.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+  [9]<span class="bibsp">   </span></span><a 
+ id="Xgran1"></a><span 
+class="cmcsc-10">E.E. G<span 
+class="small-caps">r</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">i</span><span 
+class="small-caps">r</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, ‘Weakly almost periodic and uniformly continuous functionals on the Fourier
+    algebra of any locally compact group’, <span 
+class="cmti-10">Trans. Amer. Math. Soc. </span>189 (1974) 371–382.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [10]<span class="bibsp">   </span></span><a 
+ id="Xhu"></a><span 
+class="cmcsc-10">Z. H<span 
+class="small-caps">u</span></span>, ‘Open subgroups of \(G\) and almost periodic functionals on \(A(G)\)’, <span 
+class="cmti-10">Proc. Amer. Math. Soc. </span>128
+    (2000) 2473–2478.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [11]<span class="bibsp">   </span></span><a 
+ id="Xkus"></a><span 
+class="cmcsc-10">J. K<span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">s</span></span>, ‘Locally compact quantum groups in the universal setting.’, <span 
+class="cmti-10">Internat. J. Math.</span>
+    12 (2001) 289–338.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [12]<span class="bibsp">   </span></span><a 
+ id="Xkv"></a><span 
+class="cmcsc-10">J. K<span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">s</span>, S. V<span 
+class="small-caps">a</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span></span>, ‘Locally compact quantum groups’, <span 
+class="cmti-10">Ann. Sci. </span><span 
+class="cmti-10">É</span><span 
+class="cmti-10">cole Norm. Sup.</span>
+    <span 
+class="cmti-10">(4) </span>33 (2000) 837–934.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [13]<span class="bibsp">   </span></span><a 
+ id="Xlance"></a><span 
+class="cmcsc-10">E.C. L<span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">c</span><span 
+class="small-caps">e</span></span>, <span 
+class="cmti-10">Hilbert</span> \(C\sp *\)<span 
+class="cmti-10">-modules. A toolkit for operator algebraists</span>, (London Mathematical Society
+    Lecture Note Series, 210. Cambridge University Press, Cambridge, 1995.).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [14]<span class="bibsp">   </span></span><a 
+ id="Xlau"></a><span 
+class="cmcsc-10">A.T.-M. L<span 
+class="small-caps">a</span><span 
+class="small-caps">u</span></span>, ‘Uniformly continuous functionals on the Fourier algebra of any locally compact
+    group’, <span 
+class="cmti-10">Trans. Amer. Math. Soc. </span>251 (1979) 39–59.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [15]<span class="bibsp">   </span></span><a 
+ id="Xlt"></a><span 
+class="cmcsc-10">J. L<span 
+class="small-caps">i</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">r</span><span 
+class="small-caps">a</span><span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">s</span>, L. T<span 
+class="small-caps">z</span><span 
+class="small-caps">a</span><span 
+class="small-caps">f</span><span 
+class="small-caps">r</span><span 
+class="small-caps">i</span><span 
+class="small-caps">r</span><span 
+class="small-caps">i</span></span>, <span 
+class="cmti-10">Classical Banach spaces. I.</span>, (Springer-Verlag, Berlin-New
+    York, 1977).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [16]<span class="bibsp">   </span></span><a 
+ id="Xmaes"></a><span 
+class="cmcsc-10">A. M<span 
+class="small-caps">a</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span>, A. V<span 
+class="small-caps">a</span><span 
+class="small-caps">n</span> D<span 
+class="small-caps">a</span><span 
+class="small-caps">e</span><span 
+class="small-caps">l</span><span 
+class="small-caps">e</span></span>, ‘Notes on compact quantum groups’, <span 
+class="cmti-10">Nieuw Arch. Wisk. (4) </span>16
+    (1998) 73–112.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [17]<span class="bibsp">   </span></span><a 
+ id="Xmurphy"></a><span 
+class="cmcsc-10">G.J. M<span 
+class="small-caps">u</span><span 
+class="small-caps">r</span><span 
+class="small-caps">p</span><span 
+class="small-caps">h</span><span 
+class="small-caps">y</span>, L. T<span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">e</span><span 
+class="small-caps">t</span></span>, ‘Aspects of compact quantum group theory’, <span 
+class="cmti-10">Proc. Amer. Math.</span>
+    <span 
+class="cmti-10">Soc. </span>132 (2004) 3055–3067.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [18]<span class="bibsp">   </span></span><a 
+ id="Xmust"></a><span 
+class="cmcsc-10">H.S. M<span 
+class="small-caps">u</span><span 
+class="small-caps">s</span><span 
+class="small-caps">t</span><span 
+class="small-caps">a</span><span 
+class="small-caps">f</span><span 
+class="small-caps">a</span><span 
+class="small-caps">y</span><span 
+class="small-caps">e</span><span 
+class="small-caps">v</span></span>, ‘Almost periodic functionals on some class of Banach algebras’, <span 
+class="cmti-10">Rocky</span>
+    <span 
+class="cmti-10">Mountain J. Math. </span>36 (2006) 1977–1997.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [19]<span class="bibsp">   </span></span><a 
+ id="Xped"></a><span 
+class="cmcsc-10">G.K. P<span 
+class="small-caps">e</span><span 
+class="small-caps">d</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span><span 
+class="small-caps">s</span><span 
+class="small-caps">e</span><span 
+class="small-caps">n</span></span>, \(C\sp{*} \)<span 
+class="cmti-10">-algebras and their automorphism groups</span>, (Academic Press, Inc., London-New
+    York, 1979).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [20]<span class="bibsp">   </span></span><a 
+ id="Xpisier"></a><span 
+class="cmcsc-10">G. P<span 
+class="small-caps">i</span><span 
+class="small-caps">s</span><span 
+class="small-caps">i</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, <span 
+class="cmti-10">Introduction to operator space theory</span>, (Cambridge University Press, Cambridge,
+    2003).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [21]<span class="bibsp">   </span></span><a 
+ id="Xrenaud"></a><span 
+class="cmcsc-10">P.F. R<span 
+class="small-caps">e</span><span 
+class="small-caps">n</span><span 
+class="small-caps">a</span><span 
+class="small-caps">u</span><span 
+class="small-caps">d</span></span>, ‘Invariant means on a class of von Neumann algebras’, <span 
+class="cmti-10">Trans. Amer. Math. Soc.</span>
+    170 (1972) 285–291.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [22]<span class="bibsp">   </span></span><a 
+ id="Xrindler"></a><span 
+class="cmcsc-10">H. R<span 
+class="small-caps">i</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span><span 
+class="small-caps">l</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, ‘On weak containment properties’, <span 
+class="cmti-10">Proc. Amer. Math. Soc. </span>114 (1992) 561–563.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [23]<span class="bibsp">   </span></span><a 
+ id="Xruan"></a><span 
+class="cmcsc-10">Z.-J. R<span 
+class="small-caps">u</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span></span>, ‘The operator amenability of \(A(G)\)’, <span 
+class="cmti-10">Amer. J. Math. </span>117 (1995) 1449–1474.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [24]<span class="bibsp">   </span></span><a 
+ id="Xrunde"></a><span 
+class="cmcsc-10">V. R<span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span><span 
+class="small-caps">e</span></span>, <span 
+class="cmti-10">Lectures on amenability</span>, (Lecture Notes in Mathematics, 1774. Springer-Verlag,
+    Berlin, 2002).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [25]<span class="bibsp">   </span></span><a 
+ id="Xrunde1"></a><span 
+class="cmcsc-10">V. R<span 
+class="small-caps">u</span><span 
+class="small-caps">n</span><span 
+class="small-caps">d</span><span 
+class="small-caps">e</span></span>, ‘Applications of operator spaces to abstract harmonic analysis’, <span 
+class="cmti-10">Expo. Math. </span>22
+    (2004) 317–363.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [26]<span class="bibsp">   </span></span><a 
+ id="Xsoltan"></a><span 
+class="cmcsc-10">P.M. S<span 
+class="small-caps">o</span></span><span 
+class="cmcsc-10">ł<span 
+class="small-caps">t</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span></span>, ‘Quantum Bohr compactification’, <span 
+class="cmti-10">Illinois J. Math. </span>49 (2005) 1245–1270.
+
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [27]<span class="bibsp">   </span></span><a 
+ id="Xtak1"></a><span 
+class="cmcsc-10">M. T<span 
+class="small-caps">a</span><span 
+class="small-caps">k</span><span 
+class="small-caps">e</span><span 
+class="small-caps">s</span><span 
+class="small-caps">a</span><span 
+class="small-caps">k</span><span 
+class="small-caps">i</span></span>, <span 
+class="cmti-10">Theory of operator algebras. I.</span>, (Springer-Verlag, New York-Heidelberg, 1979).
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [28]<span class="bibsp">   </span></span><a 
+ id="Xulger"></a><span 
+class="cmcsc-10">A. </span><span 
+class="cmcsc-10">Ü</span><span 
+class="cmcsc-10"><span 
+class="small-caps">l</span><span 
+class="small-caps">g</span><span 
+class="small-caps">e</span><span 
+class="small-caps">r</span></span>, ‘Continuity of weakly almost periodic functionals on \(L\sp 1(G)\)’, <span 
+class="cmti-10">Quart. J. Math. Oxford Ser.</span>
+    <span 
+class="cmti-10">(2) </span>37 (1986) 495–497.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [29]<span class="bibsp">   </span></span><a 
+ id="Xvn1"></a><span 
+class="cmcsc-10">J. <span 
+class="small-caps">v</span>.N<span 
+class="small-caps">e</span><span 
+class="small-caps">u</span><span 
+class="small-caps">m</span><span 
+class="small-caps">a</span><span 
+class="small-caps">n</span><span 
+class="small-caps">n</span></span>, ‘Almost periodic functions in a group. I.’, <span 
+class="cmti-10">Trans. Amer. Math. Soc. </span>36 (1934)
+    445–492.
+    </p>
+    <p class="bibitem" ><span class="biblabel">
+ [30]<span class="bibsp">   </span></span><a 
+ id="Xworo1"></a><span 
+class="cmcsc-10">S.L. W<span 
+class="small-caps">o</span><span 
+class="small-caps">r</span><span 
+class="small-caps">o</span><span 
+class="small-caps">n</span><span 
+class="small-caps">o</span><span 
+class="small-caps">w</span><span 
+class="small-caps">i</span><span 
+class="small-caps">c</span><span 
+class="small-caps">z</span></span>, ‘Compact quantum groups’, in <span 
+class="cmti-10">Symetries quantiques </span>(Les Houches, 1995),
+    845–884, North-Holland, Amsterdam, 1998.
+</p>
+    </div>
+<!--l. 736--><p class="noindent" ><span 
+class="cmti-12">Email: </span><span 
+class="cmtt-12">matt.daws@cantab.net</span>
+</p>
+    
+</body> 
+</html>
+
+
