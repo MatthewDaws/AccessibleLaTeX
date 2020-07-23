@@ -77,7 +77,9 @@ While the output is visually pretty nice, under the hood things get pretty nasty
 
 The `class="cmr-12"` is trying to apply a CSS rule (120% size).  I would write this as:
 
-    <p>The classical Bohr Compactification of a topological (semi)group can be defined in terms of unitary representations (see the original paper of von Neumann <a href="#Xvn1">[29]</a> or see <a href="#XBJM">[2, ???]</a> for a modern treatment).
+    <p>The classical Bohr Compactification of a topological (semi)group can be defined in terms of
+    unitary representations (see the original paper of von Neumann <a href="#Xvn1">[29]</a> or see
+    <a href="#XBJM">[2, ???]</a> for a modern treatment).
 
 There is nothing strange in the input LaTeX file to suggest why many different `spans` would be produced.
 

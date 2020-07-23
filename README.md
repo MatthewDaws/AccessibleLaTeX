@@ -5,6 +5,7 @@
 Some basics of how to generate [accessible]() HTML pages from LaTeX sources, written as I learn how to do this myself.
 
 - [Motivation](motivation.md) : Why do I care about accessible LaTeX
+- [MathJax](mathjax.md) : Some detailed notes about MathJax.
 - [make4ht](make4ht.md) : Some detailed notes about getting `make4ht` to convert LaTeX into HTML.
 - [LaTeX Notes](latex.md) : Some random notes about LaTeX usage
 
