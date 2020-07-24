@@ -15,7 +15,7 @@ Selected other resources:
 
 - [Stem Enable](http://stemenable.s805.sureserver.com/Welcome_to_STEM_Enable) A work in progress Wiki, with [associated GitHub account](https://github.com/stem-enable) for code
 - [Talmo Events](http://talmo.uk/events.html) specifically Chris Hughes's talk
-- [Talmo Day One](http://talmo.uk/dayone.html) specifically Emma Cliffe's talk
+- [Talmo Day One](http://talmo.uk/dayone.html) specifically Emma Cliffe's talk; see also [Talk slides](https://stem-enable.github.io/Accessibility-of-maths-e-resources/index.html)
 
 
 The opinions here are my own, and in no way reflect opinions of my employer(s).  I am not a lawyer.

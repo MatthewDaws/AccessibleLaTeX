@@ -114,3 +114,7 @@ There is nothing strange in the input LaTeX file to suggest why many different `
 It was suggested to me to use the [tidy](https://github.com/htacg/tidy-html5) programme on the output.  On Windows, you need to install this separately, e.g. [from here](http://www.paehl.com/open_source/?HTML_Tidy_for_HTML5).  However, this didn't do anything structural to the HTML code.
 
 This is (almost) a breaking feature as far as I am concerned.  The whole principle behind accessibility is to produce rather minimal HTML code which has clearly defined semantic meaning, and then to use CSS to provide styling.  Then automated tools (like screen-readers) have an easier time understanding the structure of the document.
+
+## Further reading
+
+There is a somewhat more complicated effort, using `htlatex` directly, at [STEM-Enable](https://github.com/STEM-Enable/LaTeXtoPDFandMathJax-Example2).  I had a play with this code, but could not get the `htlatex` to work without error messages.  I sort of gave up at the point of invoking a `jar` file to do some post-processing.  The [output can be viewed online](https://stem-enable.github.io/LaTeXtoPDFandMathJax-Example2/).  It looks okay, but not completely elegant.  I note that Emma Cliffe has not updated this for 3 years, and these (mid 2020) days [in talks](https://stem-enable.github.io/Accessibility-of-maths-e-resources/), is suggesting lwarp, but really, is suggesting Bookdown.
