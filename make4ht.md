@@ -47,12 +47,12 @@ We can also manually switch out MathJax v2 for MathJax v3, by editing the HTML f
 
     <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
 
-Results from [screen reader tests](mathjax.md):
+The [TeX input example](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/mainv3.htm) and [MathML input example](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main_mathmlv3.htm) can be viewed.  Results from [screen reader tests](mathjax.md):
 
 - You _must_ have Accessibility -> Activate turned on.
 - If you _click_ on the formula with ChromeVox, it is read.  However, when navigating around the document, the formulae are skipped.  Same result for TeX or MathML input.
 - NVDA works exactly as in v2; and now whether Accessibility -> Activate is turned on or not doesn't seem to matter.
-- The words spoken are subtly different between v2 and v3.  For example, the LaTeX $f:z\mapsto z^2+5$ is spoken as "f ratio ..." in v2, and "f colon ..." in v3.  The latter is probably better; of course I in a lecture would say "f is a map sending z to z squared plus 5", and it is a skill students will develop to make this sort of translation from _symbols_ to _meaning_.
+- The words spoken are subtly different between v2 and v3.  For example, the LaTeX $f:z\mapsto z^2+5$ is spoken as "f ratio ..." in v2, and "f colon ..." in v3.  The latter is probably better; of course in a lecture I would say "f is a map sending z to z squared plus 5", and it is a skill students will develop to make this sort of translation from _symbols_ to _meaning_.
 
 
 ## More complicated example
