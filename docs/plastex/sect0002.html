@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantum compactifications of Fourier Algebras: Compact quantum group compactifications</title>
+<link rel="next" href="sect0003.html" title="For the Fourier algebra" />
+<link rel="prev" href="sect0001.html" title="Introduction" />
+<link rel="up" href="index.html" title="Quantum compactifications of Fourier Algebras" />
+<link rel="stylesheet" href="styles/theme-green.css" />
+</head>
+
+<body>
+<nav class="toc">
+<svg  class="icon icon-cross close-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class=" active current">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Compact quantum group compactifications</span></a>
+<svg  class="icon icon-cross expand-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.1</span> <span class="toc_entry">For the Fourier algebra</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">3</span> <span class="toc_entry">Almost periodic elements</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Approximation properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">4</span> <span class="toc_entry">Operator-space structures</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="wrapper with-toc">
+<header>
+<h1 id="doc_title">Quantum compactifications of Fourier Algebras</h1>
+</header>
+
+<ul class="breadcrumbs">
+<li class="crumb"><a href="index.html" class="crumb">Quantum compactifications of Fourier Algebras</a></li>
+  <li class="last_crumb">Compact quantum group compactifications</li>
+</ul>
+
+<div class="content">
+<h1 id="a0000000009">2 Compact quantum group compactifications</h1>
+<p>We shall quickly sketch Sołtan’s work in <span class="cite">
+	[
+	<a href="sect0006.html#soltan" >26</a>
+	]
+</span>. Following Sołtan, we shall define a <em>compact quantum semigroup</em> to be a pair $\mathbb S=(\mathcal A,\Phi )$ where $\mathcal A$ is a unital C$^*$-algebra and $\Phi :\mathcal A\rightarrow \mathcal A\otimes \mathcal A$ is a <em>co-associative product</em>. Here, and henceforth, $\mathcal A\otimes \mathcal A$ is the <em>minimal</em> or <em>spacial</em> tensor product of $\mathcal A$ with itself. To say that $\Phi $ is a co-associative product means that $\Phi $ is a unital $*$-homomorphism and $(\Phi \otimes \operatorname {id})\Phi = (\operatorname {id}\otimes \Phi )\Phi $. </p>
+<p>A <em>compact quantum group</em> is a compact quantum semigroup $\mathbb G=(\mathcal A,\Phi )$ such that the linear span of the either of the sets $\{ (a\otimes I)\Phi (b) : a,b\in \mathcal A\} $ or $\{ (I\otimes a)\Phi (b) : a,b\in \mathcal A\} $ is dense in $\mathcal A\otimes \mathcal A$. These density conditions imply a large amount of structure: see <span class="cite">
+	[
+	<a href="sect0006.html#woro1" >30</a>
+	]
+</span> or the survey <span class="cite">
+	[
+	<a href="sect0006.html#maes" >16</a>
+	]
+</span> for further details. The density conditions can actually be weakened: see <span class="cite">
+	[
+	<a href="sect0006.html#murphy" >17</a>
+	]
+</span>. </p>
+<p>Compact quantum groups have a very rich (co)representation theory. For example, every irreducible corepresentation is finite-dimensional. As in the classical case, Søltan’s quantum compactification is stated in terms of finite-dimensional corepresentations. We first need the notion of a <em>quantum semigroup</em>. This is a pair $\mathbb S=(\mathcal A,\Phi )$ where $\mathcal A$ is a C$^*$-algebra (now not assumed unital) and $\Phi :\mathcal A\rightarrow M(\mathcal A\otimes \mathcal A)$ is a co-associative, non-degenerate $*$-homomorphism. Here $M(\mathcal A\otimes \mathcal A)$ is the <em>multiplier algebra</em> of $\mathcal A\otimes \mathcal A$. See <span class="cite">
+	[
+	<a href="sect0006.html#lance" >13</a>
+	]
+</span>, for example, for further details about multiplier algebras. Recall that to say that $\Phi $ is <em>non-degenerate</em> means that $\Phi (\mathcal A)(\mathcal A\otimes \mathcal A)$ is dense in $\mathcal A\otimes \mathcal A$. As such, there is a unique extension of $\Phi $ to a $*$-homomorphism $M(\mathcal A)\rightarrow M(\mathcal A\otimes \mathcal A)$. Similarly, $\Phi \otimes \operatorname {id}$ and $\operatorname {id}\otimes \Phi $ make sense as maps $M(\mathcal A\otimes \mathcal A)\rightarrow M(\mathcal A\otimes \mathcal A\otimes \mathcal A)$, and so it makes sense to speak of $\Phi $ as being co-associative. </p>
+<p>We now state the definitions which Søltan makes in <span class="cite">
+	[
+	<a href="sect0006.html#soltan" >26</a>
+	]
+</span>. However, we shall state them in different ways which are more compatible with our Banach algebra approach. Fix a quantum semigroup $\mathbb S=(\mathcal A,\Phi )$. In the usual way, we use $\Phi $ to induce an associative product on $\mathcal A’$, turning $\mathcal A’$ into a Banach algebra, by </p>
+<div class="displaymath" id="a0000000015">
+  \[  \langle {\mu \lambda },{a}\rangle  = \langle {\mu \otimes \lambda },{\Phi (a)}\rangle  \qquad (a\in \mathcal A, \mu ,\lambda \in \mathcal A’).  \]
+</div>
+<p>Let $X$ be a finite-dimensional Banach space, and let $T\in \mathcal B(X)\otimes M(\mathcal A)$. For each $\mu \in \mathcal A’$, let $T_\mu \in \mathcal B(X)$ be the slice map, $T_\mu = (\operatorname {id}\otimes \mu )T$. We say that $T$ is a <em>bounded representation</em> if $T$ is invertible in the algebra $\mathcal B(X)\otimes M(\mathcal A)$, and the map $\mathcal A’\rightarrow \mathcal B(X), \mu \mapsto T_\mu $ is an algebra homomorphism. Notice that we always have the <em>trivial representation</em>, $I_ X\otimes I_{\mathcal A}$. It is easy to construct direct sums of bounded representations, and with a little more effort, tensor products, see <span class="cite">
+	[
+	<a href="sect0006.html#soltan" >26</a>
+	, 
+	Section
+	
+	2.1
+	]
+</span>. </p>
+<p>Let ${\operatorname {ad}}:\mathcal B(X)\rightarrow \mathcal B(X’), S\mapsto S’$ be the <em>adjoint map</em>. For $T\in \mathcal B(X)\otimes M(\mathcal A)$, let $T^ T = ({\operatorname {ad}}\otimes \operatorname {id})T$ be the <em>transpose</em> of $T$. Then a bounded representation $T$ is <em>admissible</em> if $T^ T$ is invertible in $\mathcal B(X’)\otimes M(\mathcal A)$. </p>
+<p>When $H$ is a (finite-dimensional) Hilbert space, $\mathcal B(H)\otimes M(\mathcal A)$ becomes a C$^*$-algebra. When a bounded representation $T\in \mathcal B(H)\otimes M(\mathcal A)$ is a unitary, we say that $T$ is a <em>unitary representation</em>. We say that a bounded representation $T\in \mathcal B(X)\otimes M(\mathcal A)$ is <em>similar to a unitary representation</em> if $X$ admits a Hilbert space structure turning $T$ into a unitary representation. Then Søltan shows that admissible representations are similar to unitary representations; the converse need not hold. </p>
+<p>Let $T\in \mathcal B(X)\otimes M(\mathcal A)$ be an admissible representation, and let $\lambda \in \mathcal B(X)’$. Then $(\lambda \otimes \operatorname {id})T\in M(\mathcal A)$ is a <em>matrix element of $T$</em>. Søltan shows that the linear span of matrix elements of all admissible representations is a unital $*$-subalgebra of $M(\mathcal A)$, see <span class="cite">
+	[
+	<a href="sect0006.html#soltan" >26</a>
+	, 
+	Proposition
+	
+	2.12
+	]
+</span>. Let ${\mathbb {AP}}(\mathbb S)$ be the closure of this algebra, so ${\mathbb {AP}}(\mathbb S)\subseteq M(\mathcal A)$ is a unital C$^*$-algebra. Let $\Delta _{{\mathbb {AP}}(\mathbb S)}$ be the restriction of $\Phi $ to ${\mathbb {AP}}(\mathbb S)$. Then $\Delta _{{\mathbb {AP}}(\mathbb S)}$ is a $*$-homomorphism from ${\mathbb {AP}}(\mathbb S)$ to ${\mathbb {AP}}(\mathbb S)\otimes {\mathbb {AP}}(\mathbb S)$, and the pair $\mathfrak b\mathbb S = ({\mathbb {AP}}(\mathbb S),\Delta _{{\mathbb {AP}}(\mathbb S)})$ satisfies the density conditions to become a compact quantum group. </p>
+<p>The compact quantum group $\mathfrak b\mathbb S$ satisfies the expected universal property. Let $\chi _{\mathbb S}:{\mathbb {AP}}(\mathbb S)\rightarrow M(\mathcal A)$ be the inclusion map. Then, if $\mathbb G=(\mathcal B,\Phi _\mathcal B)$ is a compact quantum group, and $\theta :\mathcal B\rightarrow M(\mathcal A)$ is a non-degenerate<a class="footnote" href="#a0000000016">
+  <sup class="footnotemark">1</sup>
+</a> $*$-homomorphism such that $\Phi \circ \theta = (\theta \otimes \theta )\circ \Phi _{\mathcal B}$, there is a unique $*$-homomorphism $\mathfrak b\theta :\mathcal B\rightarrow {\mathbb {AP}}(\mathbb S)$ such that $\chi _{\mathbb S} \circ \mathfrak b\theta = \theta $. </p>
+<p>If $S$ is a topological semigroup, $\mathcal B=C_0(S)$, and $\Phi $ is the canonical dualisation of the product on $S$, then ${\mathbb {AP}}(\mathbb S)$ is isomorphic to $C(S^{\operatorname {AP}})$, where $S^{\operatorname {AP}}$ is the classical Bohr compactification of $S$. </p>
+
+<footer id="footnotes">
+<ol>
+  <li id="a0000000016">As $\mathcal B$ is unital, this is equivalent to $\theta $ being a unital $*$-homomorphism</li>
+</ol>
+</footer>
+</div>
+
+<nav class="prev_up_next">
+  <a href="sect0001.html" title="Introduction"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Quantum compactifications of Fourier Algebras"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0003.html" title="For the Fourier algebra"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</div>
+</body>
+</html>

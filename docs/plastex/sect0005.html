@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantum compactifications of Fourier Algebras: Approximation properties</title>
+<link rel="next" href="sect0006.html" title="Operator-space structures" />
+<link rel="prev" href="sect0004.html" title="Almost periodic elements" />
+<link rel="up" href="sect0004.html" title="Almost periodic elements" />
+<link rel="stylesheet" href="styles/theme-green.css" />
+</head>
+
+<body>
+<nav class="toc">
+<svg  class="icon icon-cross close-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Compact quantum group compactifications</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.1</span> <span class="toc_entry">For the Fourier algebra</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active">
+  <a href="sect0004.html"><span class="toc_ref">3</span> <span class="toc_entry">Almost periodic elements</span></a>
+<svg  class="icon icon-cross expand-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+  <ul class="sub-toc-1 active">
+     <li class=" active current">
+  <a href="sect0005.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Approximation properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">4</span> <span class="toc_entry">Operator-space structures</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="wrapper with-toc">
+<header>
+<h1 id="doc_title">Quantum compactifications of Fourier Algebras</h1>
+</header>
+
+<ul class="breadcrumbs">
+<li class="crumb"><a href="index.html" class="crumb">Quantum compactifications of Fourier Algebras</a></li>
+<li class="crumb"><a href="sect0004.html" class="crumb">Almost periodic elements</a></li>
+  <li class="last_crumb">Approximation properties</li>
+</ul>
+
+<div class="content">
+<h2 id="a0000000012">3.1 Approximation properties</h2>
+<p>We recall the classical notion of the <em>Banach space approximation property</em> (see, for example, <span class="cite">
+	[
+	<a href="sect0006.html#lt" >15</a>
+	, 
+	Section
+	
+	1.e
+	]
+</span>). Recall that a Banach space $E$ has the approximation property if, for any Banach space $F$, any compact operator $T:F\rightarrow E$ can be norm-approximated by finite-rank operators. In general, an operator which can be approximated by finite-ranks is said to be <em>approximable</em>. </p>
+<p>The Banach space $L^\infty (G)$ always has the approximation property, so in particular, asking that $\mathcal R_\mu $, for $\mu \in L^\infty (G)$, be compact is the same as asking if we can approximate $\mathcal R_\mu $ be finite-rank maps. However, we know that $VN(G)$ has the approximation property if and only if $VN(G)$ is <em>amenable</em> as a Banach algebra, which in turn is equivalent to $VN(G)$ being isomorphic to an algebra of the from </p>
+<div class="displaymath" id="a0000000035">
+  \[  \bigoplus _{k=1}^ n \mathbb M_{n_ k} \otimes C(X_ k).  \]
+</div>
+<p> It follows that this is equivalent to $G$ being abelian by finite. See <span class="cite">
+	[
+	<a href="sect0006.html#runde" >24</a>
+	, 
+	Section
+	
+	6.1
+	]
+</span> for details. In conclusion, for general groups $G$, we have no reason to believe that $\mathcal R_\mu $ being compact is equivalent to $\mathcal R_\mu $ being approximable. </p>
+<p>So perhaps a better definition of $\mu $ being “almost periodic” would be to ask for $\mathcal R_\mu $ to be approximable. We shall show below that if we do ask this, but in the category of <em>operator spaces</em>, then we get $\mathfrak b C^*_ r(G)$, as we might hope. In the remainder of this section, we shall study some stronger forms of “approximable” and show that each of these gives rise to a notion of “almost periodic” leading back to $\mathfrak b C^*_ r(G)$, at least when the group $G$ is amenable. </p>
+<p>Firstly, define ${\operatorname {AP}}^{(1)}(\hat G)$ to be the collection of $T\in VN(G)$ such that $\mathcal R_ T$ can be norm-approximated by maps of the form $\mathcal R_ S$, where $S\in VN(G)$ and $\mathcal R_ S$ is finite-rank. It follows immediately from Chou’s work that ${\operatorname {AP}}_1(\hat G)=\mathfrak bC^*_ r(G)$. Indeed, by <span class="cite">
+	[
+	<a href="sect0006.html#chou" >3</a>
+	, 
+	Proposition
+	
+	2.3
+	]
+</span>, we have that $\mathcal R_ S$ is finite-rank if and only if $S\in {\operatorname {Trig}}(\hat G)$. If $G$ is amenable, then $\| \mathcal R_ S\|  = \| S\| $ for all $S\in VN(G)$. So immediately, ${\operatorname {AP}}_1(\hat G) = \mathfrak b C^*_ r(G)$, when $G$ is amenable. </p>
+<p>Define ${\operatorname {AP}}^{(2)}(\hat G)$ to be the collection of $T\in VN(G)$ such that $\mathcal R_ T$ can be norm-approximated by finite-rank $A(G)$-module maps $\theta :A(G)\rightarrow VN(G)$. That is, maps $\theta $ such that $\theta (ab) = a\cdot \theta (b)$ for $a,b\in A(G)$. If $A(G)$ has a bounded approximate identity, that is, $G$ is amenable, then a standard argument shows that $\theta $ is of the form $\mathcal R_ S$ for some $S\in VN(G)$. Infact, the following proposition shows that this is true in general, and so ${\operatorname {AP}}_2(\hat G) = {\operatorname {AP}}_1(\hat G)$. </p>
+<p><b class="bfseries">Proposition&#160;3.2. </b><i class="itshape">A finite-rank map $\theta :A(G)\rightarrow VN(G)$ is a module map if and only if $\theta =\mathcal R_ S$ for some $S\in {\operatorname {Trig}}(\hat G)$. </i></p>
+
+<p> <div class="proof_wrapper" id="a0000000036">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <svg  class="icon icon-plus expand-proof"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+
+  </div>
+  <div class="proof_content">
+  
+  </div>
+</div> </p>
+
+</div>
+
+<nav class="prev_up_next">
+  <a href="sect0004.html" title="Almost periodic elements"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="sect0004.html" title="Almost periodic elements"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0006.html" title="Operator-space structures"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantum compactifications of Fourier Algebras: Operator-space structures</title>
+<link rel="prev" href="sect0005.html" title="Approximation properties" />
+<link rel="up" href="index.html" title="Quantum compactifications of Fourier Algebras" />
+<link rel="stylesheet" href="styles/theme-green.css" />
+</head>
+
+<body>
+<nav class="toc">
+<svg  class="icon icon-cross close-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Compact quantum group compactifications</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.1</span> <span class="toc_entry">For the Fourier algebra</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">3</span> <span class="toc_entry">Almost periodic elements</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Approximation properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active current">
+  <a href="sect0006.html"><span class="toc_ref">4</span> <span class="toc_entry">Operator-space structures</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="wrapper with-toc">
+<header>
+<h1 id="doc_title">Quantum compactifications of Fourier Algebras</h1>
+</header>
+
+<ul class="breadcrumbs">
+<li class="crumb"><a href="index.html" class="crumb">Quantum compactifications of Fourier Algebras</a></li>
+  <li class="last_crumb">Operator-space structures</li>
+</ul>
+
+<div class="content">
+<h1 id="a0000000013">4 Operator-space structures</h1>
+<p>There is now ample evidence that when considering the Fourier algebra $A(G)$, if we view $A(G)$ as a <em>completely-contractive Banach algebra</em> with its canonical operator-space structure, then $A(G)$ behaves much more closely to being the “dual” of $L^1(G)$, as compared to viewing $A(G)$ as simply a Banach algebra. See, for example, Ruan’s original paper <span class="cite">
+	[
+	<a href="sect0006.html#ruan" >23</a>
+	]
+</span> or Runde’s survey article <span class="cite">
+	[
+	<a href="sect0006.html#runde1" >25</a>
+	]
+</span>. </p>
+<p>We shall assume standard results about operator spaces, as found in <span class="cite">
+	[
+	<a href="sect0006.html#ER" >7</a>
+	]
+</span> or <span class="cite">
+	[
+	<a href="sect0006.html#pisier" >20</a>
+	]
+</span>. The important fact for us is that $A(G) {\widehat{\otimes }}A(G) = A(G\times G)$, where ${\widehat{\otimes }}$ denotes the <em>operator space projective tensor product</em>. Let $T\in VN(G)$, and consider the map $\mathcal R_ T$, now treated as a completely bounded map $A(G)\rightarrow VN(G)$. Now, $\mathcal{CB}(A(G),VN(G)) = (A(G){\widehat{\otimes }}A(G))’$, and we see that </p>
+<div class="displaymath" id="a0000000037">
+  \[  \langle {\mathcal R_ T(a)},{b}\rangle  = \langle {T},{ab}\rangle  = \langle {\Delta (T)},{a\otimes b}\rangle  \qquad (a,b\in A(G),  \]
+</div>
+<p> so $R_ T(a) = (a\otimes \operatorname {id})\Delta (T)$. As $A(G){\widehat{\otimes }}A(G) = A(G\times G)$, we have </p>
+<div class="displaymath" id="a0000000038">
+  \[  \| \mathcal R_ T\| _{cb} = \sup \{  |\langle {\Delta (T)},{a}\rangle | : a\in A(G\times G), \| a\| \leq 1 \}  = \| \Delta (T)\|  = \| T\| .  \]
+</div>
+<p>We start by showing that operator space versions of ${\operatorname {AP}}^{(1)}$ and ${\operatorname {AP}}^{(2)}$ allow us to remove the condition that $G$ be amenable. </p>
+<p>Let ${\operatorname {AP}}^{(1)}_{cb}(\hat G)$ be the collection of $T\in VN(G)$ such that $\mathcal R_ T$ can be approximated, in the completely bounded norm, by maps of the form $\mathcal R_ S$ such that $\mathcal R_ S$ is finite rank. Again, this means that $S\in {\operatorname {Trig}}(\hat G)$. However, we now have that $\| \mathcal R_ T-\mathcal R_ S\| _{cb} = \| T-S\| $, so we immediately conclude that $T\in C^*_\delta (G)$. Hence ${\operatorname {AP}}^{(1)}_{cb}(\hat G) = \mathfrak bC^*_ r(G)$. </p>
+<p>Similarly, if we define ${\operatorname {AP}}^{(2)}_{cb}(\hat G)$ to be the collection of $T\in VN(G)$ such that $\mathcal R_ T$ can be approximated, in the completely bounded norm, but finite-rank module maps, then as above, ${\operatorname {AP}}^{(2)}_{cb}(\hat G) = {\operatorname {AP}}^{(1)}_{cb}(\hat G) = \mathfrak bC^*_ r(G)$. </p>
+<p>These are very strong approximation properties. A much weaker notion is the following. Define ${\operatorname {AP}}_{cb}(\hat G)$ be the the collection of $R\in VN(G)$ such that $\mathcal R_ T$ can be approximated, in the completely bounded norm, by arbitrary finite-rank maps from $A(G)$ to $VN(G)$. From <span class="cite">
+	[
+	<a href="sect0006.html#ER" >7</a>
+	, 
+	Proposition
+	
+	8.1.2
+	]
+</span>, it follows that $T\in {\operatorname {AP}}_{cb}(\hat G)$ if and only if $\Delta (T) \in VN(G) \check\otimes VN(G)$, where here $\check\otimes $ denotes the operator space <em>injective tensor product</em>. This agrees with the minimal (or spacial) C$^*$-tensor product (see <span class="cite">
+	[
+	<a href="sect0006.html#ER" >7</a>
+	, 
+	Proposition
+	
+	8.1.6
+	]
+</span>). </p>
+<p><b class="bfseries">Theorem&#160;4.1. </b><i class="itshape">Let $G$ be a discrete group. Then ${\operatorname {AP}}_{cb}(\hat G) = \mathfrak b C^*_ r(G) = C^*_ r(G)$. </i></p>
+
+<p> <div class="proof_wrapper" id="a0000000039">
+  <div class="proof_heading">
+    <span class="proof_caption">
+    Proof
+    </span>
+    <svg  class="icon icon-plus expand-proof"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+
+  </div>
+  <div class="proof_content">
+  <p>Let $(e_ s)_{s\in G}$ be the standard orthonormal basis of $\ell ^2(G)$. Each $T\in VN(G)$ is uniquely determined by the vector $\tau = T(e_{e_ G})\in \ell ^2(G)$, as $T(x) = \tau * x$ for $x\in \ell ^2(G)$, namely the convolution of $\tau $ with $x$. Under this, we identify $VN(G)$ with the collection of vectors $\tau \in \ell ^2(G)$ such that convolution by $\tau $ on the left gives a bounded operators on $\ell ^2(G)$. Under this identification, ${\operatorname {Trig}}(G)$ is simply the linear span of $(e_ s)$ in $\ell ^2(G)$. </p>
+<p>Similarly, we identify $VN(G\times G)$ with a subspace of $\ell ^2(G\times G) = \ell ^2(G) \otimes \ell ^2(G)$. We can check that if $T\in VN(G)$ and $\tau = T(e_{e_ G})$, then </p>
+<div class="displaymath" id="a0000000040">
+  \[  \Delta (T)(e_{(e_ G,e_ G)}) = ( \tau _ s \delta _{s,t} )_{(s,t)\in G\times G},  \]
+</div>
+<p> where $\delta _{s,t}$ is the Kronecker delta. </p>
+<p>Define $U:\ell ^2(G)\rightarrow \ell ^2(G\times G)$ and $V:\ell ^2(G\times G)\rightarrow \ell ^2(G)$ by $U(e_ s) = e_{(s,s)}$ and $V(e_{(s,t)}) = \delta _{s,t} e_ s$ for $s,t\in G$. Define a map $\theta :VN(G\times G) \rightarrow \ell ^2(G)$ as follows. For $R\in VN(G\times G)$, let $\rho = R(e_{(e_ G,e_ G)}) \in \ell ^2(G\times G)$. Then define </p>
+<div class="displaymath" id="a0000000041">
+  \[  \theta (R) = \big ( \rho _{s,s} \big )_{s\in G} \in \ell ^2(G).  \]
+</div>
+<p> Notice that </p>
+<div class="displaymath" id="a0000000042">
+  \[  VRU(e_ s) = VR(e_{(s,s)}) = \sum _{t,r\in G} \rho _{(t,r)} V(e_{(ts,rs)}) = \sum _{t,r\in G} \rho _{(t,r)} \delta _{t,r} e_{ts} = \sum _{t\in G} \rho _{(t,t)} e_{ts} = \theta (R) * e_ s.  \]
+</div>
+<p> Consequently, convolution on the left by $\theta (R)$ is a bounded operator, namely $VRU$, and so $\theta (R)$ induces a member of $VN(G)$. Notice that </p>
+<div class="displaymath" id="a0000000043">
+  \[  V\Delta (T)U = T \qquad (T\in VN(G)).  \]
+</div>
+<p>If $T,S\in VN(G)$, say $\tau = T(e_{e_ G})$ and $\sigma = S(e_{e_ G})$, then </p>
+<div class="displaymath" id="a0000000044">
+  \[  \theta (T\otimes S) = \big ( \tau _ s \sigma _ s \big )_{s\in G}.  \]
+</div>
+<p> The Cauchy-Schwarz inequality shows that $\theta (T\otimes S)\in \ell ^1(G)\subseteq \ell ^2(G)$, and so $V(T\otimes S)U$ is in the closure of ${\operatorname {Trig}}(\hat G)$, that is, in $C^*_ r(G)$. By continuity, we conclude that $V R U \in C^*_ r(G)$ for any $R\in VN(G) \check\otimes VN(G)$. Hence, if $T\in VN(G)$ is such that $\Delta (T)\in VN(G)\check\otimes VN(G)$, then $T = V\Delta (T)U \in C^*_ r(G)$, as required. </p>
+
+  </div>
+</div> </p>
+<p>We shall have to work harder to prove this result for arbitrary locally compact groups $G$. </p>
+<p>One approach would be the following. Let $\Lambda $ be the collection on compact, symmetric neighbourhoods of $e_ G$. For $T\in VN(G)$, let </p>
+<div class="displaymath" id="a0000000045">
+  \[  x_ K = T(\chi _ K) |K|^{-1} \qquad (K\in \Lambda ).  \]
+</div>
+<p> Then $(x_ K)$ is a (in general unbounded) net in $L^2(G)$. However, the net $(\chi _ K |K|^{-1})_{K\in \Lambda }$ is a bounded net in $L^1(G)$ which is an approximate identity. In particular, for $f\in L^2(G)$, we have that $f = \lim _ K |K|^{-1} \chi _ K * f$. As $VN(G)$ commutes with convolution on the right, we have that </p>
+<div class="displaymath" id="a0000000046">
+  \[  T(f) = \lim _ K T(\chi _ K*f) |K|^{-1} = \lim _ K T(\chi _ K)*f |K|^{-1} = \lim _ K x_ K * f \qquad (f\in L^2(G)),  \]
+</div>
+<p> where the limit is in norm. </p>
+<p>Thus $(x_ K)$ determines $T$; in fact, if $\psi $ is the left Plancherel weight, then $\psi (T^*T) = \limsup _ K \| x_ K\| _2^2$. For $T\in VN(G)$ and $f,g\in L^2(G)$, we have </p>
+<div class="displaymath" id="a0000000047">
+  \[  (T^*(f)|g) = (f|T(g)) = \lim _ K (f|x_ K*g) = \lim _ K (x_ K^* * f|g).  \]
+</div>
+<p> Hence $|K|^{-1} T^*(\chi _ K)$ might not be $x_ K^*$, but the net $(x_ K^*)_{K\in \Lambda }$ does induce the operator $T^*$. Here the involution is that on $L^1(G)$, </p>
+<div class="displaymath" id="a0000000048">
+  \[  x_ K^*(s) = \Delta (s^{-1}) \overline{ x_ K(s) } \qquad (s\in G).  \]
+</div>
+<p> As this is only defined upon $L^2(G) \cap L^1(G)$, we technically have to perturb each $x_ K$ so that it is integrable. </p>
+<p>The problem is then to reconstruct $(x_ K)$ from $\Delta (T)$ in some way. For example, </p>
+<div class="displaymath" id="a0000000049">
+  \[  x_ K\otimes f = |K|^{-1} T(\chi _ K)\otimes f = |K|^{-1} W\Delta (T)W^*(\chi _ K\otimes f) \qquad (f\in L^2(G)).  \]
+</div>
+<p> Hence, for $f\in L^2(G)$, we have that </p>
+<span>\begin{align*}  (x_ K|f) & = \lim _ L |L|^{-1} (x_ K\otimes \chi _ L | f\otimes \chi _ L) \\ & = \lim _ L |L|^{-1} |K|^{-1} \big ( \Delta (T)W^*(\chi _ K\otimes \chi _ L) | W^*(f\otimes \chi _ L) \big ). \end{align*}</span>
+<p> For each $L\in \Lambda $, let $e_ L = \chi _ L |L|^{-1/2}$, so that $\| e_ L\| _2=1$. Then, for any $R\in \mathcal B(L^2(G\times G))$, the following limit exists </p>
+<div class="displaymath" id="a0000000050">
+  \[  \phi _{K,f}(R) = \lim _{L\in \Lambda } |K|^{-1} \big ( RW^*(\chi _ K\otimes e_ L) | W^*(f\otimes e_ L) \big ),  \]
+</div>
+<p> so that $\phi _{K,f}\in \mathcal B(L^2(G\times G))’$ with $\| \phi _{K,f}\| \leq |K|^{-1/2} \| f\| _2$. We then have that </p>
+<div class="displaymath" id="a0000000051">
+  \[  (x_ K|f) = \langle {\phi _{K,f}},{\Delta (T)}\rangle  \qquad (f\in L^2(G)).  \]
+</div>
+<p><b class="bfseries">How are we going to do this?</b> </p>
+<p><b class="bfseries">Idea:</b> We can do the above for $VN(G\times G)$ as well, of course. The idea, copying what we did in the discrete case, would be to find some <em>bounded</em> operation which takes a “convolution family” given by $VN(G\times G)$ and gives back a “convolution family” inducing a member of $VN(G)$. We want this to be an inverse to $\Delta $, and which hopefully does interesting things to $VN(G) \otimes VN(G)$. </p>
+<dl class="bibliography">
+  <dt><a name="BMT">1</a></dt>
+  <dd><p><span class="scshape">E. Bédos, G. J. Murphy, L. Tuset</span>, ‘Co-amenability of compact quantum groups’, <em>J. Geom. Phys.</em> 40 (2001) 130–153. </p>
+</dd>
+  <dt><a name="BJM">2</a></dt>
+  <dd><p><span class="scshape">J. F. Berglund, H. D. Junghenn, P. Milnes</span>, <em>Analysis on semigroups. Function spaces, compactifications, representations</em>, (John Wiley &amp; Sons, Inc., New York, 1989). </p>
+</dd>
+  <dt><a name="chou">3</a></dt>
+  <dd><p><span class="scshape">C. Chou</span>, ‘Almost periodic operators in ${\rm VN}(G)$’, <em>Trans. Amer. Math. Soc.</em> 317 (1990) 229–253. </p>
+</dd>
+  <dt><a name="Dales">4</a></dt>
+  <dd><p><span class="scshape">H. G. Dales</span>, <em>Banach algebras and automatic continuity</em>, (Clarendon Press, Oxford, 2000). </p>
+</dd>
+  <dt><a name="DR">5</a></dt>
+  <dd><p><span class="scshape">C. F. Dunkl, D. E. Ramirez</span>, ‘Weakly almost periodic functionals on the Fourier algebra’, <em>Trans. Amer. Math. Soc.</em> 185 (1973) 501–514. </p>
+</dd>
+  <dt><a name="DR2">6</a></dt>
+  <dd><p><span class="scshape">C. F. Dunkl, D. E. Ramirez</span>, ‘Existence and nonuniqueness of invariant means on ${\mathcal L}\sp {\infty }(\hat G)$’, <em>Proc. Amer. Math. Soc.</em> 32 (1972) 525–530. </p>
+</dd>
+  <dt><a name="ER">7</a></dt>
+  <dd><p><span class="scshape">E. G. Effros, Z.-J. Ruan</span>, <em>Operator spaces</em>, (Oxford University Press, New York, 2000). </p>
+</dd>
+  <dt><a name="eymard">8</a></dt>
+  <dd><p><span class="scshape">P. Eymard</span>, ‘L’algèbre de Fourier d’un groupe localement compact’, <em>Bull. Soc. Math. France</em> 92 (1964) 181–236. </p>
+</dd>
+  <dt><a name="gran1">9</a></dt>
+  <dd><p><span class="scshape">E. E. Granirer</span>, ‘Weakly almost periodic and uniformly continuous functionals on the Fourier algebra of any locally compact group’, <em>Trans. Amer. Math. Soc.</em> 189 (1974) 371–382. </p>
+</dd>
+  <dt><a name="hu">10</a></dt>
+  <dd><p><span class="scshape">Z. Hu</span>, ‘Open subgroups of $G$ and almost periodic functionals on $A(G)$’, <em>Proc. Amer. Math. Soc.</em> 128 (2000) 2473–2478. </p>
+</dd>
+  <dt><a name="kus">11</a></dt>
+  <dd><p><span class="scshape">J. Kustermans</span>, ‘Locally compact quantum groups in the universal setting.’, <em>Internat. J. Math.</em> 12 (2001) 289–338. </p>
+</dd>
+  <dt><a name="kv">12</a></dt>
+  <dd><p><span class="scshape">J. Kustermans, S. Vaes</span>, ‘Locally compact quantum groups’, <em>Ann. Sci. École Norm. Sup. (4)</em> 33 (2000) 837–934. </p>
+</dd>
+  <dt><a name="lance">13</a></dt>
+  <dd><p><span class="scshape">E. C. Lance</span>, <em>Hilbert $C\sp *$-modules. A toolkit for operator algebraists</em>, (London Mathematical Society Lecture Note Series, 210. Cambridge University Press, Cambridge, 1995.). </p>
+</dd>
+  <dt><a name="lau">14</a></dt>
+  <dd><p><span class="scshape">A. T.-M. Lau</span>, ‘Uniformly continuous functionals on the Fourier algebra of any locally compact group’, <em>Trans. Amer. Math. Soc.</em> 251 (1979) 39–59. </p>
+</dd>
+  <dt><a name="lt">15</a></dt>
+  <dd><p><span class="scshape">J. Lindenstrauss, L. Tzafriri</span>, <em>Classical Banach spaces. I.</em>, (Springer-Verlag, Berlin-New York, 1977). </p>
+</dd>
+  <dt><a name="maes">16</a></dt>
+  <dd><p><span class="scshape">A. Maes, A. Van Daele</span>, ‘Notes on compact quantum groups’, <em>Nieuw Arch. Wisk. (4)</em> 16 (1998) 73–112. </p>
+</dd>
+  <dt><a name="murphy">17</a></dt>
+  <dd><p><span class="scshape">G. J. Murphy, L. Tuset</span>, ‘Aspects of compact quantum group theory’, <em>Proc. Amer. Math. Soc.</em> 132 (2004) 3055–3067. </p>
+</dd>
+  <dt><a name="must">18</a></dt>
+  <dd><p><span class="scshape">H. S. Mustafayev</span>, ‘Almost periodic functionals on some class of Banach algebras’, <em>Rocky Mountain J. Math.</em> 36 (2006) 1977–1997. </p>
+</dd>
+  <dt><a name="ped">19</a></dt>
+  <dd><p><span class="scshape">G. K. Pedersen</span>, <em>$C\sp {*} $-algebras and their automorphism groups</em>, (Academic Press, Inc., London-New York, 1979). </p>
+</dd>
+  <dt><a name="pisier">20</a></dt>
+  <dd><p><span class="scshape">G. Pisier</span>, <em>Introduction to operator space theory</em>, (Cambridge University Press, Cambridge, 2003). </p>
+</dd>
+  <dt><a name="renaud">21</a></dt>
+  <dd><p><span class="scshape">P. F. Renaud</span>, ‘Invariant means on a class of von Neumann algebras’, <em>Trans. Amer. Math. Soc.</em> 170 (1972) 285–291. </p>
+</dd>
+  <dt><a name="rindler">22</a></dt>
+  <dd><p><span class="scshape">H. Rindler</span>, ‘On weak containment properties’, <em>Proc. Amer. Math. Soc.</em> 114 (1992) 561–563. </p>
+</dd>
+  <dt><a name="ruan">23</a></dt>
+  <dd><p><span class="scshape">Z.-J. Ruan</span>, ‘The operator amenability of $A(G)$’, <em>Amer. J. Math.</em> 117 (1995) 1449–1474. </p>
+</dd>
+  <dt><a name="runde">24</a></dt>
+  <dd><p><span class="scshape">V. Runde</span>, <em>Lectures on amenability</em>, (Lecture Notes in Mathematics, 1774. Springer-Verlag, Berlin, 2002). </p>
+</dd>
+  <dt><a name="runde1">25</a></dt>
+  <dd><p><span class="scshape">V. Runde</span>, ‘Applications of operator spaces to abstract harmonic analysis’, <em>Expo. Math.</em> 22 (2004) 317–363. </p>
+</dd>
+  <dt><a name="soltan">26</a></dt>
+  <dd><p><span class="scshape">P. M. Sołtan</span>, ‘Quantum Bohr compactification’, <em>Illinois J. Math.</em> 49 (2005) 1245–1270. </p>
+</dd>
+  <dt><a name="tak1">27</a></dt>
+  <dd><p><span class="scshape">M. Takesaki</span>, <em>Theory of operator algebras. I.</em>, (Springer-Verlag, New York-Heidelberg, 1979). </p>
+</dd>
+  <dt><a name="ulger">28</a></dt>
+  <dd><p><span class="scshape">A. Ülger</span>, ‘Continuity of weakly almost periodic functionals on $L\sp 1(G)$’, <em>Quart. J. Math. Oxford Ser. (2)</em> 37 (1986) 495–497. </p>
+</dd>
+  <dt><a name="vn1">29</a></dt>
+  <dd><p><span class="scshape">J. v. Neumann</span>, ‘Almost periodic functions in a group. I.’, <em>Trans. Amer. Math. Soc.</em> 36 (1934) 445–492. </p>
+</dd>
+  <dt><a name="woro1">30</a></dt>
+  <dd><p><span class="scshape">S. L. Woronowicz</span>, ‘Compact quantum groups’, in <em>Symetries quantiques</em> (Les Houches, 1995), 845–884, North-Holland, Amsterdam, 1998. </p>
+</dd>
+</dl>
+<p><em>Email:</em> <span class="ttfamily">matt.daws@cantab.net</span> </p>
+
+</div>
+
+<nav class="prev_up_next">
+  <a href="sect0005.html" title="Approximation properties"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Quantum compactifications of Fourier Algebras"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</div>
+</body>
+</html>

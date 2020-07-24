@@ -7,6 +7,8 @@ Some basics of how to generate [accessible]() HTML pages from LaTeX sources, wri
 - [Motivation](motivation.md) : Why do I care about accessible LaTeX
 - [MathJax](mathjax.md) : Some detailed notes about MathJax.
 - [make4ht](make4ht.md) : Some detailed notes about getting `make4ht` to convert LaTeX into HTML.
+- [plasTeX](plastex.md) : A python module which, out the box, performs better than `make4ht`, but requires more knowledge to use.
+- [BookDown](bookdown.md) : An entirely different solution, using RStudio to edit markdown, and compile to various outputs.  No working example yet.
 - [LaTeX Notes](latex.md) : Some random notes about LaTeX usage
 
 

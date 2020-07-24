@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantum compactifications of Fourier Algebras: Introduction</title>
+<link rel="next" href="sect0002.html" title="Compact quantum group compactifications" />
+<link rel="prev" href="index.html" title="Quantum compactifications of Fourier Algebras" />
+<link rel="up" href="index.html" title="Quantum compactifications of Fourier Algebras" />
+<link rel="stylesheet" href="styles/theme-green.css" />
+</head>
+
+<body>
+<nav class="toc">
+<svg  class="icon icon-cross close-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+
+<ul class="sub-toc-0">
+<li class=" active current">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Compact quantum group compactifications</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.1</span> <span class="toc_entry">For the Fourier algebra</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0004.html"><span class="toc_ref">3</span> <span class="toc_entry">Almost periodic elements</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0005.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Approximation properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">4</span> <span class="toc_entry">Operator-space structures</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="wrapper with-toc">
+<header>
+<h1 id="doc_title">Quantum compactifications of Fourier Algebras</h1>
+</header>
+
+<ul class="breadcrumbs">
+<li class="crumb"><a href="index.html" class="crumb">Quantum compactifications of Fourier Algebras</a></li>
+  <li class="last_crumb">Introduction</li>
+</ul>
+
+<div class="content">
+<h1 id="a0000000008">1 Introduction</h1>
+<p>The classical Bohr Compactification of a topological (semi)group can be defined in terms of unitary representations (see the original paper of von Neumann <span class="cite">
+	[
+	<a href="sect0006.html#vn1" >29</a>
+	]
+</span> or see <span class="cite">
+	[
+	<a href="sect0006.html#BJM" >2</a>
+	, 
+	???
+	]
+</span> for a modern treatment). Recently, see <span class="cite">
+	[
+	<a href="sect0006.html#soltan" >26</a>
+	]
+</span>, Sołtan has extended this idea to give a definition of a compactification of a quantum semigroup, a process which yields a compact quantum group, in the sense of Woronowicz (see <span class="cite">
+	[
+	<a href="sect0006.html#woro1" >30</a>
+	]
+</span>). </p>
+<p>For a locally compact group $G$, we can describe the Bohr (or equivalently <em>almost periodic</em>) compactification of $G$ in terms of a certain function space on $G$. Indeed, we can describe this function space in terms of the Banach algebra $L^1(G)$ and its dual $L^\infty (G)$. We turn the dual into an $L^1(G)$-bimodule in the usual way, and then define $f\in L^\infty (G)$ to be <em>almost periodic</em> if the map </p>
+<div class="displaymath" id="a0000000014">
+  \[  R_ f:L^1(G)\rightarrow L^\infty (G); \quad a\mapsto a\cdot f \qquad (a\in L^1(G))  \]
+</div>
+<p> is compact. If we let ${\operatorname {AP}}(G)\subseteq L^\infty (G)$ be the collection of almost periodic elements, then each member of ${\operatorname {AP}}(G)$ is continuous; ${\operatorname {AP}}(G)$ is a unital C$^*$-subalgebra of $L^\infty (G)$; if the character space of ${\operatorname {AP}}(G)$ is $G^{\operatorname {AP}}$, then $G^{\operatorname {AP}}$ becomes a compact group containing a dense homeomorphic image of $G$. </p>
+<p>For an abelian locally compact group $G$, we have the Fourier transform $L^1(G)\rightarrow C_0(\hat G)$, where $\hat G$ is the dual group to $G$. The image is defined as the <em>Fourier algebra</em> of $\hat G$, see <span class="cite">
+	[
+	<a href="sect0006.html#Dales" >4</a>
+	, 
+	???
+	]
+</span>. For a non-abelian group $G$, Eymard defined an commutative Banach algebra of functions on $G$, written $A(G)$, which extends the definition of the Fourier algebra, see <span class="cite">
+	[
+	<a href="sect0006.html#eymard" >8</a>
+	]
+</span>. As the definition of <em>almost periodic</em> above makes sense for any Banach algebra, it is not surprising that the space of almost periodic functionals on the Fourier algebra has been studied. The definition appears to have been made in <span class="cite">
+	[
+	<a href="sect0006.html#DR" >5</a>
+	, 
+	Section
+	
+	7
+	]
+</span>, where the authors write ${\operatorname {AP}}(\hat G)$, in analogy with the abelian case. Further study was undertaken in <span class="cite">
+	[
+	<a href="sect0006.html#gran1" >9</a>
+	]
+</span> and <span class="cite">
+	[
+	<a href="sect0006.html#lau" >14</a>
+	]
+</span>, for example. An excellent survey (which we use extensively below) is Chou’s paper <span class="cite">
+	[
+	<a href="sect0006.html#chou" >3</a>
+	]
+</span>. See also <span class="cite">
+	[
+	<a href="sect0006.html#hu" >10</a>
+	]
+</span> and <span class="cite">
+	[
+	<a href="sect0006.html#must" >18</a>
+	]
+</span> for more recent work. </p>
+<p>The space ${\operatorname {AP}}(\hat G)$ is not nearly as well understood as ${\operatorname {AP}}(G)$, and it appears that no study has been undertaken of ${\operatorname {AP}}(\hat G)$ in the context of a categorical notion of “compactification”. The aim of this paper is to undertake such a study. </p>
+<p><b class="bfseries">Stuff about approximation properties</b>. </p>
+<p><b class="bfseries">AIMS:</b> </p>
+<ul class="itemize">
+  <li><p>Heavily using <span class="cite">
+	[
+	<a href="sect0006.html#chou" >3</a>
+	]
+</span>, we introduce a modified definition of “almost periodic”, and show the resulting space exactly coincides with the quantum compactification constructed by Sołtan, once appropriate identifications are made. </p>
+</li>
+  <li><p>We try to use operator-space methods. </p>
+</li>
+  <li><p>In general ${\operatorname {AP}}(\hat G)$ is not a C$^*$-algebra; this is our major problem with what we could call the “classical case”. However, does there perhaps exist a <em>completely isometry</em> $\Delta :{\operatorname {AP}}(\hat G)\rightarrow {\operatorname {AP}}(\hat G)\check\otimes {\operatorname {AP}}(\hat G)$. </p>
+</li>
+  <li><p>Proceeding with the above, can we apply some abstract procedure to ${\operatorname {AP}}(\hat G)$ to obtain a von Neumann algebra? Use the Haar functional here (which we know does exist). </p>
+</li>
+  <li><p>What is the <em>reduced</em> compact quantum group which we get from Sołtan’s methods? Can we perhaps recover this from ${\operatorname {AP}}(\hat G)$? </p>
+</li>
+  <li><p>This about the tensor product: key fact which Soltan uses to show that ${\mathbb {AP}}(\mathbb G)$ is an algebra. Can we adapt to ${\operatorname {AP}}(\hat G)$ somehow? </p>
+</li>
+  <li><p>Anything else? </p>
+</li>
+</ul>
+<p>Notation: $\mathcal B(E)$. Dual space, dual pairing. Notation for inner products. </p>
+
+</div>
+
+<nav class="prev_up_next">
+  <a href="index.html" title="Quantum compactifications of Fourier Algebras"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Quantum compactifications of Fourier Algebras"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0002.html" title="Compact quantum group compactifications"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</div>
+</body>
+</html>

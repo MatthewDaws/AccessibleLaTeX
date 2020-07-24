@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<meta name="generator" content="plasTeX" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Quantum compactifications of Fourier Algebras: Almost periodic elements</title>
+<link rel="next" href="sect0005.html" title="Approximation properties" />
+<link rel="prev" href="sect0003.html" title="For the Fourier algebra" />
+<link rel="up" href="index.html" title="Quantum compactifications of Fourier Algebras" />
+<link rel="stylesheet" href="styles/theme-green.css" />
+</head>
+
+<body>
+<nav class="toc">
+<svg  class="icon icon-cross close-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+
+<ul class="sub-toc-0">
+<li class="">
+  <a href="sect0001.html"><span class="toc_ref">1</span> <span class="toc_entry">Introduction</span></a>
+ </li>
+<li class="">
+  <a href="sect0002.html"><span class="toc_ref">2</span> <span class="toc_entry">Compact quantum group compactifications</span></a>
+<svg  class="icon icon-plus expand-toc"><use xlink:href="symbol-defs.svg#icon-plus"></use></svg>
+  <ul class="sub-toc-1">
+     <li class="">
+  <a href="sect0003.html"><span class="toc_ref">2.1</span> <span class="toc_entry">For the Fourier algebra</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class=" active current">
+  <a href="sect0004.html"><span class="toc_ref">3</span> <span class="toc_entry">Almost periodic elements</span></a>
+<svg  class="icon icon-cross expand-toc"><use xlink:href="symbol-defs.svg#icon-cross"></use></svg>
+  <ul class="sub-toc-1 active">
+     <li class="">
+  <a href="sect0005.html"><span class="toc_ref">3.1</span> <span class="toc_entry">Approximation properties</span></a>
+ </li>
+
+  </ul>
+ </li>
+<li class="">
+  <a href="sect0006.html"><span class="toc_ref">4</span> <span class="toc_entry">Operator-space structures</span></a>
+ </li>
+</ul>
+</nav>
+
+<div class="wrapper with-toc">
+<header>
+<h1 id="doc_title">Quantum compactifications of Fourier Algebras</h1>
+</header>
+
+<ul class="breadcrumbs">
+<li class="crumb"><a href="index.html" class="crumb">Quantum compactifications of Fourier Algebras</a></li>
+  <li class="last_crumb">Almost periodic elements</li>
+</ul>
+
+<div class="content">
+<h1 id="a0000000011">3 Almost periodic elements</h1>
+<p>Let $\mathcal A$ be a Banach algebra, and turn $\mathcal A’$ into an $\mathcal A$-bimodule in the usual way, </p>
+<div class="displaymath" id="a0000000031">
+  \[  \langle {a\cdot \mu },{b}\rangle  = \langle {\mu },{ba}\rangle , \quad \pi {\mu \cdot a}{b} = \langle {\mu },{ab}\rangle  \qquad (a,b\in \mathcal A,\mu \in \mathcal A’).  \]
+</div>
+<p> For $\mu \in \mathcal A’$, let $\mathcal R_\mu :\mathcal A\rightarrow \mathcal A’$ be the map $\mathcal R_\mu (a) = a\cdot \mu $. When $\mathcal R_\mu $ is a <em>compact</em> operator, we say that $\mu $ is <em>almost periodic</em>, written $\mu \in {\operatorname {AP}}(\mathcal A)$. We can show that ${\operatorname {AP}}(\mathcal A)$ is a closed $\mathcal A$-submodule of $\mathcal A’$. </p>
+<p>We similarly turn $\mathcal A”$ into an $\mathcal A$-bimodule. We define an action of $\mathcal A”$ on $\mathcal A’$ by </p>
+<div class="displaymath" id="a0000000032">
+  \[  \langle {\Phi \cdot \mu },{a}\rangle  = \langle {\Phi },{\mu \cdot a}\rangle , \quad \langle {\mu \cdot \Phi },{a}\rangle  = \langle {\Phi },{a\cdot \mu }\rangle  \qquad (a\in \mathcal A, \mu \in \mathcal A’, \Phi \in \mathcal A”).  \]
+</div>
+<p> Then we define two bilinear maps $\square ,\Diamond $ on $\mathcal A”$ by </p>
+<div class="displaymath" id="a0000000033">
+  \[  \langle {\Phi \square \Psi },{\mu }\rangle  = \langle {\Phi },{\Psi \cdot \mu }\rangle , \quad \langle {\Phi \Diamond \Psi },{\mu }\rangle  = \langle {\Psi },{\mu \cdot \Phi }\rangle  \qquad (\Phi ,\Psi \in \mathcal A”, \mu \in \mathcal A’).  \]
+</div>
+<p> Then $\square $ and $\Diamond $ are algebra products, called the <em>Arens products</em>. They both extend the product on $\mathcal A$ in the sense that, for $a\in \mathcal A$ and $\Phi \in \mathcal A”$, $a\cdot \Phi = \kappa _{mc A}(a)\square \Phi = \kappa _{\mathcal A}(a)\Diamond \Phi $, and similarly on the right. See <span class="cite">
+	[
+	<a href="sect0006.html#Dales" >4</a>
+	, 
+	???
+	]
+</span> or <span class="cite">
+	[
+</span> for further details. </p>
+<p>The following result essentially appears a number of times in the literture, but for our purposes, is well treated by Lau in <span class="cite">
+	[
+	<a href="sect0006.html#lau" >14</a>
+	, 
+	Theorem
+	
+	5.8
+	]
+</span>. </p>
+<p><b class="bfseries">Proposition&#160;3.1. </b><i class="itshape"> Let $\mathcal A$ be a Banach algebra, and let $X\subseteq \mathcal A’$ be a closed $\mathcal A$-submodule. Then the following are equivalent: <ol class="enumerate">
+  <li><p>$X\subseteq {\operatorname {AP}}(\mathcal A)$; </p>
+</li>
+  <li><p>Treating $X’$ as a quotient of $A”$, both Arens products drop to well-defined algebra products on $X’$, these products agree, and the resuling product is jointly weak$^*$-continuous on bounded subsets. </p>
+</li>
+</ol> </i></p>
+
+<p>Let $G$ be a locally compact group. We say that $f\in C^ b(G)$ is <em>almost periodic</em> if the set $\{  f_ s : s\in G \} $ is relatively compact in $C^ b(G)$, where $f_ s(t) = f(ts)$ for $t\in G$. Using bounded approximate identities, it is easy (compare with <span class="cite">
+	[
+	<a href="sect0006.html#ulger" >28</a>
+	]
+</span>) to show that ${\operatorname {AP}}(L^1(G)) = {\operatorname {AP}}(G)$. We know that ${\operatorname {AP}}(G)$ is a closed $*$-subalgebra of $C^ b(G)$, with spectrum $G^{\operatorname {AP}}$ say. Then $G$ is dense in $G^{\operatorname {AP}}$, and extending the product from $G$ to $G^{\operatorname {AP}}$ turns $G^{\operatorname {AP}}$ into a compact group. Furthermore, $G^{\operatorname {AP}}$ then agrees with the Bohr compactification of $G$. See <span class="cite">
+	[
+	<a href="sect0006.html#BJM" >2</a>
+	]
+</span> for further details. </p>
+<p>As $A(G)$ can be thought of as being the “dual” to $L^1(G)$ (hence extending the abelian case, when $A(G) = L^1(\hat G)$), it is not surprising that ${\operatorname {AP}}(A(G))$ has been studied. It is customary to write ${\operatorname {AP}}(\hat G)$ for ${\operatorname {AP}}(A(G))$. See the references <span class="cite">
+	[
+	<a href="sect0006.html#DR" >5</a>
+	, 
+	Section
+	
+	7
+	]
+</span>, <span class="cite">
+	[
+	<a href="sect0006.html#gran1" >9</a>
+	]
+</span>, <span class="cite">
+	[
+	<a href="sect0006.html#lau" >14</a>
+	]
+</span>, <span class="cite">
+	[
+	<a href="sect0006.html#hu" >10</a>
+	]
+</span>, <span class="cite">
+	[
+	<a href="sect0006.html#must" >18</a>
+	]
+</span>, and especially <span class="cite">
+	[
+	<a href="sect0006.html#chou" >3</a>
+	]
+</span> for further details. It would be fair to say that, for a general locally compact group $G$, the above proposition is about all that is known about ${\operatorname {AP}}(\hat G)$ (though see below for our discussion of invariant states). </p>
+<p>When $G$ is abelian, by applying Fourier transforms, we can show that ${\operatorname {AP}}(\hat G) = C^*_\delta (G) = \mathfrak b C^*_ r(G)$. Similarly, when $G$ is discrete and amenable, we have ${\operatorname {AP}}(\hat G) = \mathfrak b C^*_ r(G)$ (this follows from inspecting <span class="cite">
+	[
+	<a href="sect0006.html#gran1" >9</a>
+	, 
+	Proposition
+	
+	2
+	]
+</span>). We do not know, in general, if ${\operatorname {AP}}(\hat G)$ need be a C$^*$-algebra. Chou defines a group $G$ to have the <em>dual Bohr approximation property</em> if ${\operatorname {AP}}(\hat G) = C^*_\delta (G) = \mathfrak bC^*_ r(G)$. In <span class="cite">
+	[
+	<a href="sect0006.html#chou" >3</a>
+	]
+</span>, and in Rinder’s correction <span class="cite">
+	[
+	<a href="sect0006.html#rindler" >22</a>
+	]
+</span>, it is shown that there exist compact groups $G$ which fail to have the dual Bohr approximation property. Indeed, the idea is as follows. Let $E\in VN(G)$ be the rank-one operator defined by </p>
+<div class="displaymath" id="a0000000034">
+  \[  E(f) = \Big(\int _ G f \Big) 1_ G \qquad (f\in L^2(G)),  \]
+</div>
+<p> where $1_ G$ is the constant function on $G$. Then it is possible for both $\mathcal R_ E$ to be compact, that is, $E\in {\operatorname {AP}}(\hat G)$, and for us to have that $E\not\in C^*_\delta (G)$. </p>
+
+</div>
+
+<nav class="prev_up_next">
+  <a href="sect0003.html" title="For the Fourier algebra"><svg  class="icon icon-arrow-left "><use xlink:href="symbol-defs.svg#icon-arrow-left"></use></svg>
+</a>
+  <a href="index.html" title="Quantum compactifications of Fourier Algebras"><svg  class="icon icon-arrow-up "><use xlink:href="symbol-defs.svg#icon-arrow-up"></use></svg>
+</a>
+  <a href="sect0005.html" title="Approximation properties"><svg  class="icon icon-arrow-right "><use xlink:href="symbol-defs.svg#icon-arrow-right"></use></svg>
+</a>
+<svg  id="toc-toggle" class="icon icon-list-numbered "><use xlink:href="symbol-defs.svg#icon-list-numbered"></use></svg>
+</nav>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/plastex.js"></script>
+<script type="text/javascript" src="js/svgxuse.js"></script>
+</div>
+</body>
+</html>
