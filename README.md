@@ -10,4 +10,12 @@ Some basics of how to generate [accessible]() HTML pages from LaTeX sources, wri
 - [LaTeX Notes](latex.md) : Some random notes about LaTeX usage
 
 
-The opinions here are my own, and in no way reflect opinions of my employers.  I am not a lawyer.
+
+Selected other resources:
+
+- [Stem Enable](http://stemenable.s805.sureserver.com/Welcome_to_STEM_Enable) A work in progress Wiki, with [associated GitHub account](https://github.com/stem-enable) for code
+- [Talmo Events](http://talmo.uk/events.html) specifically Chris Hughes's talk
+- [Talmo Day One](http://talmo.uk/dayone.html) specifically Emma Cliffe's talk
+
+
+The opinions here are my own, and in no way reflect opinions of my employer(s).  I am not a lawyer.
