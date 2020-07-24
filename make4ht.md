@@ -24,7 +24,35 @@ A very simple example, to check things work.  The [LaTeX file](sources/make4ht%2
 (On Windows, using MikTeX, I had to install some additional packages, which happens automatically, if slowly.)  We should find `main.htm`.  Open this is a web browser, and you should see the expected output.  Right click on the displayed formula to see the MathJax context menu.
 
 - You can see the [HTML output here](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main.htm).
-- The _bad news_: On testing with ChromeVox, the mathematics is not really read at all.  More on this later.
+
+An alternative is to run
+
+    make4ht main.tex "htm,mathml"
+
+This produces an HTML file with [MathML](https://en.wikipedia.org/wiki/Mathml) used to represent the formulae.  These will be displayed correctly in Firefox, but not in Chrome, for example.  Instead, we copy and paste the MathJax `<script>` elements from the 1st file to the 2nd, and now the maths will display.  Under the hood, the HTML document no longer contains readable TeX fragments, but instead rather unreadable MathML code.
+
+- You can see the [HTML output here](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main_mathml.htm).
+
+### Screen reader results
+
+Results from [screen reader tests](mathjax.md):
+
+- ChromeVox can read the MathJax generated formulae.
+- ChromeVox can read the MathML formulae, but _only_ if Accessibility -> Assistive MathML is selected in the MathJax context menu.  Otherwise formulae are ignored.
+- NVDA (with caveats) copes with both forms, but again _only_ is the Assistive MathML option is enabled.
+
+### MathJax v3
+
+We can also manually switch out MathJax v2 for MathJax v3, by editing the HTML files.  If you are using the "minimal" versions of the scripts, remember to choose the correct one; for example, for MathML input, use
+
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js"></script>
+
+Results from [screen reader tests](mathjax.md):
+
+- You _must_ have Accessibility -> Activate turned on.
+- If you _click_ on the formula with ChromeVox, it is read.  However, when navigating around the document, the formulae are skipped.  Same result for TeX or MathML input.
+- NVDA works exactly as in v2; and now whether Accessibility -> Activate is turned on or not doesn't seem to matter.
+- The words spoken are subtly different between v2 and v3.  For example, the LaTeX $f:z\mapsto z^2+5$ is spoken as "f ratio ..." in v2, and "f colon ..." in v3.  The latter is probably better; of course I in a lecture would say "f is a map sending z to z squared plus 5", and it is a skill students will develop to make this sort of translation from _symbols_ to _meaning_.
 
 
 ## More complicated example
@@ -82,5 +110,7 @@ The `class="cmr-12"` is trying to apply a CSS rule (120% size).  I would write t
     <a href="#XBJM">[2, ???]</a> for a modern treatment).
 
 There is nothing strange in the input LaTeX file to suggest why many different `spans` would be produced.
+
+It was suggested to me to use the [tidy](https://github.com/htacg/tidy-html5) programme on the output.  On Windows, you need to install this separately, e.g. [from here](http://www.paehl.com/open_source/?HTML_Tidy_for_HTML5).  However, this didn't do anything structural to the HTML code.
 
 This is (almost) a breaking feature as far as I am concerned.  The whole principle behind accessibility is to produce rather minimal HTML code which has clearly defined semantic meaning, and then to use CSS to provide styling.  Then automated tools (like screen-readers) have an easier time understanding the structure of the document.

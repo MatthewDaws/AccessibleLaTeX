@@ -13,6 +13,8 @@ This is just my personal experience.  MathJax can be a bit slow, even on a moder
 
 On my very old Surface Pro laptop, the performance is dismal, to the point of making a long document almost unusable.
 
+**Moral:** Another reason to keep HTML documents short, and allow easy navigation between different documents to form a larger body of work.
+
 
 ## What we should actually expect
 
@@ -22,32 +24,56 @@ At this point, I spent some time researching what exactly a screen reader is _me
 - [MathJax demo](https://www.youtube.com/watch?v=6GSgTjorewQ&feature=youtu.be) : youtube video of different systems
 - [MathJax v3 overview](https://progressiveaccess.com/ahg19/ahg19.html) : Conference talk text
 
-Having installed [NVDA](https://www.nvaccess.org/) I can, _sort of_, reproduce these.  (My lack of success is probably down to my lack of skill with NVDA).  Some interpretation:
+A more natural demonstration can be seen here:
 
-- We don't really expect the maths to be readout "inline", as part of the text.  This of course is a big problem for the way advanced mathematics, especially pure mathematics, is written.
-- Everything seems rather geared to _highschool level Mathematics_.  The [eBook test document](http://epubtest.org/test-books#math) for mathematics contains merely a fraction and some indeterminates.
+- [Reading MathJax with NVDA](http://stemenable.s805.sureserver.com/Reading_MathJax_with_NVDA)
 
 
 ## Testing with ChromeVox
 
-This is a screen reader which appears in the MathJax docs, and context menus.  You can install it for Chrome from the webstore: [ChromeVox](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn).  That said, I note ominously that the download page says
+This is a screen reader which appears in the MathJax docs, and context menus.  You can install it for Chrome from the webstore: [ChromeVox](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn).  Weirdly, if you visit the very similar ULR [ChromeVox with en modifier](https://chrome.google.com/webstore/detail/chromevox-classic-extensi/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en) then you a different description, including:
 
 > Please note that this extension is now in maintenance mode; no new additions will be made moving forward.
 
 It seems that the tool is being transitioned to an OS level tool inside ChromeOS.  Maybe I need to test on my chromebook.
 
+I had a fight getting ChromeVox to work, and initially decided it just didn't work.  A few days later, my experience is that my Surface Pro is completely unusable.  Removing and reinstalling the extension improved that to "very slow".  On a desktop PC, I can get it to, approximately, work.  Tests performed using the documents produced from [make4ht examples](make4ht.md).
+
+- The key seems to be to "navigate" around the document.
+- Open the "ChromeVox Options" and check the current KeyMap.  Make sure that the "ChromeVox modifier key" is set.  I found "Ctrl+Shift" to be best ("Ctrl+Alt" is a reserved Windows combination, and expect bad things to if you press "Ctrl-Alt-DownArrow" for example ("+UpArrow" fixes this)).
+- The default "Classic Keymap" allows you to use Ctrl+Shift+Up/DownArrow to navigate around the (logical, HTML) structure of the document.
+- By repeatedly pressing DownArrow, I was able to get it to read a document, with the inline or displayed Mathematics, in a reasonably good way.
+- On Windows, the voice driver seems to swallow the letter "A", which makes reading variable names difficult (see notes below on NVDA)
+
 Testing with MathJax v2:
-- It doesn't read any maths initially in my [simple example](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%201/main.htm).
-- If I use the context menu -> Accessibility -> Explorer -> Active then it will read simple inline maths, but the integral is narrated as "Collapsed separator ..."
+- Seems to work fine.  For consistent results (e.g. with MathML input) make sure the Accessibility -> Assistive MathML is selected in the MathJax context menu.
 
 Testing with MathJax v3:
-- It doesn't read any maths initially in my [simple example](https://matthewdaws.github.io/AccessibleLaTeX/mathjax%203%20simple/main.htm).
-- If I use the context menu -> Accessibility -> Active then it now reads pretty well.
+- You must use context menu -> Accessibility -> Active
 - This [StackOverflow question](https://stackoverflow.com/questions/60688026/how-to-activate-mathjax-accessibility-by-default) suggests that it's not possible to active the accessibility tools by default!  However, the setting does seem to persist, I think at the "web page" level.
+- I cannot get ChromeVox to read the formulae as part of the "flow" of the document; but selecting the formulae elements does work.
 
 The accessibility tools in version 3 seem to be slightly buggy still.  I managed to find a breaking case, and filled a bug report on GitHub.  The [MathML example](https://matthewdaws.github.io/AccessibleLaTeX/make4ht%20project%203/main.html) generated by `make4ht` renders fine normally, but if you turn on the accessibility tools and scroll to the end of the screen, is displays a large number of errors (latest versions of Firefox or Chrome).  (It is possible this is related to the build problems I saw from `make4ht`).
 
 
+## NVDA
+
+This is a free screen reader, which seems to work well on Windows, and in particular for FireFox.  Having installed [NVDA](https://www.nvaccess.org/), I could interact with math elements, but not get them to read as part of the main text.  However, upon installing a further piece of (free, not open-source) software: [MathPlayer](https://www.dessci.com/en/products/mathplayer/download.htm) it does work.
+
+- I find the reliance on a piece of 4.5 year old software a little disturbing.
+- MathPlayer is not something that has a _configuration_, so it is hard to perform tests.
+
+Some notes about NVDA:
+
+- On windows, the default speech "synthesizer" seems to swallow certain letters (most notably "a").  I found changing it to "eSpeak NG" gave a far more artificial voice, but one which does correctly pronounce every letter / word.
+- I found the guidance [available here](https://www.marcozehe.de/how-to-use-nvda-and-firefox-to-test-your-web-pages-for-accessibility/) to be really useful.  The stuff about settings seems incompatible with my copy of NVDA, but the keyboard guide is perfect.
+- In particular:
+  - Pressing up/down will navigate through (logical, HTML) sections of the document, reading them out.  I had success in reading text and maths by repeatedly pressing "down" to hear the next section
+  - The "nvda-key" is "insert", and pressing this together with F7 displays a dialogue showing the structure of the HTML document, as NVDA seems it.  I imagine this could be useful when thinking about how to structure a document.
+  
+Once configured correctly, NVDA works pretty well with MathJax v2 and v3, in either TeX or MathML input modes.
+
+
 ## Documentation
 
-- [Configuration](http://docs.mathjax.org/en/latest/web/configuration.html#web-configuration)
+- [Configuration](http://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) of MathJax v3.
