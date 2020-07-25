@@ -74,6 +74,17 @@ Some notes about NVDA:
 Once configured correctly, NVDA works pretty well with MathJax v2 and v3, in either TeX or MathML input modes.
 
 
+## More complicated things
+
+### Commutative diagrams
+
+I don't use these in teaching, but do extensively in anything research related.  The _standard_ way to typeset these in LaTeX is surely [xy-pic](https://tug.org/applications/Xy-pic/), which is supported in MathJax by the extension [XYJax](https://sonoisa.github.io/xyjax/xyjax.html).  The [GitHub repo](https://github.com/sonoisa/XyJax) is really out of date, and the documentation says that MathJax v2.3 only is supported.  The news is not all bad though, as this [example from the Stacks Project](https://stacks.math.columbia.edu/tag/0025) shows.
+
+It turns out that the `xyjax.js` script can be used with the latest version of MathJax v2.  You need to pay careful attention to the instructions [on the GitHub site](https://github.com/sonoisa/XyJax) to make sure where you host the script matches what the end of script says.  You can [view an example here](https://matthewdaws.github.io/AccessibleLaTeX/xypic/xypic.html).
+
+However for v3 we seem to be out of luck.  You could use the [AMSCD](https://www.jmilne.org/not/Mamscd.pdf) package for simple diagrams.  (From an accessibility point of view, a complex commutative diagram is already probably a nightmare, and might well be something which falls under the remit of requiring a special solution (for example, alt text with instructions to listen to an audio description, etc.)  Thus one might be happy with an image anyway.  Indeed, [this Stack Exchange answer](https://math.meta.stackexchange.com/questions/14986/is-it-possible-to-draw-a-diagonal-arrow-in-a-commutative-diagram) indicates that already the `xyjax` solution uses SVG, and is presumably not very accessible.)
+
+
 ## Documentation
 
 - [Configuration](http://docs.mathjax.org/en/latest/web/configuration.html#web-configuration) of MathJax v3.
