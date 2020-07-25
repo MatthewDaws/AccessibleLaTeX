@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8">
+<title>Basic example of xypic</title>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      extensions: ['tex2jax.js'],
+      jax: ['input/TeX','output/HTML-CSS'],
+      TeX: {
+        extensions: ['AMSmath.js', 'AMSsymbols.js', 'https://matthewdaws.github.io/AccessibleLaTeX/xypic/script/xypic.js'],
+        Macros: {
+          linebreak: ["", 1, ""],
+          },
+        TagSide: 'left'
+      },
+      tex2jax: {
+        inlineMath: [['$','$']],
+        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+      },
+      'HTML-CSS': { scale: 100 }
+    });
+  </script>
+  
+  <!--<script async src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script>  <!--?config=TeX-AMS-MML_CHTML-->
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- '.\xypic.js'-->
+
+<body>
+
+<p>A really simple document, merely to contain a big commutative diagram:</p>
+
+\[ f:\mathbb{C} \rightarrow \mathbb C \setminus\{0\} \]
+
+\[  \xymatrix{ y \ar[r]_ g \ar[d]_ f &  z \ar[d]^ q \\  x \ar[r]^ p &  x\amalg _ y z }  \]
+
+\[
+
+\xymatrix{ 0 \ar[r] & X \ar[r]^\iota & Y \ar[r]^\pi & Z \ar[r] 0 }
+
+\]
+
+</body>
+</html>
